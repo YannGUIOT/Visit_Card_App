@@ -1,4 +1,3 @@
-
 import './App.scss'
 
 import {
@@ -11,8 +10,6 @@ import { About } from './pages/About/About';
 import { Home } from './pages/Home/Home';
 import { NotFound } from './pages/NotFound/NotFound';
 import { Other } from './pages/Other/Other';
-import { Account } from './pages/Account/Account';
-import { Inscription } from './pages/Inscription/Inscription';
 
 import { Navbar } from './components/Navbar/Navbar';
 import { Footer } from './components/Footer/Footer';
@@ -28,8 +25,6 @@ export const App = () => {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/other" element={<Other />} />
-            <Route path="/account" element={<Account />} />
-            <Route path="/inscription" element={<Inscription />} />
             <Route path="/other/:otherSlug" element={<Slug />} />
             <Route path="/*" element={<NotFound />} />
         </Routes>

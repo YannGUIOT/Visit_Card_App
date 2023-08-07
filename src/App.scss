@@ -1,0 +1,134 @@
+:root {
+  --background-color: rgb(231, 230, 230);
+  --navbar-color: rgb(253, 246, 227);
+  --text-color: #191A1C;
+  --link-text-color: rgb(63, 65, 94);
+  --filter-invert: invert(0%);
+}
+
+
+#slide {
+  margin-right: 1em;
+}
+
+#root {
+  height: 100vh;
+  text-align: center;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+body {
+  margin: 0;
+}
+
+nav {
+  background-color: var(--navbar-color); 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+nav li {
+  float: left;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+a {
+  color: var(--link-text-color);
+  text-decoration: none;
+}
+
+.footer {
+  background-color: var(--navbar-color); 
+  padding: 20px 0;
+  text-align: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.info {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.second-nav-part {
+  display: flex;
+  flex-direction: row;
+  filter: var(--filter-invert);
+  gap: 10px;
+  align-items: center;
+}
+
+.circle {
+  width: 25px;
+  height: 25px;
+  // background-color: var(--navbar-color);
+  background-color: rgb(255, 234, 164);
+  border: 1px solid black;
+  border-radius: 50%;
+  margin-left: -20px;
+  margin-top: -15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+}
+
+#log {
+  margin-top: 5px;
+}
+
+.profile {
+  display: flex;
+  position: relative;
+  height: 60px;
+  width: 60px;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown-menu {
+  display: flex;
+  visibility: hidden;
+  position: absolute;
+  top: 100%;
+  right: 10px;
+  width: 125px;
+  flex-direction: column;
+  gap: 2px;
+  justify-content: end;
+}
+
+.dropdown-line {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 125px;
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 15px;
+  justify-content: center;
+  background-color: var(--navbar-color);
+}
+
+.profile:hover .dropdown-menu {
+  visibility: visible;
+}

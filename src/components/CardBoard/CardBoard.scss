@@ -41,6 +41,7 @@
 }
 
 .cardDisplay {
+  min-width: 35em;
   background-color: rgb(190, 210, 226);
   grid-column: 4 / 10; /* Occupe la colonne 4 à 9 */
   grid-row: 2 / 6; /* Occupe les rangées 3 à 6 */

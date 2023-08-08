@@ -1,7 +1,48 @@
 .cardBoard {
-  height: 80vh;
   width: 100vw;
+  height: 85vh;
+  background-color: rgb(134, 133, 133);
+}
+
+.grid-container {
+  display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(6, 1fr);
-  background-color: rgb(134, 133, 133);
+  gap: 0.5em;
+}
+
+.grid-item {
+  border: 1px solid blue;
+  border-radius: 1em;
+  min-height: 3em;
+}
+
+.modelSelection {
+  background-color: rgb(190, 210, 226);
+  grid-column: 1 / 4; /* Occupe la colonne 1 à 3 */
+  grid-row: 1 / 7; /* Occupe les rangées 1 à 6 */
+}
+
+.textsForm {
+  background-color: rgb(190, 210, 226);
+  grid-column: 4 / 9; /* Occupe la colonne 4 à 8 */
+  grid-row: 1 / 3; /* Occupe les rangées 1 à 2 */
+}
+
+.colorsSelection {
+  background-color: rgb(190, 210, 226);
+  grid-column: 9 / 13; /* Occupe la colonne 9 à 12 */
+  grid-row: 1 / 4; /* Occupe les rangées 1 à 3 */
+}
+
+.fontsSelection {
+  background-color: rgb(190, 210, 226);
+  grid-column: 9 / 13; /* Occupe la colonne 9 à 12 */
+  grid-row: 4 / 7; /* Occupe les rangées 4 à 6 */
+}
+
+.cardDisplay {
+  background-color: rgb(190, 210, 226);
+  grid-column: 4 / 9; /* Occupe la colonne 4 à 8 */
+  grid-row: 3 / 7; /* Occupe les rangées 3 à 6 */
 }

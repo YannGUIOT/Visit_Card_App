@@ -6,7 +6,6 @@ export const Home = () => {
   return (
     <>
       <h1>CREATE YOUR VISIT CARD</h1>
-      {/* <ModelSelection /> */}
       <CardBoard />
     </>
   )

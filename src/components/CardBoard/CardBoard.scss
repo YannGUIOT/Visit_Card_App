@@ -24,18 +24,18 @@
 .textsForm {
   background-color: rgb(190, 210, 226);
   grid-column: 4 / 10; /* Occupe la colonne 4 à 8 */
-  grid-row: 1 / 2; /* Occupe les rangées 1 à 2 */
+  grid-row: 1 / 2; /* Occupe les rangées 1 à 1 */
 }
 
 .colorsSelection {
   background-color: rgb(190, 210, 226);
-  grid-column: 10 / 13; /* Occupe la colonne 9 à 12 */
+  grid-column: 10 / 13; /* Occupe la colonne 10 à 12 */
   grid-row: 1 / 4; /* Occupe les rangées 1 à 3 */
 }
 
 .fontsSelection {
   background-color: rgb(190, 210, 226);
-  grid-column: 10 / 13; /* Occupe la colonne 9 à 12 */
+  grid-column: 10 / 13; /* Occupe la colonne 10 à 12 */
   grid-row: 4 / 7; /* Occupe les rangées 4 à 6 */
 }
 
@@ -48,5 +48,5 @@
 .other {
   background-color: rgb(190, 210, 226);
   grid-column: 4 / 10; /* Occupe la colonne 4 à 8 */
-  grid-row: 6 / 7; /* Occupe les rangées 3 à 6 */
+  grid-row: 6 / 7; /* Occupe les rangées 6 à 6 */
 }

@@ -19,7 +19,7 @@ export const App = () => {
 
   return (
     <Router>
-      <Navbar />
+      {/* <Navbar /> */}
       <main>
         <Routes>
             <Route path="/" element={<Home />} />

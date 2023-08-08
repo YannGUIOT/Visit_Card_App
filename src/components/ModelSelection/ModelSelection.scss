@@ -1,0 +1,8 @@
+.modelSelection {
+  height: 4em;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  border-radius: 1em;
+  background-color: antiquewhite;
+}

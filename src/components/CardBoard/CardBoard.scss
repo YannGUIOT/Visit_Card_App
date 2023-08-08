@@ -1,6 +1,7 @@
 .cardBoard {
-  width: 80em;
-  height: 40em;
-  background-color: black;
-  border-radius: 1em;
+  height: 80vh;
+  width: 100vw;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  background-color: rgb(134, 133, 133);
 }

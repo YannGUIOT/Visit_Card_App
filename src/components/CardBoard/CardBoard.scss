@@ -61,10 +61,12 @@
 
 @media (max-width: 1210px) {
   :root {
-    --couleur-principale: #FF5733;
+    --var: #FF5733;
   }
 }
 
 @media (min-width: 1210px) {
-
+  :root {
+    --var: #FF5733;
+  }
 }

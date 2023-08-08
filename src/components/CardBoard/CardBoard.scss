@@ -23,6 +23,7 @@
 }
 
 .textsForm {
+  min-width: 35em;
   background-color: rgb(190, 210, 226);
   grid-column: 4 / 10; /* Occupe la colonne 4 à 9 */
   grid-row: 1 / 2; /* Occupe les rangées 1 à 1 */
@@ -49,10 +50,10 @@
 }
 
 .other {
+  min-width: 35em;
   background-color: rgb(190, 210, 226);
   grid-column: 4 / 10; /* Occupe la colonne 4 à 9 */
   grid-row: 6 / 7; /* Occupe les rangées 6 à 6 */
 }
-
 
 // change < 1210px

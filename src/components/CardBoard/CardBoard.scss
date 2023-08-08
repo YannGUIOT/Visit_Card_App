@@ -58,3 +58,13 @@
 }
 
 // change < 1210px
+
+@media (max-width: 1210px) {
+  :root {
+    --couleur-principale: #FF5733;
+  }
+}
+
+@media (min-width: 1210px) {
+
+}

@@ -1,7 +1,6 @@
 .cardBoard {
   width: 100vw;
   height: 85vh;
-  background-color: rgb(134, 133, 133);
 }
 
 .grid-container {
@@ -12,8 +11,7 @@
 }
 
 .grid-item {
-  border: 1px solid blue;
-  border-radius: 1em;
+  border: 1px solid rgb(122, 122, 122);
   min-height: 3em;
 }
 
@@ -25,24 +23,30 @@
 
 .textsForm {
   background-color: rgb(190, 210, 226);
-  grid-column: 4 / 9; /* Occupe la colonne 4 à 8 */
-  grid-row: 1 / 3; /* Occupe les rangées 1 à 2 */
+  grid-column: 4 / 10; /* Occupe la colonne 4 à 8 */
+  grid-row: 1 / 2; /* Occupe les rangées 1 à 2 */
 }
 
 .colorsSelection {
   background-color: rgb(190, 210, 226);
-  grid-column: 9 / 13; /* Occupe la colonne 9 à 12 */
+  grid-column: 10 / 13; /* Occupe la colonne 9 à 12 */
   grid-row: 1 / 4; /* Occupe les rangées 1 à 3 */
 }
 
 .fontsSelection {
   background-color: rgb(190, 210, 226);
-  grid-column: 9 / 13; /* Occupe la colonne 9 à 12 */
+  grid-column: 10 / 13; /* Occupe la colonne 9 à 12 */
   grid-row: 4 / 7; /* Occupe les rangées 4 à 6 */
 }
 
 .cardDisplay {
   background-color: rgb(190, 210, 226);
-  grid-column: 4 / 9; /* Occupe la colonne 4 à 8 */
-  grid-row: 3 / 7; /* Occupe les rangées 3 à 6 */
+  grid-column: 4 / 10; /* Occupe la colonne 4 à 8 */
+  grid-row: 2 / 6; /* Occupe les rangées 3 à 6 */
+}
+
+.other {
+  background-color: rgb(190, 210, 226);
+  grid-column: 4 / 10; /* Occupe la colonne 4 à 8 */
+  grid-row: 6 / 7; /* Occupe les rangées 3 à 6 */
 }

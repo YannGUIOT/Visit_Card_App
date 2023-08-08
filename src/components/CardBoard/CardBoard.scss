@@ -61,7 +61,8 @@
 
 @media (max-width: 1210px) {
   :root {
-    --var: #FF5733;
+    --cardDisplay-Grid-C: 4 / 10; /* Occupe la colonne 4 à 9 */
+    --cardDisplay-Grid-R: 2 / 6; /* Occupe les rangées 3 à 6 */
   }
 }
 

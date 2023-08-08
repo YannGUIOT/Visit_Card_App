@@ -37,6 +37,7 @@
 }
 
 .fontsSelection {
+  min-width: 15em;
   background-color: rgb(190, 210, 226);
   grid-column: 10 / 13; /* Occupe la colonne 10 à 12 */
   grid-row: 4 / 7; /* Occupe les rangées 4 à 6 */

@@ -5,15 +5,13 @@ import './CardBoard.scss'
 
 export const CardBoard = () => {
 
-const card = new Card();
+  const [card, setCard] = useState(new Card());
 
-const [company, setCompany] = useState(card.state.company);
-
-const handleCompanyChange = (event) => {
-  const newCompany = event.target.value;
-  card.updateTexts('company', newCompany);
-  setCompany(newCompany);
-};
+  const handleChange = (field) => (event) => {
+    card.updateTexts(field, event.target.value);
+    // Mettez à jour l'état de la carte avec la nouvelle instance mise à jour
+    setCard({ ...card });
+  };
 
   return (
     <div className="grid-container cardBoard">
@@ -23,32 +21,32 @@ const handleCompanyChange = (event) => {
       <input
         type="text"
         name="ENTREPRISE:"
-        value={company}
-        onChange={handleCompanyChange}
+        value={card.state.company}
+        onChange={handleChange('company')}
       />
       <input
         type="text"
         name="NOM:"
         value={card.state.lastName}
-        onChange={event => card.updateTexts('lastName', event.target.value)}
+        onChange={handleChange('lastName')}
       />
       <input
         type="text"
         name="Prénom:"
         value={card.state.firstName}
-        onChange={event => card.updateTexts('firstName', event.target.value)}
+        onChange={handleChange('firstName')}
       />
       <input
         type="text"
         name="email:"
         value={card.state.email}
-        onChange={event => card.updateTexts('email', event.target.value)}
+        onChange={handleChange('email')}
       />
       <input
         type="text"
         name="tel:"
         value={card.state.phone}
-        onChange={event => card.updateTexts('phone', event.target.value)}
+        onChange={handleChange('phone')}
       /></div>
       <div className='grid-item colorsSelection'>{card.renderColorSelect()}</div>
       <div className='grid-item fontsSelection'></div>

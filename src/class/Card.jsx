@@ -21,10 +21,6 @@ export class Card {
     this.state[field] = value;
   };
 
-  handleInputChange = (field, value) => {
-    this.state[field] = value;
-  };
-
   renderCard = () => {
     return (
       <div className="card" style={{ backgroundColor: this.state.backgrdColor }}>
@@ -37,47 +33,25 @@ export class Card {
   };
 
 
-  updateTexts = () => {
-    // au lieu de renderEditText et handleInputChange
+  updateTexts = (field, value) => {
+    this.state[field] = value;
+    // if(field=='company') {
+    //   this.state.company = value;
+    // }
+    // if(field=='lastName') {
+    //   this.state.lastName = value;
+    // }
+    // if(field=='firstName') {
+    //   this.state.firstName = value;
+    // }
+    // if(field=='email') {
+    //   this.state.email = value;
+    // }
+    // if(field=='phone') {
+    //   this.state.phone = value;
+    // }
   }
 
-  renderEditText = () => {
-    return (
-      <div>
-        <input
-          type="text"
-          name="ENTREPRISE:"
-          value={this.state.company}
-          onChange={event => this.handleInputChange('company', event.target.value)}
-        />
-        <input
-          type="text"
-          name="NOM:"
-          value={this.state.lastName}
-          onChange={event => this.handleInputChange('lastName', event.target.value)}
-        />
-        <input
-          type="text"
-          name="Prénom:"
-          value={this.state.firstName}
-          onChange={event => this.handleInputChange('firstName', event.target.value)}
-        />
-        <input
-          type="text"
-          name="email:"
-          value={this.state.email}
-          onChange={event => this.handleInputChange('email', event.target.value)}
-        />
-        <input
-          type="text"
-          name="tel:"
-          value={this.state.phone}
-          onChange={event => this.handleInputChange('phone', event.target.value)}
-        />
-      </div>
-    );
-  };
-  
 
   renderColorSelect = () => {
     return (

@@ -1,76 +1,65 @@
-.cardBoard {
-  width: 100vw;
-  height: 85vh;
+@media (min-width: 1210px) {
+  .cardBoard {
+    width: 100vw;
+    height: 85vh;
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 0.2em;
+  }
+  
+  .grid-item {
+    border: 1px solid rgb(56, 56, 56);
+    min-height: 3em;
+  }
+  
+  .modelSelection {
+    min-width: 25em;
+    background-color: rgb(190, 210, 226);
+    grid-column: 1 / 4; /* Occupe la colonne 1 à 3 */
+    grid-row: 1 / 7; /* Occupe les rangées 1 à 6 */
+  }
+  
+  .textsForm {
+    min-width: 35em;
+    background-color: rgb(190, 210, 226);
+    grid-column: 4 / 10; /* Occupe la colonne 4 à 9 */
+    grid-row: 1 / 2; /* Occupe les rangées 1 à 1 */
+  }
+  
+  .colorsSelection {
+    min-width: 15em;
+    background-color: rgb(190, 210, 226);
+    grid-column: 10 / 13; /* Occupe la colonne 10 à 12 */
+    grid-row: 1 / 4; /* Occupe les rangées 1 à 3 */
+  }
+  
+  .fontsSelection {
+    min-width: 15em;
+    background-color: rgb(190, 210, 226);
+    grid-column: 10 / 13; /* Occupe la colonne 10 à 12 */
+    grid-row: 4 / 7; /* Occupe les rangées 4 à 6 */
+  }
+  
+  .cardDisplay {
+    min-width: 35em;
+    background-color: rgb(190, 210, 226);
+    grid-column: 4 / 10; /* Occupe la colonne 4 à 9 */
+    grid-row: 2 / 6; /* Occupe les rangées 3 à 6 */
+  }
+  
+  .other {
+    min-width: 35em;
+    background-color: rgb(190, 210, 226);
+    grid-column: 4 / 10; /* Occupe la colonne 4 à 9 */
+    grid-row: 6 / 7; /* Occupe les rangées 6 à 6 */
+  }  
 }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(6, 1fr);
-  gap: 0.2em;
-}
-
-.grid-item {
-  border: 1px solid rgb(56, 56, 56);
-  min-height: 3em;
-}
-
-.modelSelection {
-  min-width: 25em;
-  background-color: rgb(190, 210, 226);
-  grid-column: 1 / 4; /* Occupe la colonne 1 à 3 */
-  grid-row: 1 / 7; /* Occupe les rangées 1 à 6 */
-}
-
-.textsForm {
-  min-width: 35em;
-  background-color: rgb(190, 210, 226);
-  grid-column: 4 / 10; /* Occupe la colonne 4 à 9 */
-  grid-row: 1 / 2; /* Occupe les rangées 1 à 1 */
-}
-
-.colorsSelection {
-  min-width: 15em;
-  background-color: rgb(190, 210, 226);
-  grid-column: 10 / 13; /* Occupe la colonne 10 à 12 */
-  grid-row: 1 / 4; /* Occupe les rangées 1 à 3 */
-}
-
-.fontsSelection {
-  min-width: 15em;
-  background-color: rgb(190, 210, 226);
-  grid-column: 10 / 13; /* Occupe la colonne 10 à 12 */
-  grid-row: 4 / 7; /* Occupe les rangées 4 à 6 */
-}
-
-.cardDisplay {
-  min-width: 35em;
-  background-color: rgb(190, 210, 226);
-  grid-column: var(--cardDisplay-Grid-C);
-  grid-row: var(--cardDisplay-Grid-R);
-}
-
-.other {
-  min-width: 35em;
-  background-color: rgb(190, 210, 226);
-  grid-column: 4 / 10; /* Occupe la colonne 4 à 9 */
-  grid-row: 6 / 7; /* Occupe les rangées 6 à 6 */
-}
-
-// change < 1210px
 
 @media (max-width: 1210px) {
-  :root {
-    --cardDisplay-Grid-C: 2 / 12; /* Occupe la colonne 2 à 11 */
-    --cardDisplay-Grid-R: 2 / 6; /* Occupe les rangées 3 à 6 */
 
-    // passer en flex ...
-  }
-}
-
-@media (min-width: 1210px) {
-  :root {
-    --cardDisplay-Grid-C: 4 / 10; /* Occupe la colonne 4 à 9 */
-    --cardDisplay-Grid-R: 2 / 6; /* Occupe les rangées 3 à 6 */
-  }
 }

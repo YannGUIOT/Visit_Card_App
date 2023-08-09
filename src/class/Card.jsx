@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class Card extends Component {
+export class Card extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -18,18 +18,6 @@ class Card extends Component {
       contactFont: 'Arial',
       model: 1
     };
-  }
-
-  // Méthode pour afficher la carte
-  CardDisplay() {
-    return (
-      <div className="card" style={{ backgroundColor: this.state.backgrdColor }}>
-        <h2>{this.state.company}</h2>
-        <p>{this.state.lastName} {this.state.firstName}</p>
-        <p>Email: {this.state.email}</p>
-        <p>Tel: {this.state.phone}</p>
-      </div>
-    );
   }
 
   // Méthode pour activer l'édition
@@ -94,5 +82,16 @@ class Card extends Component {
   Save = () => {
     console.log("sauvegarde")
   };
+
+  render() {
+    return (
+      <div className="card" style={{ backgroundColor: this.state.backgrdColor }}>
+        <h2>{this.state.company}</h2>
+        <p>{this.state.lastName} {this.state.firstName}</p>
+        <p>Email: {this.state.email}</p>
+        <p>Tel: {this.state.phone}</p>
+      </div>
+    )
+  }
 }
 

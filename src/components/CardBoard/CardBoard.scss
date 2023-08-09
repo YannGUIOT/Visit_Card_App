@@ -60,6 +60,36 @@
 }
 
 
-@media (max-width: 1210px) {
+@media (max-width: 1209px) {
+  .cardBoard, .cardDisplay, .modelSelection, .textsForm, .colorsSelection, .fontsSelection, .other {
+    width: 35em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+  }
+  
+  .cardDisplay {
 
+  }
+
+  .modelSelection {
+
+  }
+  
+  .textsForm {
+
+  }
+  
+  .colorsSelection {
+
+  }
+  
+  .fontsSelection {
+
+  }
+  
+  .other {
+
+  } 
 }

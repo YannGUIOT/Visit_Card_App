@@ -4,11 +4,11 @@ export class Card extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      company: props.company,
-      lastName: props.lastName,
-      firstName: props.firstName,
-      email: props.email,
-      phone: props.phone,
+      company: 'Mon Entreprise',
+      lastName: 'Doe',
+      firstName: 'John',
+      email: 'john.doe@example.com',
+      phone: '123-456-7890',
       backgrdColor: '#ffccff',
       companyColor: '#dddddd',
       namesColor: '#dddddd',

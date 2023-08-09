@@ -4,7 +4,7 @@ export const ModelSelection = () => {
 
   return (
     <div className='model'>
-      <h1>Selection du Modèle</h1>
+      <h1>Sélection du Modèle</h1>
     </div>
   )
 }

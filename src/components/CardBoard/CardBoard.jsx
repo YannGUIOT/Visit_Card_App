@@ -1,10 +1,19 @@
 import { Card } from '../../class/Card';
+import { useState } from 'react';
 
 import './CardBoard.scss'
 
 export const CardBoard = () => {
 
 const card = new Card();
+
+const [company, setCompany] = useState(card.state.company);
+
+const handleCompanyChange = (event) => {
+  const newCompany = event.target.value;
+  card.updateTexts('company', newCompany);
+  setCompany(newCompany);
+};
 
   return (
     <div className="grid-container cardBoard">
@@ -14,8 +23,8 @@ const card = new Card();
       <input
         type="text"
         name="ENTREPRISE:"
-        value={card.state.company}
-        onChange={event => card.updateTexts('company', event.target.value)}
+        value={company}
+        onChange={handleCompanyChange}
       />
       <input
         type="text"

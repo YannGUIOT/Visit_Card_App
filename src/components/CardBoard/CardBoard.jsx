@@ -1,24 +1,41 @@
-
-import { ModelSelection } from '../ModelSelection/ModelSelection';
-import { FontsSelection } from '../FontsSelection/FontsSelection';
-import { Other } from '../Other/Other';
-
+import { Component } from 'react';
 import { Card } from '../../class/Card';
 
 import './CardBoard.scss'
 
+// export class CardBoard extends Component {
+//   constructor(props) {
+//     super(props);
+//     this.card = new Card();
+//   }
+
+//   render() {
+//     return (
+//       <div className="grid-container cardBoard">
+//         <div className='grid-item cardDisplay'>{this.card.renderCard()}</div>
+//         <div className='grid-item modelSelection'></div>
+//         <div className='grid-item textsForm'>{this.card.renderEditText()}</div>
+//         <div className='grid-item colorsSelection'>{this.card.renderColorSelect()}</div>
+//         <div className='grid-item fontsSelection'></div>
+//         <div className='grid-item other'></div>
+//       </div>
+//     );
+//   }
+// }
+
 export const CardBoard = () => {
 
-  const cardInstance = new Card();
+const card = new Card();
 
-  return (
-    <div className="grid-container cardBoard ">
-      <div className='grid-item cardDisplay'><Card /></div>
-      <div className='grid-item modelSelection'><ModelSelection /></div>
-      <div className='grid-item textsForm'>{cardInstance.EditText()}</div>
-      <div className='grid-item colorsSelection'>{cardInstance.ColorSelect()}</div>
-      <div className='grid-item fontsSelection'><FontsSelection /></div>
-      <div className='grid-item other'><Other /></div>
-    </div>
-  )
+
+    return (
+      <div className="grid-container cardBoard">
+        <div className='grid-item cardDisplay'>{card.renderCard()}</div>
+        <div className='grid-item modelSelection'></div>
+        <div className='grid-item textsForm'>{card.renderEditText()}</div>
+        <div className='grid-item colorsSelection'>{card.renderColorSelect()}</div>
+        <div className='grid-item fontsSelection'></div>
+        <div className='grid-item other'></div>
+      </div>
+    )
 }

@@ -1,7 +1,5 @@
-import React, { Component } from 'react';
-export class Card extends Component {
-  constructor(props) {
-    super(props);
+export class Card {
+  constructor() {
     this.state = {
       company: 'Mon Entreprise',
       lastName: 'Doe',
@@ -19,65 +17,15 @@ export class Card extends Component {
     };
   }
 
-  EditText = () => {
-    return (
-      <div>
-        <input
-          type="text"
-          name="ENTREPRISE:"
-          value={this.state.company}
-          onChange={event => this.setState({ company: event.target.value })}
-        />
-        <input
-          type="text"
-          name="NOM:"
-          value={this.state.lastName}
-          onChange={event => this.setState({ lastName: event.target.value })}
-        />
-        <input
-          type="text"
-          name="Prénom:"
-          value={this.state.firstName}
-          onChange={event => this.setState({ firstName: event.target.value })}
-        />
-        <input
-          type="text"
-          name="email:"
-          value={this.state.email}
-          onChange={event => this.setState({ email: event.target.value })}
-        />
-        <input
-          type="text"
-          name="tel:"
-          value={this.state.phone}
-          onChange={event => this.setState({ phone: event.target.value })}
-        />
-      </div>
-    )
+  handleColorChange = (field, value) => {
+    this.state[field] = value;
   };
 
-  ColorSelect = () => {
-    return (
-      <div>
-        <select value={this.state.backgrdColor} onChange={this.handleColorChange}>
-          <option value="#ffffff">Blanc</option>
-          <option value="#ffcccb">Rouge</option>
-          <option value="#caffba">Vert</option>
-          <option value="#ccccff">Bleu</option>
-        </select>
-      </div>
-    )
+  handleInputChange = (field, value) => {
+    this.state[field] = value;
   };
 
-  handleColorChange = event => {
-    this.setState({ backgrdColor: event.target.value });
-  };
-
-  Save = () => {
-    console.log("sauvegarde")
-  };
-
-  render() {
+  renderCard = () => {
     return (
       <div className="card" style={{ backgroundColor: this.state.backgrdColor }}>
         <h2>{this.state.company}</h2>
@@ -85,6 +33,57 @@ export class Card extends Component {
         <p>Email: {this.state.email}</p>
         <p>Tel: {this.state.phone}</p>
       </div>
-    )
-  }
+    );
+  };
+
+  renderEditText = () => {
+    return (
+      <div>
+        <input
+          type="text"
+          name="ENTREPRISE:"
+          value={this.state.company}
+          onChange={event => this.handleInputChange('company', event.target.value)}
+        />
+        <input
+          type="text"
+          name="NOM:"
+          value={this.state.lastName}
+          onChange={event => this.handleInputChange('lastName', event.target.value)}
+        />
+        <input
+          type="text"
+          name="Prénom:"
+          value={this.state.firstName}
+          onChange={event => this.handleInputChange('firstName', event.target.value)}
+        />
+        <input
+          type="text"
+          name="email:"
+          value={this.state.email}
+          onChange={event => this.handleInputChange('email', event.target.value)}
+        />
+        <input
+          type="text"
+          name="tel:"
+          value={this.state.phone}
+          onChange={event => this.handleInputChange('phone', event.target.value)}
+        />
+      </div>
+    );
+  };
+  
+
+  renderColorSelect = () => {
+    return (
+      <div>
+        <select value={this.state.backgrdColor} onChange={event => this.handleColorChange('backgrdColor', event.target.value)}>
+          <option value="#ffffff">Blanc</option>
+          <option value="#ffcccb">Rouge</option>
+          <option value="#caffba">Vert</option>
+          <option value="#ccccff">Bleu</option>
+        </select>
+      </div>
+    );
+  };
 }

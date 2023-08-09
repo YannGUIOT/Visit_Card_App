@@ -3,6 +3,7 @@ import { ModelSelection } from '../ModelSelection/ModelSelection';
 import { TextsForm } from '../TextsForm/TextsForm';
 import { ColorsSelection } from '../ColorsSelection/ColorsSelection';
 import { FontsSelection } from '../FontsSelection/FontsSelection';
+import { Other } from '../Other/Other';
 
 import './CardBoard.scss'
 
@@ -15,7 +16,7 @@ export const CardBoard = () => {
       <div className='grid-item textsForm'><TextsForm /></div>
       <div className='grid-item colorsSelection'><ColorsSelection /></div>
       <div className='grid-item fontsSelection'><FontsSelection /></div>
-      <div className='grid-item other'>other</div>
+      <div className='grid-item other'><Other /></div>
     </div>
   )
 }

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 export class Card extends Component {
   constructor(props) {
     super(props);
@@ -20,7 +19,6 @@ export class Card extends Component {
     };
   }
 
-  // Méthode pour activer l'édition
   EditText = () => {
     return (
       <div>
@@ -54,13 +52,10 @@ export class Card extends Component {
           value={this.state.phone}
           onChange={event => this.setState({ phone: event.target.value })}
         />
-
-        <button onClick={this.Save}>Enregistrer</button>
       </div>
     )
   };
 
-  // Méthode pour sélectionner une couleur
   ColorSelect = () => {
     return (
       <div>
@@ -74,7 +69,6 @@ export class Card extends Component {
     )
   };
 
-  // Méthode pour gérer les changements de couleur
   handleColorChange = event => {
     this.setState({ backgrdColor: event.target.value });
   };
@@ -94,4 +88,3 @@ export class Card extends Component {
     )
   }
 }
-

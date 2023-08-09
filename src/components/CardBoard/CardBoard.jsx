@@ -1,7 +1,8 @@
-import { CardDisplay } from '../CardDisplay/CardDisplay';
+// import { ColorsSelection } from '../ColorsSelection/ColorsSelection';
+// import { CardDisplay } from '../CardDisplay/CardDisplay';
+// import { TextsForm } from '../TextsForm/TextsForm';
+
 import { ModelSelection } from '../ModelSelection/ModelSelection';
-import { TextsForm } from '../TextsForm/TextsForm';
-import { ColorsSelection } from '../ColorsSelection/ColorsSelection';
 import { FontsSelection } from '../FontsSelection/FontsSelection';
 import { Other } from '../Other/Other';
 

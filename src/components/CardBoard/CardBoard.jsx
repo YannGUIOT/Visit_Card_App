@@ -1,6 +1,3 @@
-// import { ColorsSelection } from '../ColorsSelection/ColorsSelection';
-// import { CardDisplay } from '../CardDisplay/CardDisplay';
-// import { TextsForm } from '../TextsForm/TextsForm';
 
 import { ModelSelection } from '../ModelSelection/ModelSelection';
 import { FontsSelection } from '../FontsSelection/FontsSelection';

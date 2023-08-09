@@ -36,6 +36,11 @@ export class Card {
     );
   };
 
+
+  updateTexts = () => {
+    // au lieu de renderEditText et handleInputChange
+  }
+
   renderEditText = () => {
     return (
       <div>

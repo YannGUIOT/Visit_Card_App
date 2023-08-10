@@ -52,36 +52,40 @@ export const CardBoard = () => {
           <p>Carte :</p>
           <select value={card.state.backgrdColor} onChange={updateChange('backgrdColor')}>
             <option value="#ffffff">Blanc</option>
-            <option value="#ffcccb">Rouge</option>
-            <option value="#caffba">Vert</option>
-            <option value="#ccccff">Bleu</option>
+            <option value="#ff0000">Rouge</option>
+            <option value="#00ff00">Vert</option>
+            <option value="#0000ff">Bleu</option>
+            <option value="#000000">Noir</option>
           </select>
         </div>
         <div>
           <p>Entreprise :</p>
           <select value={card.state.companyColor} onChange={updateChange('companyColor')}>
             <option value="#ffffff">Blanc</option>
-            <option value="#ffcccb">Rouge</option>
-            <option value="#caffba">Vert</option>
-            <option value="#ccccff">Bleu</option>
+            <option value="#ff0000">Rouge</option>
+            <option value="#00ff00">Vert</option>
+            <option value="#0000ff">Bleu</option>
+            <option value="#000000">Noir</option>
           </select>
         </div>
         <div>
           <p>Nom & Prénom :</p>
           <select value={card.state.namesColor} onChange={updateChange('namesColor')}>
             <option value="#ffffff">Blanc</option>
-            <option value="#ffcccb">Rouge</option>
-            <option value="#caffba">Vert</option>
-            <option value="#ccccff">Bleu</option>
+            <option value="#ff0000">Rouge</option>
+            <option value="#00ff00">Vert</option>
+            <option value="#0000ff">Bleu</option>
+            <option value="#000000">Noir</option>
           </select>
         </div>
         <div>
           <p>Email & Tel :</p>
           <select value={card.state.contactColor} onChange={updateChange('contactColor')}>
             <option value="#ffffff">Blanc</option>
-            <option value="#ffcccb">Rouge</option>
-            <option value="#caffba">Vert</option>
-            <option value="#ccccff">Bleu</option>
+            <option value="#ff0000">Rouge</option>
+            <option value="#00ff00">Vert</option>
+            <option value="#0000ff">Bleu</option>
+            <option value="#000000">Noir</option>
           </select>
         </div>
       </div>

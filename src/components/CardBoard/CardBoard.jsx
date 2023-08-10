@@ -13,11 +13,18 @@ import './CardBoard.scss'
 export const CardBoard = () => {
 
   const [card, setCard] = useState(new Card());
+  const [selectedModel, setSelectedModel] = useState(null);
 
   const Models = [Model_1, Model_2, Model_3, Model_4, Model_5, Model_6, Model_7];
 
   const updateChange = (field) => (event) => {
     card.updateCard(field, event.target.value);
+    setCard({ ...card });
+  };
+
+  const handleModelSelect = (index) => {
+    setSelectedModel(index);
+    card.updateCard('model', index); // Met à jour le modèle dans card.state.model
     setCard({ ...card });
   };
 
@@ -28,7 +35,12 @@ export const CardBoard = () => {
       SELECT YOUR MODEL :
       {Models.map((Model, index) => (
           <div key={index}>
-            <img src={Model} alt={`Model ${index + 1}`} className='model' height={'100px'} />
+            <img 
+              src={Model} 
+              alt={`Model ${index + 1}`} 
+              className={`model ${selectedModel === index ? 'selected' : ''}`}
+              onClick={() => handleModelSelect(index)}
+              height={'100px'} />
           </div>
         ))}
       </div>

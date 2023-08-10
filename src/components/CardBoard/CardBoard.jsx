@@ -25,6 +25,7 @@ export const CardBoard = () => {
     <div className="grid-container cardBoard">
       <div className='grid-item cardDisplay'>{card.renderCard()}</div>
       <div className='grid-item modelSelection'>
+      SELECT YOUR MODEL :
       {Models.map((Model, index) => (
           <div key={index}>
             <img src={Model} alt={`Model ${index + 1}`} className='model' />

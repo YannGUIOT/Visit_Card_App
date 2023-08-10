@@ -19,31 +19,31 @@ export const CardBoard = () => {
       <div className='grid-item textsForm'>
       <input
         type="text"
-        name="ENTREPRISE:"
+        name="company"
         value={card.state.company}
         onChange={updateChange('company')}
       />
       <input
         type="text"
-        name="NOM:"
+        name="lastName"
         value={card.state.lastName}
         onChange={updateChange('lastName')}
       />
       <input
         type="text"
-        name="Prénom:"
+        name="firstName"
         value={card.state.firstName}
         onChange={updateChange('firstName')}
       />
       <input
         type="text"
-        name="email:"
+        name="email"
         value={card.state.email}
         onChange={updateChange('email')}
       />
       <input
         type="text"
-        name="tel:"
+        name="phone"
         value={card.state.phone}
         onChange={updateChange('phone')}
       /></div>

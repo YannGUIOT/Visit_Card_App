@@ -41,7 +41,7 @@ export class Card {
       Model_7
     ];
   
-    return modelImages[this.state.model]; // -1 because array index starts from 0
+    return modelImages[this.state.model];
   }
   
   renderCard = () => {

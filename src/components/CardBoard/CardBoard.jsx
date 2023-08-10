@@ -9,7 +9,6 @@ export const CardBoard = () => {
 
   const handleChange = (field) => (event) => {
     card.updateTexts(field, event.target.value);
-    // Mettez à jour l'état de la carte avec la nouvelle instance mise à jour
     setCard({ ...card });
   };
 

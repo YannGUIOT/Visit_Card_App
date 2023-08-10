@@ -1,6 +1,15 @@
 import './Card.scss'
 import Tel from '../assets/tel.png';
 import Email from '../assets/email.png';
+
+import Model_1 from '../assets/models/model-1.png';
+import Model_2 from '../assets/models/model-2.png';
+import Model_3 from '../assets/models/model-3.png';
+import Model_4 from '../assets/models/model-4.png';
+import Model_5 from '../assets/models/model-5.png';
+import Model_6 from '../assets/models/model-6.png';
+import Model_7 from '../assets/models/model-7.png';
+
 export class Card {
   constructor() {
     this.state = {
@@ -17,13 +26,27 @@ export class Card {
       companyFont: 'Arial',
       namesFont: 'Arial',
       contactFont: 'Arial',
-      model: 1
+      model: 0
     };
   }
 
+  getModelImage() {
+    const modelImages = [
+      Model_1,
+      Model_2,
+      Model_3,
+      Model_4,
+      Model_5,
+      Model_6,
+      Model_7
+    ];
+  
+    return modelImages[this.state.model]; // -1 because array index starts from 0
+  }
+  
   renderCard = () => {
     return (
-      <div className="card" style={{ backgroundColor: this.state.backgrdColor }}>
+      <div className="card" style={{ backgroundColor: this.state.backgrdColor, backgroundImage: `url(${this.getModelImage()})` }}>
         <div className="company" style={{ color: this.state.companyColor, fontFamily: this.state.companyFont }}>{this.state.company}</div>
         <div className="fonction" style={{ color: this.state.companyColor, fontFamily: this.state.companyFont }}>{this.state.fonction}</div>
         <div className="names" style={{ color: this.state.namesColor, fontFamily: this.state.namesFont }}>{this.state.firstName} {this.state.lastName}</div>

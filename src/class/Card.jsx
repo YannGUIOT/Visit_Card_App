@@ -17,10 +17,6 @@ export class Card {
     };
   }
 
-  updateColors = (field, value) => {
-    this.state[field] = value;
-  };
-
   renderCard = () => {
     return (
       <div className="card" style={{ backgroundColor: this.state.backgrdColor }}>
@@ -37,17 +33,4 @@ export class Card {
     this.state[field] = value;
   }
 
-
-  renderColorSelect = () => {
-    return (
-      <div>
-        <select value={this.state.backgrdColor} onChange={event => this.handleColorChange('backgrdColor', event.target.value)}>
-          <option value="#ffffff">Blanc</option>
-          <option value="#ffcccb">Rouge</option>
-          <option value="#caffba">Vert</option>
-          <option value="#ccccff">Bleu</option>
-        </select>
-      </div>
-    );
-  };
 }

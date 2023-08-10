@@ -85,7 +85,38 @@ export const CardBoard = () => {
           </select>
         </div>
       </div>
-      <div className='grid-item fontsSelection'></div>
+      <div className='grid-item fontsSelection'>
+        <div>
+          <p>Entreprise :</p>
+          <select value={card.state.companyFont} onChange={updateChange('companyFont')}>
+            <option value="Arial">Arial</option>
+            <option value="Courier New">Courier</option>
+            <option value="Lucida Sans">Lucida</option>
+            <option value="Times New Roman">Times</option>
+            <option value="Trebuchet MS">Trebuchet</option>
+          </select>
+        </div>
+        <div>
+          <p>Nom & Prénom :</p>
+          <select value={card.state.namesFont} onChange={updateChange('namesFont')}>
+            <option value="Arial">Arial</option>
+            <option value="Courier New">Courier</option>
+            <option value="Lucida Sans">Lucida</option>
+            <option value="Times New Roman">Times</option>
+            <option value="Trebuchet MS">Trebuchet</option>
+          </select>
+        </div>
+        <div>
+          <p>Email & Tel :</p>
+          <select value={card.state.contactFont} onChange={updateChange('contactFont')}>
+            <option value="Arial">Arial</option>
+            <option value="Courier New">Courier</option>
+            <option value="Lucida Sans">Lucida</option>
+            <option value="Times New Roman">Times</option>
+            <option value="Trebuchet MS">Trebuchet</option>
+          </select>
+        </div>
+      </div>
       <div className='grid-item other'></div>
     </div>
   )

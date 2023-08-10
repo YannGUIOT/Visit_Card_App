@@ -65,42 +65,60 @@ export const CardBoard = () => {
         ))}
       </div>
       <div className='grid-item textsForm'>
-      <input
-        type="text"
-        name="company"
-        value={card.state.company}
-        onChange={updateChange('company')}
-      />
-      <input
-        type="text"
-        name="fonction"
-        value={card.state.fonction}
-        onChange={updateChange('fonction')}
-      />
-      <input
-        type="text"
-        name="firstName"
-        value={card.state.firstName}
-        onChange={updateChange('firstName')}
-      />
-      <input
-        type="text"
-        name="lastName"
-        value={card.state.lastName}
-        onChange={updateChange('lastName')}
-      />
-      <input
-        type="text"
-        name="email"
-        value={card.state.email}
-        onChange={updateChange('email')}
-      />
-      <input
-        type="text"
-        name="phone"
-        value={card.state.phone}
-        onChange={updateChange('phone')}
-      /></div>
+      <div>
+        Entreprise :
+        <input
+          type="text"
+          name="company"
+          value={card.state.company}
+          onChange={updateChange('company')}
+        />
+      </div>
+      <div>
+        Titre Pro :
+        <input
+          type="text"
+          name="fonction"
+          value={card.state.fonction}
+          onChange={updateChange('fonction')}
+        />
+      </div>
+      <div>
+        Prénom :
+        <input
+          type="text"
+          name="firstName"
+          value={card.state.firstName}
+          onChange={updateChange('firstName')}
+        />
+      </div>
+      <div>
+        Nom :
+        <input
+          type="text"
+          name="lastName"
+          value={card.state.lastName}
+          onChange={updateChange('lastName')}
+        />
+      </div>
+      <div>
+        Email :
+        <input
+          type="text"
+          name="email"
+          value={card.state.email}
+          onChange={updateChange('email')}
+        />
+      </div>
+      <div>
+        Tel :
+        <input
+          type="text"
+          name="phone"
+          value={card.state.phone}
+          onChange={updateChange('phone')}
+        />
+      </div></div>
       <div className='grid-item colorsSelection'>
         <div>
           <p>Carte :</p>

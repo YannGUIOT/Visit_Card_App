@@ -117,7 +117,7 @@ export const CardBoard = () => {
           <p>Police d'écriture :</p>
           <select value={card.state.font} onChange={updateChange('font')}>
             {fonts.map((font, index) => (
-              <option key={index} value={font}>
+              <option key={index} value={font} style={{fontFamily: font}}>
                 {font}
               </option>
             ))}

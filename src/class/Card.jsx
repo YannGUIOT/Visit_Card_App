@@ -35,21 +35,6 @@ export class Card {
 
   updateTexts = (field, value) => {
     this.state[field] = value;
-    // if(field=='company') {
-    //   this.state.company = value;
-    // }
-    // if(field=='lastName') {
-    //   this.state.lastName = value;
-    // }
-    // if(field=='firstName') {
-    //   this.state.firstName = value;
-    // }
-    // if(field=='email') {
-    //   this.state.email = value;
-    // }
-    // if(field=='phone') {
-    //   this.state.phone = value;
-    // }
   }
 
 

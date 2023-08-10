@@ -1,5 +1,12 @@
 import { Card } from '../../class/Card';
 import { useState } from 'react';
+import Model_1 from '../../assets/models/model-1.png';
+import Model_2 from '../../assets/models/model-2.png';
+import Model_3 from '../../assets/models/model-3.png';
+import Model_4 from '../../assets/models/model-4.png';
+import Model_5 from '../../assets/models/model-5.png';
+import Model_6 from '../../assets/models/model-6.png';
+import Model_7 from '../../assets/models/model-7.png';
 
 import './CardBoard.scss'
 

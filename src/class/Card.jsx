@@ -20,12 +20,8 @@ export class Card {
       email: 'john.doe@example.com',
       phone: '123-456-7890',
       backgrdColor: '#ffffff',
-      companyColor: '#000000',
-      namesColor: '#000000',
-      contactColor: '#000000',
-      companyFont: 'Arial',
-      namesFont: 'Arial',
-      contactFont: 'Arial',
+      textColor: '#000000',
+      font: 'Arial',
       model: 0
     };
   }
@@ -46,11 +42,18 @@ export class Card {
   
   renderCard = () => {
     return (
-      <div className="card" style={{ backgroundColor: this.state.backgrdColor, backgroundImage: `url(${this.getModelImage()})` }}>
-        <div className="company" style={{ color: this.state.companyColor, fontFamily: this.state.companyFont }}>{this.state.company}</div>
-        <div className="fonction" style={{ color: this.state.companyColor, fontFamily: this.state.companyFont }}>{this.state.fonction}</div>
-        <div className="names" style={{ color: this.state.namesColor, fontFamily: this.state.namesFont }}>{this.state.firstName} {this.state.lastName}</div>
-        <div className="contact" style={{ color: this.state.contactColor, fontFamily: this.state.contactFont }}>
+      <div 
+        className="card" 
+        style={{ 
+          backgroundColor: this.state.backgrdColor, 
+          backgroundImage: `url(${this.getModelImage()})`,
+          color: this.state.textColor,
+          fontFamily: this.state.font
+          }}>
+        <div className="company">{this.state.company}</div>
+        <div className="fonction">{this.state.fonction}</div>
+        <div className="names">{this.state.firstName} {this.state.lastName}</div>
+        <div className="contact">
           <div className='contact-info'><img src={Email} height={"15px"} width={"15px"}/> {this.state.email}</div>
           <div className='contact-info'><img src={Tel} height={"15px"} width={"15px"}/>  {this.state.phone}</div>
         </div>

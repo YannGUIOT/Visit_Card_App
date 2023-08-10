@@ -1,5 +1,5 @@
 import { Card } from '../../class/Card';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Model_1 from '../../assets/models/model-1.png';
 import Model_2 from '../../assets/models/model-2.png';
 import Model_3 from '../../assets/models/model-3.png';
@@ -15,6 +15,26 @@ export const CardBoard = () => {
   const [card, setCard] = useState(new Card());
   const [selectedModel, setSelectedModel] = useState(0);
 
+  const fonts = [
+    "Arial",
+    "Courier New",
+    "Lucida Sans",
+    "Times New Roman",
+    "Trebuchet MS",
+    "Roboto",
+    "Borel",
+    "Kanit",
+    "Dancing Script",
+    'Caprasimo',
+    'Caveat',
+    'Indie Flower',
+    'Lilita One', 
+    'Pacifico',
+    'Permanent Marker', 
+    'Tektur',
+    'Ysabeau SC'
+  ];
+
   const Models = [Model_1, Model_2, Model_3, Model_4, Model_5, Model_6, Model_7];
 
   const updateChange = (field) => (event) => {
@@ -27,6 +47,7 @@ export const CardBoard = () => {
     card.updateCard('model', index); // Met à jour le modèle dans card.state.model
     setCard({ ...card });
   };
+
 
   return (
     <div className="grid-container cardBoard">
@@ -87,47 +108,19 @@ export const CardBoard = () => {
           <input type="color" value={card.state.backgrdColor} onChange={updateChange('backgrdColor')} />
         </div>
         <div>
-          <p>Entreprise & Titre Professionnel :</p>
-          <input type="color" value={card.state.companyColor} onChange={updateChange('companyColor')} />
-        </div>
-        <div>
-          <p>Nom & Prénom :</p>
-          <input type="color" value={card.state.namesColor} onChange={updateChange('namesColor')} />
-        </div>
-        <div>
-          <p>Email & Tel :</p>
-          <input type="color" value={card.state.contactColor} onChange={updateChange('contactColor')} />
+          <p>Textes :</p>
+          <input type="color" value={card.state.textColor} onChange={updateChange('textColor')} />
         </div>
       </div>
       <div className='grid-item fontsSelection'>
         <div>
-          <p>Entreprise & Titre Professionnel :</p>
-          <select value={card.state.companyFont} onChange={updateChange('companyFont')}>
-            <option value="Arial">Arial</option>
-            <option value="Courier New">Courier</option>
-            <option value="Lucida Sans">Lucida</option>
-            <option value="Times New Roman">Times</option>
-            <option value="Trebuchet MS">Trebuchet</option>
-          </select>
-        </div>
-        <div>
-          <p>Nom & Prénom :</p>
-          <select value={card.state.namesFont} onChange={updateChange('namesFont')}>
-            <option value="Arial">Arial</option>
-            <option value="Courier New">Courier</option>
-            <option value="Lucida Sans">Lucida</option>
-            <option value="Times New Roman">Times</option>
-            <option value="Trebuchet MS">Trebuchet</option>
-          </select>
-        </div>
-        <div>
-          <p>Email & Tel :</p>
-          <select value={card.state.contactFont} onChange={updateChange('contactFont')}>
-            <option value="Arial">Arial</option>
-            <option value="Courier New">Courier</option>
-            <option value="Lucida Sans">Lucida</option>
-            <option value="Times New Roman">Times</option>
-            <option value="Trebuchet MS">Trebuchet</option>
+          <p>Police d'écriture :</p>
+          <select value={card.state.font} onChange={updateChange('font')}>
+            {fonts.map((font, index) => (
+              <option key={index} value={font}>
+                {font}
+              </option>
+            ))}
           </select>
         </div>
       </div>

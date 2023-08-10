@@ -17,7 +17,7 @@ export class Card {
     };
   }
 
-  handleColorChange = (field, value) => {
+  updateColors = (field, value) => {
     this.state[field] = value;
   };
 
@@ -33,7 +33,7 @@ export class Card {
   };
 
 
-  updateTexts = (field, value) => {
+  updateCard = (field, value) => {
     this.state[field] = value;
   }
 

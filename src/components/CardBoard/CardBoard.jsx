@@ -7,8 +7,8 @@ export const CardBoard = () => {
 
   const [card, setCard] = useState(new Card());
 
-  const handleChange = (field) => (event) => {
-    card.updateTexts(field, event.target.value);
+  const updateChange = (field) => (event) => {
+    card.updateCard(field, event.target.value);
     setCard({ ...card });
   };
 
@@ -21,33 +21,70 @@ export const CardBoard = () => {
         type="text"
         name="ENTREPRISE:"
         value={card.state.company}
-        onChange={handleChange('company')}
+        onChange={updateChange('company')}
       />
       <input
         type="text"
         name="NOM:"
         value={card.state.lastName}
-        onChange={handleChange('lastName')}
+        onChange={updateChange('lastName')}
       />
       <input
         type="text"
         name="Prénom:"
         value={card.state.firstName}
-        onChange={handleChange('firstName')}
+        onChange={updateChange('firstName')}
       />
       <input
         type="text"
         name="email:"
         value={card.state.email}
-        onChange={handleChange('email')}
+        onChange={updateChange('email')}
       />
       <input
         type="text"
         name="tel:"
         value={card.state.phone}
-        onChange={handleChange('phone')}
+        onChange={updateChange('phone')}
       /></div>
-      <div className='grid-item colorsSelection'>{card.renderColorSelect()}</div>
+      <div className='grid-item colorsSelection'>
+        <div>
+          <p>Carte :</p>
+          <select value={card.state.backgrdColor} onChange={updateChange('backgrdColor')}>
+            <option value="#ffffff">Blanc</option>
+            <option value="#ffcccb">Rouge</option>
+            <option value="#caffba">Vert</option>
+            <option value="#ccccff">Bleu</option>
+          </select>
+        </div>
+        <div>
+          <p>Entreprise :</p>
+          <select value={card.state.companyColor} onChange={updateChange('companyColor')}>
+            <option value="#ffffff">Blanc</option>
+            <option value="#ffcccb">Rouge</option>
+            <option value="#caffba">Vert</option>
+            <option value="#ccccff">Bleu</option>
+          </select>
+        </div>
+        <div>
+          <p>Nom & Prénom :</p>
+          <select value={card.state.namesColor} onChange={updateChange('namesColor')}>
+            <option value="#ffffff">Blanc</option>
+            <option value="#ffcccb">Rouge</option>
+            <option value="#caffba">Vert</option>
+            <option value="#ccccff">Bleu</option>
+          </select>
+        </div>
+        <div>
+          <p>Email & Tel :</p>
+          <select value={card.state.contactColor} onChange={updateChange('contactColor')}>
+            <option value="#ffffff">Blanc</option>
+            <option value="#ffcccb">Rouge</option>
+            <option value="#caffba">Vert</option>
+            <option value="#ccccff">Bleu</option>
+          </select>
+        </div>
+      </div>
       <div className='grid-item fontsSelection'></div>
       <div className='grid-item other'></div>
     </div>

@@ -18,7 +18,6 @@ export const CardBoard = () => {
   const fonts = [
     "Arial",
     "Courier New",
-    "Lucida Sans",
     "Times New Roman",
     "Trebuchet MS",
     "Roboto",
@@ -124,7 +123,9 @@ export const CardBoard = () => {
           </select>
         </div>
       </div>
-      <div className='grid-item other'></div>
+      <div className='grid-item other'>
+        <button>Télécharger</button>
+      </div>
     </div>
   )
 }

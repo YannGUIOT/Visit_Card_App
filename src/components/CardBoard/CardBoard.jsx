@@ -14,6 +14,8 @@ export const CardBoard = () => {
 
   const [card, setCard] = useState(new Card());
 
+  const Models = [Model_1, Model_2, Model_3, Model_4, Model_5, Model_6, Model_7];
+
   const updateChange = (field) => (event) => {
     card.updateCard(field, event.target.value);
     setCard({ ...card });
@@ -22,7 +24,13 @@ export const CardBoard = () => {
   return (
     <div className="grid-container cardBoard">
       <div className='grid-item cardDisplay'>{card.renderCard()}</div>
-      <div className='grid-item modelSelection'></div>
+      <div className='grid-item modelSelection'>
+      {Models.map((Model, index) => (
+          <div key={index}>
+            <img src={Model} alt={`Model ${index + 1}`} className='model' />
+          </div>
+        ))}
+      </div>
       <div className='grid-item textsForm'>
       <input
         type="text"

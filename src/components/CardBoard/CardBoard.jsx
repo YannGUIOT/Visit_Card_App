@@ -25,6 +25,12 @@ export const CardBoard = () => {
       />
       <input
         type="text"
+        name="fonction"
+        value={card.state.fonction}
+        onChange={updateChange('fonction')}
+      />
+      <input
+        type="text"
         name="lastName"
         value={card.state.lastName}
         onChange={updateChange('lastName')}
@@ -59,7 +65,7 @@ export const CardBoard = () => {
           </select>
         </div>
         <div>
-          <p>Entreprise :</p>
+          <p>Entreprise & Fonction :</p>
           <select value={card.state.companyColor} onChange={updateChange('companyColor')}>
             <option value="#ffffff">Blanc</option>
             <option value="#ff0000">Rouge</option>

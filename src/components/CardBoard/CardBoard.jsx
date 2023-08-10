@@ -31,15 +31,15 @@ export const CardBoard = () => {
       />
       <input
         type="text"
-        name="lastName"
-        value={card.state.lastName}
-        onChange={updateChange('lastName')}
-      />
-      <input
-        type="text"
         name="firstName"
         value={card.state.firstName}
         onChange={updateChange('firstName')}
+      />
+      <input
+        type="text"
+        name="lastName"
+        value={card.state.lastName}
+        onChange={updateChange('lastName')}
       />
       <input
         type="text"
@@ -97,7 +97,7 @@ export const CardBoard = () => {
       </div>
       <div className='grid-item fontsSelection'>
         <div>
-          <p>Entreprise :</p>
+          <p>Entreprise & Fonction :</p>
           <select value={card.state.companyFont} onChange={updateChange('companyFont')}>
             <option value="Arial">Arial</option>
             <option value="Courier New">Courier</option>

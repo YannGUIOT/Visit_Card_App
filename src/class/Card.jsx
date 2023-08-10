@@ -23,9 +23,10 @@ export class Card {
     return (
       <div className="card" style={{ backgroundColor: this.state.backgrdColor }}>
         <div className="company" style={{ color: this.state.companyColor, fontFamily: this.state.companyFont }}>{this.state.company}</div>
-        <div className="names" style={{ color: this.state.namesColor, fontFamily: this.state.namesFont }}>{this.state.firstName} {this.state.lastName}</div>
         <div className="fonction" style={{ color: this.state.companyColor, fontFamily: this.state.companyFont }}>{this.state.fonction}</div>
-        <div className="contact" style={{ color: this.state.contactColor, fontFamily: this.state.contactFont }}><p>Email: {this.state.email}</p><p>Tel: {this.state.phone}</p></div>
+        <div className="names" style={{ color: this.state.namesColor, fontFamily: this.state.namesFont }}>{this.state.firstName} {this.state.lastName}</div>
+        <div className="contact" style={{ color: this.state.contactColor, fontFamily: this.state.contactFont }}>
+          <div>Email: {this.state.email}</div><div>Tel: {this.state.phone}</div></div>
       </div>
     );
   };

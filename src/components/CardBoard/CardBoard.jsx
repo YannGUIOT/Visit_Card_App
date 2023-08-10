@@ -28,7 +28,7 @@ export const CardBoard = () => {
       SELECT YOUR MODEL :
       {Models.map((Model, index) => (
           <div key={index}>
-            <img src={Model} alt={`Model ${index + 1}`} className='model' />
+            <img src={Model} alt={`Model ${index + 1}`} className='model' height={'100px'} />
           </div>
         ))}
       </div>

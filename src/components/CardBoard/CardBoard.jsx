@@ -84,43 +84,19 @@ export const CardBoard = () => {
       <div className='grid-item colorsSelection'>
         <div>
           <p>Carte :</p>
-          <select value={card.state.backgrdColor} onChange={updateChange('backgrdColor')}>
-            <option value="#ffffff">Blanc</option>
-            <option value="#ff0000">Rouge</option>
-            <option value="#00ff00">Vert</option>
-            <option value="#0000ff">Bleu</option>
-            <option value="#808088">Gris</option>
-          </select>
+          <input type="color" value={card.state.backgrdColor} onChange={updateChange('backgrdColor')} />
         </div>
         <div>
           <p>Entreprise & Titre Professionnel :</p>
-          <select value={card.state.companyColor} onChange={updateChange('companyColor')}>
-            <option value="#ffffff">Blanc</option>
-            <option value="#ff0000">Rouge</option>
-            <option value="#00ff00">Vert</option>
-            <option value="#0000ff">Bleu</option>
-            <option value="#000000">Noir</option>
-          </select>
+          <input type="color" value={card.state.companyColor} onChange={updateChange('companyColor')} />
         </div>
         <div>
           <p>Nom & Prénom :</p>
-          <select value={card.state.namesColor} onChange={updateChange('namesColor')}>
-            <option value="#ffffff">Blanc</option>
-            <option value="#ff0000">Rouge</option>
-            <option value="#00ff00">Vert</option>
-            <option value="#0000ff">Bleu</option>
-            <option value="#000000">Noir</option>
-          </select>
+          <input type="color" value={card.state.namesColor} onChange={updateChange('namesColor')} />
         </div>
         <div>
           <p>Email & Tel :</p>
-          <select value={card.state.contactColor} onChange={updateChange('contactColor')}>
-            <option value="#ffffff">Blanc</option>
-            <option value="#ff0000">Rouge</option>
-            <option value="#00ff00">Vert</option>
-            <option value="#0000ff">Bleu</option>
-            <option value="#000000">Noir</option>
-          </select>
+          <input type="color" value={card.state.contactColor} onChange={updateChange('contactColor')} />
         </div>
       </div>
       <div className='grid-item fontsSelection'>

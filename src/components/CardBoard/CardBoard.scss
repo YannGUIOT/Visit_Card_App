@@ -49,10 +49,6 @@
     background-color: rgb(190, 210, 226);
     grid-column: 4 / 10; /* Occupe la colonne 4 à 9 */
     grid-row: 2 / 6; /* Occupe les rangées 3 à 6 */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
   }
   
   .other {
@@ -72,28 +68,11 @@
     align-items: center;
     border: 1px solid black;
   }
-  
-  // .cardDisplay {
+}
 
-  // }
-
-  // .modelSelection {
-
-  // }
-  
-  // .textsForm {
-
-  // }
-  
-  // .colorsSelection {
-
-  // }
-  
-  // .fontsSelection {
-
-  // }
-  
-  // .other {
-
-  // } 
+.cardDisplay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }

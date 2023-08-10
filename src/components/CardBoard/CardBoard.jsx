@@ -61,11 +61,11 @@ export const CardBoard = () => {
             <option value="#ff0000">Rouge</option>
             <option value="#00ff00">Vert</option>
             <option value="#0000ff">Bleu</option>
-            <option value="#000000">Noir</option>
+            <option value="#808088">Gris</option>
           </select>
         </div>
         <div>
-          <p>Entreprise & Fonction :</p>
+          <p>Entreprise & Titre Professionnel :</p>
           <select value={card.state.companyColor} onChange={updateChange('companyColor')}>
             <option value="#ffffff">Blanc</option>
             <option value="#ff0000">Rouge</option>
@@ -97,7 +97,7 @@ export const CardBoard = () => {
       </div>
       <div className='grid-item fontsSelection'>
         <div>
-          <p>Entreprise & Fonction :</p>
+          <p>Entreprise & Titre Professionnel :</p>
           <select value={card.state.companyFont} onChange={updateChange('companyFont')}>
             <option value="Arial">Arial</option>
             <option value="Courier New">Courier</option>

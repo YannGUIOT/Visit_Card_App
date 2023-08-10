@@ -13,7 +13,7 @@ import './CardBoard.scss'
 export const CardBoard = () => {
 
   const [card, setCard] = useState(new Card());
-  const [selectedModel, setSelectedModel] = useState(null);
+  const [selectedModel, setSelectedModel] = useState(0);
 
   const Models = [Model_1, Model_2, Model_3, Model_4, Model_5, Model_6, Model_7];
 

@@ -1,6 +1,6 @@
 .card {
-  // width: 22em;
-  // height: 14em;
+  width: 22em;
+  height: 14em;
   border: 1px solid black;
   box-shadow: 5px 5px 2px rgb(68, 68, 68);
   display: flex;
@@ -11,12 +11,10 @@
 
 .company {
   font-weight: bold;
-  // font-size: x-large;
 }
 
 .fonction {
   font-weight: bold;
-  // font-size: medium;
 }
 
 .contact-info {

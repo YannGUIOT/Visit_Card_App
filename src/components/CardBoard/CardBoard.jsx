@@ -88,6 +88,7 @@ export const CardBoard = () => {
             name="company"
             value={card.state.company}
             onChange={updateChange('company')}
+            maxLength={20}
           />
         </div>
       </div>
@@ -101,6 +102,7 @@ export const CardBoard = () => {
             name="fonction"
             value={card.state.fonction}
             onChange={updateChange('fonction')}
+            maxLength={28}
           />
         </div>
       </div>
@@ -114,6 +116,7 @@ export const CardBoard = () => {
             name="name"
             value={card.state.name}
             onChange={updateChange('name')}
+            maxLength={28}
           />
         </div>
       </div>

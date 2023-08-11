@@ -77,7 +77,7 @@ export const CardBoard = () => {
         ))}
       </div>
       <div className='grid-item textsForm'>
-      <h2>INFOS</h2>
+      <h2>INFORMATIONS</h2>
       <div>
         Entreprise :
         <input
@@ -161,7 +161,7 @@ export const CardBoard = () => {
         </div>
         <div>
           <label>
-            <p>Contours : <input type="checkbox" checked={card.state.textBorder} onChange={updateTextBorder}/></p>
+            <p>Contouré : <input type="checkbox" checked={card.state.textBorder} onChange={updateTextBorder}/></p>
           </label>
         </div>
       </div>

@@ -1,5 +1,4 @@
 import { CardBoard } from "../../components/CardBoard/CardBoard";
-import { ModelSelection } from "../../components/ModelSelection/ModelSelection";
 
 export const Home = () => {
 

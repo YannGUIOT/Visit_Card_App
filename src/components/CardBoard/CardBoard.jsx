@@ -21,7 +21,6 @@ export const CardBoard = () => {
     "Times New Roman",
     "Trebuchet MS",
     "Roboto",
-    "Borel",
     "Kanit",
     "Dancing Script",
     'Caprasimo',
@@ -52,6 +51,15 @@ export const CardBoard = () => {
     card.updateCard('model', index); // Met à jour le modèle dans card.state.model
     setCard({ ...card });
   };
+
+  const changeSize = (n) => {
+    if(((n == -1) && (card.state.fontSizeTexts > 14)) || ((n == 1) && (card.state.fontSizeTexts < 24))) {
+      card.updateCard('fontSizeTexts', card.state.fontSizeTexts + n);
+      card.updateCard('fontSizeCompany', card.state.fontSizeCompany + n);
+      setCard({ ...card });
+    }
+  };
+  
 
 
   return (
@@ -134,11 +142,6 @@ export const CardBoard = () => {
           <p>Textes :</p>
           <input type="color" value={card.state.textColor} onChange={updateChange('textColor')} />
         </div>
-        <div>
-          <label>
-            <p>Contours : <input type="checkbox" checked={card.state.textBorder} onChange={updateTextBorder}/></p>
-          </label>
-        </div>
       </div>
       <div className='grid-item fontsSelection'>
         <div>
@@ -150,6 +153,15 @@ export const CardBoard = () => {
               </option>
             ))}
           </select>
+          <p>taille : &nbsp;
+            <button onClick={() => changeSize(-1)}>-</button>
+            <button onClick={() => changeSize(1)}>+</button>
+          </p>
+        </div>
+        <div>
+          <label>
+            <p>Contours : <input type="checkbox" checked={card.state.textBorder} onChange={updateTextBorder}/></p>
+          </label>
         </div>
       </div>
       <div className='grid-item other'>

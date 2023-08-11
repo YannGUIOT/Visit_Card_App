@@ -22,6 +22,8 @@ export class Card {
       backgrdColor: '#ffffff',
       textColor: '#000000',
       font: 'Arial',
+      fontSizeTexts: 18,
+      fontSizeCompany: 24,
       textBorder: false,
       model: 0
     };
@@ -46,16 +48,18 @@ export class Card {
       <div 
         className="card" 
         style={{ 
+          width: '22em',
+          height: '14em',
           backgroundColor: this.state.backgrdColor, 
           backgroundImage: `url(${this.getModelImage()})`,
           color: this.state.textColor,
           fontFamily: this.state.font,
           textShadow: this.state.textBorder ? '0px 0px 1px black' : 'none'
           }}>
-        <div className="company">{this.state.company}</div>
-        <div className="fonction">{this.state.fonction}</div>
-        <div className="names">{this.state.firstName} {this.state.lastName}</div>
-        <div className="contact">
+        <div className="company" style={{ fontSize: `${this.state.fontSizeCompany}px` }}>{this.state.company}</div>
+        <div className="fonction" style={{ fontSize: `${this.state.fontSizeTexts}px` }}>{this.state.fonction}</div>
+        <div className="names" style={{ fontSize: `${this.state.fontSizeTexts}px` }}>{this.state.firstName} {this.state.lastName}</div>
+        <div className="contact" style={{ fontSize: `${this.state.fontSizeTexts}px` }}>
           <div className='contact-info'><img src={Email} height={"15px"} width={"15px"}/> {this.state.email}</div>
           <div className='contact-info'><img src={Tel} height={"15px"} width={"15px"}/>  {this.state.phone}</div>
         </div>

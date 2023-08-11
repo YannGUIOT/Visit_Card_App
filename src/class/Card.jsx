@@ -54,7 +54,7 @@ export class Card {
           backgroundImage: `url(${this.getModelImage()})`,
           color: this.state.textColor,
           fontFamily: this.state.font,
-          textShadow: this.state.textBorder ? '0px 0px 1px black' : 'none'
+          textShadow: this.state.textBorder ? '0px 0px 2px black' : 'none'
           }}>
         <div className="company" style={{ fontSize: `${this.state.fontSizeCompany}px` }}>{this.state.company}</div>
         <div className="fonction" style={{ fontSize: `${this.state.fontSizeTexts}px` }}>{this.state.fonction}</div>

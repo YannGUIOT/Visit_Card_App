@@ -48,7 +48,7 @@ export const CardBoard = () => {
 
   const handleModelSelect = (index) => {
     setSelectedModel(index);
-    card.updateCard('model', index); // Met à jour le modèle dans card.state.model
+    card.updateCard('model', index);
     setCard({ ...card });
   };
 
@@ -60,7 +60,6 @@ export const CardBoard = () => {
     }
   };
   
-
 
   return (
     <div className="grid-container cardBoard">

@@ -8,7 +8,6 @@ import Model_3 from '../assets/models/model-3.png';
 import Model_4 from '../assets/models/model-4.png';
 import Model_5 from '../assets/models/model-5.png';
 import Model_6 from '../assets/models/model-6.png';
-import Model_7 from '../assets/models/model-7.png';
 
 export class Card {
   constructor() {
@@ -18,7 +17,7 @@ export class Card {
       firstName: 'John',
       fonction: 'Manager',
       email: 'john.doe@example.com',
-      phone: '123-456-7890',
+      phone: '01.23.45.67.89',
       backgrdColor: '#ffffff',
       textColor: '#000000',
       font: 'Arial',
@@ -36,8 +35,7 @@ export class Card {
       Model_3,
       Model_4,
       Model_5,
-      Model_6,
-      Model_7
+      Model_6
     ];
   
     return modelImages[this.state.model];

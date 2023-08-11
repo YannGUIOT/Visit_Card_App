@@ -6,7 +6,6 @@ import Model_3 from '../../assets/models/model-3.png';
 import Model_4 from '../../assets/models/model-4.png';
 import Model_5 from '../../assets/models/model-5.png';
 import Model_6 from '../../assets/models/model-6.png';
-import Model_7 from '../../assets/models/model-7.png';
 
 import './CardBoard.scss'
 
@@ -33,7 +32,7 @@ export const CardBoard = () => {
     'Ysabeau SC'
   ];
 
-  const Models = [Model_1, Model_2, Model_3, Model_4, Model_5, Model_6, Model_7];
+  const Models = [Model_1, Model_2, Model_3, Model_4, Model_5, Model_6];
 
   const updateChange = (field) => (event) => {
     card.updateCard(field, event.target.value);
@@ -65,7 +64,7 @@ export const CardBoard = () => {
     <div className="grid-container cardBoard">
       <div className='grid-item cardDisplay'>{card.renderCard()}</div>
       <div className='grid-item modelSelection'>
-      SELECT YOUR MODEL :
+      <h2>MODÈLES</h2>
       {Models.map((Model, index) => (
           <div key={index}>
             <img 
@@ -78,6 +77,7 @@ export const CardBoard = () => {
         ))}
       </div>
       <div className='grid-item textsForm'>
+      <h2>INFOS</h2>
       <div>
         Entreprise :
         <input
@@ -133,6 +133,7 @@ export const CardBoard = () => {
         />
       </div></div>
       <div className='grid-item colorsSelection'>
+        <h2>COULEURS</h2>
         <div>
           <p>Carte :</p>
           <input type="color" value={card.state.backgrdColor} onChange={updateChange('backgrdColor')} />
@@ -143,6 +144,7 @@ export const CardBoard = () => {
         </div>
       </div>
       <div className='grid-item fontsSelection'>
+        <h2>TEXTES</h2>
         <div>
           <p>Police d'écriture :</p>
           <select value={card.state.font} onChange={updateChange('font')}>

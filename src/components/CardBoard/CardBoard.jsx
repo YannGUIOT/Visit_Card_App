@@ -54,7 +54,7 @@ export const CardBoard = () => {
   const changeSize = (n) => {
     if(((n == -1) && (card.state.fontSizeTexts > 14)) || ((n == 1) && (card.state.fontSizeTexts < 24))) {
       card.updateCard('fontSizeTexts', card.state.fontSizeTexts + n);
-      card.updateCard('fontSizetitre1', card.state.fontSizetitre1 + n);
+      card.updateCard('fontSizeTitre1', card.state.fontSizeTitre1 + n);
       setCard({ ...card });
     }
   };

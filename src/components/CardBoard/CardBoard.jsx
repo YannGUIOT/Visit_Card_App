@@ -79,58 +79,69 @@ export const CardBoard = () => {
       <div className='grid-item textsForm'>
       <h2>INFORMATIONS</h2>
       <div>
-        Entreprise :
-        <input
-          type="text"
-          name="company"
-          value={card.state.company}
-          onChange={updateChange('company')}
-        />
+        <div className='info-col-1'>
+          Entreprise :
+        </div>
+        <div className='info-col-2'>
+          <input
+            type="text"
+            name="company"
+            value={card.state.company}
+            onChange={updateChange('company')}
+          />
+        </div>
       </div>
       <div>
-        Titre Pro :
-        <input
-          type="text"
-          name="fonction"
-          value={card.state.fonction}
-          onChange={updateChange('fonction')}
-        />
+        <div className='info-col-1'>
+          Titre Pro :
+        </div>
+        <div className='info-col-2'>
+          <input
+            type="text"
+            name="fonction"
+            value={card.state.fonction}
+            onChange={updateChange('fonction')}
+          />
+        </div>
       </div>
       <div>
-        Prénom :
-        <input
-          type="text"
-          name="firstName"
-          value={card.state.firstName}
-          onChange={updateChange('firstName')}
-        />
+        <div className='info-col-1'>
+          Nom :
+        </div>
+        <div className='info-col-2'>
+          <input
+            type="text"
+            name="name"
+            value={card.state.name}
+            onChange={updateChange('name')}
+          />
+        </div>
       </div>
       <div>
-        Nom :
-        <input
-          type="text"
-          name="lastName"
-          value={card.state.lastName}
-          onChange={updateChange('lastName')}
-        />
+        <div className='info-col-1'>
+          Email :
+        </div>
+        <div className='info-col-2'>
+          <input
+            type="text"
+            name="email"
+            value={card.state.email}
+            onChange={updateChange('email')}
+          />
+        </div>
       </div>
       <div>
-        Email :
-        <input
-          type="text"
-          name="email"
-          value={card.state.email}
-          onChange={updateChange('email')}
-        />
-      </div>
-      <div>
-        Tel :
-        <input
-          type="text"
-          name="phone"
-          value={card.state.phone}
-          onChange={updateChange('phone')}
-        />
+        <div className='info-col-1'>
+          Tel :
+        </div>
+        <div className='info-col-2'>
+          <input
+            type="text"
+            name="phone"
+            value={card.state.phone}
+            onChange={updateChange('phone')}
+          />
+        </div>
       </div></div>
       <div className='grid-item colorsSelection'>
         <h2>COULEURS</h2>

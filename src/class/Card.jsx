@@ -13,8 +13,7 @@ export class Card {
   constructor() {
     this.state = {
       company: 'Mon Entreprise',
-      lastName: 'Doe',
-      firstName: 'John',
+      name: 'John Doe',
       fonction: 'Manager',
       email: 'john.doe@example.com',
       phone: '01.23.45.67.89',
@@ -59,7 +58,7 @@ export class Card {
           {this.state.fonction}
         </div>
         <div className="names" style={{ fontSize: `${this.state.fontSizeTexts}px` }}>
-          {this.state.firstName} {this.state.lastName}
+          {this.state.name}
         </div>
         <div className="contact" style={{ fontSize: `${this.state.fontSizeTexts}px` }}>
           <div className='contact-info'>

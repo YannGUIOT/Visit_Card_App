@@ -80,7 +80,7 @@ export const CardBoard = () => {
       <h2>INFORMATIONS</h2>
       <div className='info-row'>
         <div className='info-col-1'>
-          Entreprise :
+          Titre 1 :
         </div>
         <div className='info-col-2'>
           <input
@@ -94,7 +94,7 @@ export const CardBoard = () => {
       </div>
       <div className='info-row'>
         <div className='info-col-1'>
-          Titre Pro :
+          Titre 2 :
         </div>
         <div className='info-col-2'>
           <input
@@ -108,7 +108,7 @@ export const CardBoard = () => {
       </div>
       <div className='info-row'>
         <div className='info-col-1'>
-          Nom :
+          Titre 3 :
         </div>
         <div className='info-col-2'>
           <input
@@ -143,6 +143,7 @@ export const CardBoard = () => {
             name="phone"
             value={card.state.phone}
             onChange={updateChange('phone')}
+            maxLength={18}
           />
         </div>
       </div></div>

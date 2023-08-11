@@ -8,31 +8,32 @@
   grid-template-rows: repeat(15, 1fr);
 }
 
-.company, .fonction {
+.titre1, .titre2 {
   font-weight: bold;
 }
 
-.company, .fonction, .names, .contact {
+.titre1, .titre2, .titre3, .contact {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.company {
+.titre1 {
   grid-row: 4 / 5;
 }
 
-.fonction {
+.titre2 {
   grid-row: 6 / 7;
 }
 
-.names {
+.titre3 {
   grid-row: 8 / 9;
 }
 
 .contact {
   grid-row: 11 / 13;
+  gap: 0.2em;
 }
 
 .contact-info {
@@ -42,4 +43,3 @@
   justify-content: center;
   gap: 0.5em;
 }
-

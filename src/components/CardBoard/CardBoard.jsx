@@ -54,7 +54,7 @@ export const CardBoard = () => {
   const changeSize = (n) => {
     if(((n == -1) && (card.state.fontSizeTexts > 14)) || ((n == 1) && (card.state.fontSizeTexts < 24))) {
       card.updateCard('fontSizeTexts', card.state.fontSizeTexts + n);
-      card.updateCard('fontSizeCompany', card.state.fontSizeCompany + n);
+      card.updateCard('fontSizetitre1', card.state.fontSizetitre1 + n);
       setCard({ ...card });
     }
   };
@@ -85,9 +85,9 @@ export const CardBoard = () => {
         <div className='info-col-2'>
           <input
             type="text"
-            name="company"
-            value={card.state.company}
-            onChange={updateChange('company')}
+            name="titre1"
+            value={card.state.titre1}
+            onChange={updateChange('titre1')}
             maxLength={20}
           />
         </div>
@@ -99,9 +99,9 @@ export const CardBoard = () => {
         <div className='info-col-2'>
           <input
             type="text"
-            name="fonction"
-            value={card.state.fonction}
-            onChange={updateChange('fonction')}
+            name="titre2"
+            value={card.state.titre2}
+            onChange={updateChange('titre2')}
             maxLength={28}
           />
         </div>
@@ -113,9 +113,9 @@ export const CardBoard = () => {
         <div className='info-col-2'>
           <input
             type="text"
-            name="name"
-            value={card.state.name}
-            onChange={updateChange('name')}
+            name="titre3"
+            value={card.state.titre3}
+            onChange={updateChange('titre3')}
             maxLength={28}
           />
         </div>

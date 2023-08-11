@@ -12,16 +12,16 @@ import Model_6 from '../assets/models/model-6.png';
 export class Card {
   constructor() {
     this.state = {
-      company: 'Mon Entreprise',
-      name: 'John Doe',
-      fonction: 'Manager',
-      email: 'john.doe@example.com',
+      titre1: 'JohnDoe&Co',
+      titre2: 'responsable',
+      titre3: 'John Doe',
+      email: 'john.doe@gmail.com',
       phone: '01.23.45.67.89',
       backgrdColor: '#ffffff',
       textColor: '#000000',
       font: 'Arial',
       fontSizeTexts: 18,
-      fontSizeCompany: 24,
+      fontSizeTitre1: 24,
       textBorder: false,
       model: 0
     };
@@ -51,14 +51,14 @@ export class Card {
           fontFamily: this.state.font,
           textShadow: this.state.textBorder ? '0px 0px 2px black' : 'none'
           }}>
-        <div className="company" style={{ fontSize: `${this.state.fontSizeCompany}px` }}>
-          {this.state.company}
+        <div className="titre1" style={{ fontSize: `${this.state.fontSizeTitre1}px` }}>
+          {this.state.titre1}
         </div>
-        <div className="fonction" style={{ fontSize: `${this.state.fontSizeTexts}px` }}>
-          {this.state.fonction}
+        <div className="titre2" style={{ fontSize: `${this.state.fontSizeTexts}px` }}>
+          {this.state.titre2}
         </div>
-        <div className="names" style={{ fontSize: `${this.state.fontSizeTexts}px` }}>
-          {this.state.name}
+        <div className="titre3" style={{ fontSize: `${this.state.fontSizeTexts}px` }}>
+          {this.state.titre3}
         </div>
         <div className="contact" style={{ fontSize: `${this.state.fontSizeTexts}px` }}>
           <div className='contact-info'>

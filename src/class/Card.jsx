@@ -52,9 +52,15 @@ export class Card {
           fontFamily: this.state.font,
           textShadow: this.state.textBorder ? '0px 0px 2px black' : 'none'
           }}>
-        <div className="company" style={{ fontSize: `${this.state.fontSizeCompany}px` }}>{this.state.company}</div>
-        <div className="fonction" style={{ fontSize: `${this.state.fontSizeTexts}px` }}>{this.state.fonction}</div>
-        <div className="names" style={{ fontSize: `${this.state.fontSizeTexts}px` }}>{this.state.firstName} {this.state.lastName}</div>
+        <div className="company" style={{ fontSize: `${this.state.fontSizeCompany}px` }}>
+          {this.state.company}
+        </div>
+        <div className="fonction" style={{ fontSize: `${this.state.fontSizeTexts}px` }}>
+          {this.state.fonction}
+        </div>
+        <div className="names" style={{ fontSize: `${this.state.fontSizeTexts}px` }}>
+          {this.state.firstName} {this.state.lastName}
+        </div>
         <div className="contact" style={{ fontSize: `${this.state.fontSizeTexts}px` }}>
           <div className='contact-info'><img src={Email} height={`${this.state.fontSizeTexts-2}px`}/> {this.state.email}</div>
           <div className='contact-info'><img src={Tel} height={`${this.state.fontSizeTexts-2}px`}/>  {this.state.phone}</div>
@@ -62,7 +68,6 @@ export class Card {
       </div>
     );
   };
-
 
   updateCard = (field, value) => {
     this.state[field] = value;

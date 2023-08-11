@@ -97,8 +97,17 @@
 .textsForm {
   display: flex;
   flex-direction: column;
+  font-family: 'Kanit';
 }
 
 h1, h2 {
   font-family: 'Indie Flower';
+}
+
+.textsForm input {
+  border-radius: 1em;
+  height: 1.8em;
+  width: 18em;
+  padding-left: 0.5em;
+  font-family: 'Kanit';
 }

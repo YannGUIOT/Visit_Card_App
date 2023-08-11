@@ -62,8 +62,12 @@ export class Card {
           {this.state.firstName} {this.state.lastName}
         </div>
         <div className="contact" style={{ fontSize: `${this.state.fontSizeTexts}px` }}>
-          <div className='contact-info'><img src={Email} height={`${this.state.fontSizeTexts-2}px`}/> {this.state.email}</div>
-          <div className='contact-info'><img src={Tel} height={`${this.state.fontSizeTexts-2}px`}/>  {this.state.phone}</div>
+          <div className='contact-info'>
+            <img src={Email} height={`${this.state.fontSizeTexts-2}px`}/> {this.state.email}
+          </div>
+          <div className='contact-info'>
+            <img src={Tel} height={`${this.state.fontSizeTexts-2}px`}/> {this.state.phone}
+          </div>
         </div>
       </div>
     );

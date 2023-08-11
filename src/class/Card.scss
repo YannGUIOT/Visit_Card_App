@@ -3,18 +3,36 @@
   height: 14em;
   border: 1px solid black;
   box-shadow: 5px 5px 2px rgb(68, 68, 68);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(7, 1fr);
+}
+
+.company, .fonction {
+  font-weight: bold;
+}
+
+.company, .fonction, .names, .contact {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 
 .company {
-  font-weight: bold;
+  grid-row: 2 / 3;
 }
 
 .fonction {
-  font-weight: bold;
+  grid-row: 3 / 4;
+}
+
+.names {
+  grid-row: 4 / 5;
+}
+
+.contact {
+  grid-row: 5 / 7;
 }
 
 .contact-info {

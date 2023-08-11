@@ -41,6 +41,12 @@ export const CardBoard = () => {
     setCard({ ...card });
   };
 
+  const updateTextBorder = () => {
+    card.updateCard('textBorder', !card.state.textBorder);
+    setCard({ ...card });
+  };
+  
+
   const handleModelSelect = (index) => {
     setSelectedModel(index);
     card.updateCard('model', index); // Met à jour le modèle dans card.state.model
@@ -127,6 +133,11 @@ export const CardBoard = () => {
         <div>
           <p>Textes :</p>
           <input type="color" value={card.state.textColor} onChange={updateChange('textColor')} />
+        </div>
+        <div>
+          <label>
+            <p>Contours : <input type="checkbox" checked={card.state.textBorder} onChange={updateTextBorder}/></p>
+          </label>
         </div>
       </div>
       <div className='grid-item fontsSelection'>

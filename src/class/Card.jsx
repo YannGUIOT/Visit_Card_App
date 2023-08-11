@@ -22,6 +22,7 @@ export class Card {
       backgrdColor: '#ffffff',
       textColor: '#000000',
       font: 'Arial',
+      textBorder: false,
       model: 0
     };
   }
@@ -48,7 +49,8 @@ export class Card {
           backgroundColor: this.state.backgrdColor, 
           backgroundImage: `url(${this.getModelImage()})`,
           color: this.state.textColor,
-          fontFamily: this.state.font
+          fontFamily: this.state.font,
+          textShadow: this.state.textBorder ? '0px 0px 1px black' : 'none'
           }}>
         <div className="company">{this.state.company}</div>
         <div className="fonction">{this.state.fonction}</div>

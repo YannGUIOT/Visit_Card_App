@@ -78,7 +78,7 @@ export const CardBoard = () => {
       </div>
       <div className='grid-item textsForm'>
       <h2>INFORMATIONS</h2>
-      <div>
+      <div className='info-row'>
         <div className='info-col-1'>
           Entreprise :
         </div>
@@ -91,7 +91,7 @@ export const CardBoard = () => {
           />
         </div>
       </div>
-      <div>
+      <div className='info-row'>
         <div className='info-col-1'>
           Titre Pro :
         </div>
@@ -104,7 +104,7 @@ export const CardBoard = () => {
           />
         </div>
       </div>
-      <div>
+      <div className='info-row'>
         <div className='info-col-1'>
           Nom :
         </div>
@@ -117,7 +117,7 @@ export const CardBoard = () => {
           />
         </div>
       </div>
-      <div>
+      <div className='info-row'>
         <div className='info-col-1'>
           Email :
         </div>
@@ -130,7 +130,7 @@ export const CardBoard = () => {
           />
         </div>
       </div>
-      <div>
+      <div className='info-row'>
         <div className='info-col-1'>
           Tel :
         </div>

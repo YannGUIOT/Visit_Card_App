@@ -105,9 +105,21 @@ h1, h2 {
 }
 
 .textsForm input {
-  border-radius: 1em;
-  height: 1.8em;
-  width: 18em;
   padding-left: 0.5em;
   font-family: 'Kanit';
+}
+
+.info-col-1 {
+  width: 8em;
+  text-align: end;
+}
+
+.info-col-2 {
+  margin-left: 0.5em;
+}
+
+.info-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }

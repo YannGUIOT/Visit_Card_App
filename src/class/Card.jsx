@@ -1,6 +1,6 @@
 import './Card.scss'
-import Tel from '../assets/tel.png';
-import Email from '../assets/email.png';
+import Phone from '../assets/phone.svg';
+import Email from '../assets/email.svg';
 
 import Model_1 from '../assets/models/model-1.png';
 import Model_2 from '../assets/models/model-2.png';
@@ -100,7 +100,7 @@ export class Card {
               }}>
           {this.state.title3}
         </div>
-        <div className="contact" style={{ fontSize: `${this.state.fontSizeTexts}px` }}>
+        <div className="contact">
           <div className='contact-email'
                style={{ 
                 color: this.state.email_color,
@@ -109,7 +109,11 @@ export class Card {
                 fontWeight: this.state.email_strong ? 'bold' : 'normal',
                 textShadow: this.state.email_border ? '0px 0px 2px black' : 'none', 
                 }}>
-            <img src={Email} height={`${this.state.email_size-2}px`}/> {this.state.email}
+            <img 
+              src={Email} 
+              height={`${this.state.email_size+2}px`}
+              style={{ fill: this.state.email.color }}  
+              /> {this.state.email}
           </div>
           <div className='contact-phone'
                style={{ 
@@ -119,7 +123,7 @@ export class Card {
                 fontWeight: this.state.phone_strong ? 'bold' : 'normal',
                 textShadow: this.state.phone_border ? '0px 0px 2px black' : 'none', 
                 }}>
-            <img src={Tel} height={`${this.state.phone_size-2}px`}/> {this.state.phone}
+            <img src={Phone} height={`${this.state.phone_size}px`}/> {this.state.phone}
           </div>
         </div>
       </div>

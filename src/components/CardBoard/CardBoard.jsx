@@ -40,31 +40,13 @@ export const CardBoard = () => {
     setCard({ ...card });
   };
 
-  const updateGlobalColor = () => {
-    card.updateCard('title1_color', card.state.global_color);
-    card.updateCard('title2_color', card.state.global_color);
-    card.updateCard('title3_color', card.state.global_color);
-    card.updateCard('email_color', card.state.global_color);
-    card.updateCard('phone_color', card.state.global_color);
-    setCard({ ...card });
-  };
-
-  const updateGlobalFont = () => {
-    card.updateCard('title1_font', card.state.global_font);
-    card.updateCard('title2_font', card.state.global_font);
-    card.updateCard('title3_font', card.state.global_font);
-    card.updateCard('email_font', card.state.global_font);
-    card.updateCard('phone_font', card.state.global_font);
-    setCard({ ...card });
-  };
-
   const updateGlobal = (field) => (event) => {
-    card.updateCard(`global_${field}`, event.target.value);
-    card.updateCard(`title1_${field}`, card.state[`global_${field}`]);
-    card.updateCard(`title2_${field}`, card.state[`global_${field}`]);
-    card.updateCard(`title3_${field}`, card.state[`global_${field}`]);
-    card.updateCard(`email_${field}`, card.state[`global_${field}`]);
-    card.updateCard(`phone_${field}`, card.state[`global_${field}`]);
+    card.updateCard(`global_${field}`, event.target.value); // ? est-ce utile ?
+    card.updateCard(`title1_${field}`, event.target.value);
+    card.updateCard(`title2_${field}`, event.target.value);
+    card.updateCard(`title3_${field}`, event.target.value);
+    card.updateCard(`email_${field}`, event.target.value);
+    card.updateCard(`phone_${field}`, event.target.value);
     setCard({ ...card });
   };
 
@@ -78,7 +60,7 @@ export const CardBoard = () => {
   };
 
   const changeSize = (field, n) => {
-    if( ((n==-1)&&(card.state[field] > 8)) || ((n==1)&&(card.state[field] < 28)) ) {
+    if( ((n==-1)&&(card.state[field] > 10)) || ((n==1)&&(card.state[field] < 36)) ) {
       card.updateCard(field, card.state[field] + n);
       setCard({ ...card });
     }

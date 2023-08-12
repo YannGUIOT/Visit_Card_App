@@ -54,7 +54,7 @@ export const CardBoard = () => {
   const changeSize = (n) => {
     if(((n == -1) && (card.state.fontSizeTexts > 14)) || ((n == 1) && (card.state.fontSizeTexts < 24))) {
       card.updateCard('fontSizeTexts', card.state.fontSizeTexts + n);
-      card.updateCard('fontSizeTitre1', card.state.fontSizeTitre1 + n);
+      card.updateCard('fontSizeTitle1', card.state.fontSizeTitle1 + n);
       setCard({ ...card });
     }
   };
@@ -64,7 +64,7 @@ export const CardBoard = () => {
     <div className="grid-container cardBoard">
       <div className='grid-item cardDisplay'>{card.renderCard()}</div>
       <div className='grid-item modelSelection'>
-        <h2>MODÈLES</h2>
+        <h2>MODELS</h2>
         <div className='models-list'>
           {Models.map((Model, index) => (
               <div key={index}>
@@ -82,42 +82,42 @@ export const CardBoard = () => {
         <h2>INFORMATIONS</h2>
         <div className='info-row'>
           <div className='info-col-1'>
-            Titre 1 :
+            Title 1 :
           </div>
           <div className='info-col-2'>
             <input
               type="text"
-              name="titre1"
-              value={card.state.titre1}
-              onChange={updateChange('titre1')}
+              name="title1"
+              value={card.state.title1}
+              onChange={updateChange('title1')}
               maxLength={20}
             />
           </div>
         </div>
         <div className='info-row'>
           <div className='info-col-1'>
-            Titre 2 :
+            Title 2 :
           </div>
           <div className='info-col-2'>
             <input
               type="text"
-              name="titre2"
-              value={card.state.titre2}
-              onChange={updateChange('titre2')}
+              name="title2"
+              value={card.state.title2}
+              onChange={updateChange('title2')}
               maxLength={28}
             />
           </div>
         </div>
         <div className='info-row'>
           <div className='info-col-1'>
-            Titre 3 :
+            Title 3 :
           </div>
           <div className='info-col-2'>
             <input
               type="text"
-              name="titre3"
-              value={card.state.titre3}
-              onChange={updateChange('titre3')}
+              name="title3"
+              value={card.state.title3}
+              onChange={updateChange('title3')}
               maxLength={28}
             />
           </div>
@@ -138,7 +138,7 @@ export const CardBoard = () => {
         </div>
         <div className='info-row'>
           <div className='info-col-1'>
-            Tel :
+            Phone :
           </div>
           <div className='info-col-2'>
             <input
@@ -152,20 +152,22 @@ export const CardBoard = () => {
         </div>
       </div>
       <div className='grid-item colorsSelection'>
-        <h2>COULEURS</h2>
+        <h2>GLOBAL COLORS</h2>
         <div>
-          <p>Carte :</p>
+          <p>Card : &nbsp;
           <input type="color" value={card.state.backgrdColor} onChange={updateChange('backgrdColor')} />
+          </p>
         </div>
         <div>
-          <p>Textes :</p>
+          <p>Texts : &nbsp;
           <input type="color" value={card.state.textColor} onChange={updateChange('textColor')} />
+          </p>
         </div>
       </div>
       <div className='grid-item fontsSelection'>
-        <h2>TEXTES</h2>
+        <h2>GLOBAL TEXTS</h2>
         <div>
-          <p>Police d'écriture :</p>
+          <p>Font :</p>
           <select value={card.state.font} onChange={updateChange('font')}>
             {fonts.map((font, index) => (
               <option key={index} value={font} style={{fontFamily: font}}>
@@ -173,19 +175,19 @@ export const CardBoard = () => {
               </option>
             ))}
           </select>
-          <p>taille : &nbsp;
+          <p>Size : &nbsp;
             <button onClick={() => changeSize(-1)}>-</button>
             <button onClick={() => changeSize(1)}>+</button>
           </p>
         </div>
         <div>
           <label>
-            <p>Contouré : <input type="checkbox" checked={card.state.textBorder} onChange={updateTextBorder}/></p>
+            <p>Contoured : <input type="checkbox" checked={card.state.textBorder} onChange={updateTextBorder}/></p>
           </label>
         </div>
       </div>
       <div className='grid-item other'>
-        <button>Télécharger</button>
+        <button>DOWNLOAD CARD</button>
       </div>
     </div>
   )

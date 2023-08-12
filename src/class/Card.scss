@@ -9,26 +9,26 @@
   overflow: hidden;
 }
 
-.titre1, .titre2 {
+.title1, .title2 {
   font-weight: bold;
 }
 
-.titre1, .titre2, .titre3, .contact {
+.title1, .title2, .title3, .contact {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.titre1 {
+.title1 {
   grid-row: 4 / 5;
 }
 
-.titre2 {
+.title2 {
   grid-row: 6 / 7;
 }
 
-.titre3 {
+.title3 {
   grid-row: 8 / 9;
 }
 

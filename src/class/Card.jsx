@@ -38,11 +38,8 @@ export class Card {
       phone_size: 18,
       phone_border: false,
       backgrdColor: '#ffffff',
-      // textColor: '#000000',
-      // font: 'Arial',
-      // fontSizeTexts: 18,
-      // fontSizeTitle1: 24,
-      // textBorder: false,
+      global_font: 'Arial',
+      global_color: '#000000',
       model: 0
     };
   }
@@ -66,10 +63,7 @@ export class Card {
         className="card" 
         style={{ 
           backgroundColor: this.state.backgrdColor, 
-          backgroundImage: `url(${this.getModelImage()})`,
-          // color: this.state.textColor,
-          // fontFamily: this.state.font,
-          // textShadow: this.state.textBorder ? '0px 0px 2px black' : 'none'
+          backgroundImage: `url(${this.getModelImage()})`
           }}>
         <div className="title1" 
              style={{ 

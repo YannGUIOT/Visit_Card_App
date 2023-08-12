@@ -1,11 +1,12 @@
-import { Card } from '../../class/Card';
-import { useState, useEffect } from 'react';
 import Model_1 from '../../assets/models/model-1.png';
 import Model_2 from '../../assets/models/model-2.png';
 import Model_3 from '../../assets/models/model-3.png';
 import Model_4 from '../../assets/models/model-4.png';
 import Model_5 from '../../assets/models/model-5.png';
 import Model_6 from '../../assets/models/model-6.png';
+
+import { Card } from '../../class/Card';
+import { useState } from 'react';
 
 import './CardBoard.scss'
 
@@ -39,24 +40,24 @@ export const CardBoard = () => {
     setCard({ ...card });
   };
 
-  const updateGlobalTextBorder = () => {
-    // card.updateCard('title1_border', !card.state.title1_border);
-    // card.updateCard('title2_border', !card.state.title2_border);
-    // card.updateCard('title3_border', !card.state.title3_border);
-    // card.updateCard('email_border', !card.state.email_border);
-    // card.updateCard('phone_border', !card.state.phone_border);
-    // setCard({ ...card });
-  };
-
   const updateGlobalColor = () => {
-    card.updateCard('title1_color', card.state.title1_color);
-    card.updateCard('title2_color', card.state.title1_color);
-    card.updateCard('title3_color', card.state.title1_color);
-    card.updateCard('email_color', card.state.title1_color);
-    card.updateCard('phone_color', card.state.title1_color);
+    card.updateCard('title1_color', card.state.global_color);
+    card.updateCard('title2_color', card.state.global_color);
+    card.updateCard('title3_color', card.state.global_color);
+    card.updateCard('email_color', card.state.global_color);
+    card.updateCard('phone_color', card.state.global_color);
     setCard({ ...card });
   };
-  
+
+  const updateGlobalFont = () => {
+    card.updateCard('title1_font', card.state.global_font);
+    card.updateCard('title2_font', card.state.global_font);
+    card.updateCard('title3_font', card.state.global_font);
+    card.updateCard('email_font', card.state.global_font);
+    card.updateCard('phone_font', card.state.global_font);
+    setCard({ ...card });
+  };
+
 
   const handleModelSelect = (index) => {
     setSelectedModel(index);
@@ -64,13 +65,11 @@ export const CardBoard = () => {
     setCard({ ...card });
   };
 
-  const changeGlobalSize = (n) => {
-      // card.updateCard('title1_size', card.state.title1_size + n);
-      // card.updateCard('title2_size', card.state.title2_size + n);
-      // card.updateCard('title3_size', card.state.title3_size + n);
-      // card.updateCard('email_size', card.state.email_size + n);
-      // card.updateCard('phone_size', card.state.phone_size + n);
-      // setCard({ ...card });
+  const changeSize = (field, n) => {
+    if( ((n==-1)&&(card[field] > 8)) || ((n==1)&&(card[field] < 28)) ) {
+      card.updateCard(field, card[field] + n);
+      setCard({ ...card });
+    }
   };
   
 
@@ -106,6 +105,22 @@ export const CardBoard = () => {
               onChange={updateChange('title1')}
               maxLength={20}
             />
+          </div>
+          <div className='info-col-3'>
+            <input type="color" value={card.state.title1_color} onChange={updateChange('title1_color')} />
+          </div>
+          <div className='info-col-4'>
+            <select value={card.state.title1_font} onChange={updateChange('title1_font')}>
+              {fonts.map((font, index) => (
+                <option key={index} value={font} style={{fontFamily: font}}>
+                  {font}
+                </option>
+              ))}
+            </select>
+          </div>
+          <div className='info-col-5'>
+            <button onClick={() => changeSize('title1_size', -1)}>-</button>
+            <button onClick={() => changeSize('title1_size', 1)}>+</button>
           </div>
         </div>
         <div className='info-row'>
@@ -174,7 +189,7 @@ export const CardBoard = () => {
         </div>
         <div>
           <p>Texts : &nbsp;
-          <input type="color" value={card.state.title1_color} onChange={updateGlobalColor()} />
+          <input type="color" value={card.state.global_color} onChange={updateGlobalColor()} />
           </p>
         </div>
       </div>
@@ -182,22 +197,13 @@ export const CardBoard = () => {
         <h2>GLOBAL TEXTS</h2>
         <div>
           <p>Font :</p>
-          <select value={card.state.font} onChange={updateChange('font')}>
+          <select value={card.state.global_font} onChange={updateGlobalFont()}>
             {fonts.map((font, index) => (
               <option key={index} value={font} style={{fontFamily: font}}>
                 {font}
               </option>
             ))}
           </select>
-          <p>Size : &nbsp;
-            <button onClick={() => changeGlobalSize(-1)}>-</button>
-            <button onClick={() => changeGlobalSize(1)}>+</button>
-          </p>
-        </div>
-        <div>
-          <label>
-            <p>Contoured : <input type="checkbox" checked={card.state.textBorder} onChange={updateGlobalTextBorder}/></p>
-          </label>
         </div>
       </div>
       <div className='grid-item other'>

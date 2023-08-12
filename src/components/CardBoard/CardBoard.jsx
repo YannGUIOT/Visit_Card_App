@@ -64,89 +64,91 @@ export const CardBoard = () => {
     <div className="grid-container cardBoard">
       <div className='grid-item cardDisplay'>{card.renderCard()}</div>
       <div className='grid-item modelSelection'>
-      <h2>MODÈLES</h2>
-      {Models.map((Model, index) => (
-          <div key={index}>
-            <img 
-              src={Model} 
-              alt={`Model ${index + 1}`} 
-              className={`model ${selectedModel === index ? 'selected' : ''}`}
-              onClick={() => handleModelSelect(index)}
-              height={'100px'} />
-          </div>
-        ))}
+        <h2>MODÈLES</h2>
+        {Models.map((Model, index) => (
+            <div key={index}>
+              <img 
+                src={Model} 
+                alt={`Model ${index + 1}`} 
+                className={`model ${selectedModel === index ? 'selected' : ''}`}
+                onClick={() => handleModelSelect(index)}
+                height={'100px'} />
+            </div>
+          ))}
       </div>
       <div className='grid-item textsForm'>
-      <h2>INFORMATIONS</h2>
-      <div className='info-row'>
-        <div className='info-col-1'>
-          Titre 1 :
+        <h2>INFORMATIONS</h2>
+        <div className='info-row'>
+          <div className='info-col-1'>
+            Titre 1 :
+          </div>
+          <div className='info-col-2'>
+            <input
+              type="text"
+              name="titre1"
+              value={card.state.titre1}
+              onChange={updateChange('titre1')}
+              maxLength={20}
+            />
+          </div>
         </div>
-        <div className='info-col-2'>
-          <input
-            type="text"
-            name="titre1"
-            value={card.state.titre1}
-            onChange={updateChange('titre1')}
-            maxLength={20}
-          />
+        <div className='info-row'>
+          <div className='info-col-1'>
+            Titre 2 :
+          </div>
+          <div className='info-col-2'>
+            <input
+              type="text"
+              name="titre2"
+              value={card.state.titre2}
+              onChange={updateChange('titre2')}
+              maxLength={28}
+            />
+          </div>
+        </div>
+        <div className='info-row'>
+          <div className='info-col-1'>
+            Titre 3 :
+          </div>
+          <div className='info-col-2'>
+            <input
+              type="text"
+              name="titre3"
+              value={card.state.titre3}
+              onChange={updateChange('titre3')}
+              maxLength={28}
+            />
+          </div>
+        </div>
+        <br />
+        <div className='info-row'>
+          <div className='info-col-1'>
+            Email :
+          </div>
+          <div className='info-col-2'>
+            <input
+              type="text"
+              name="email"
+              value={card.state.email}
+              onChange={updateChange('email')}
+            />
+          </div>
+        </div>
+        <div className='info-row'>
+          <div className='info-col-1'>
+            Tel :
+          </div>
+          <div className='info-col-2'>
+            <input
+              type="text"
+              name="phone"
+              value={card.state.phone}
+              onChange={updateChange('phone')}
+              maxLength={18}
+            />
+          </div>
         </div>
       </div>
-      <div className='info-row'>
-        <div className='info-col-1'>
-          Titre 2 :
-        </div>
-        <div className='info-col-2'>
-          <input
-            type="text"
-            name="titre2"
-            value={card.state.titre2}
-            onChange={updateChange('titre2')}
-            maxLength={28}
-          />
-        </div>
-      </div>
-      <div className='info-row'>
-        <div className='info-col-1'>
-          Titre 3 :
-        </div>
-        <div className='info-col-2'>
-          <input
-            type="text"
-            name="titre3"
-            value={card.state.titre3}
-            onChange={updateChange('titre3')}
-            maxLength={28}
-          />
-        </div>
-      </div>
-      <div className='info-row'>
-        <div className='info-col-1'>
-          Email :
-        </div>
-        <div className='info-col-2'>
-          <input
-            type="text"
-            name="email"
-            value={card.state.email}
-            onChange={updateChange('email')}
-          />
-        </div>
-      </div>
-      <div className='info-row'>
-        <div className='info-col-1'>
-          Tel :
-        </div>
-        <div className='info-col-2'>
-          <input
-            type="text"
-            name="phone"
-            value={card.state.phone}
-            onChange={updateChange('phone')}
-            maxLength={18}
-          />
-        </div>
-      </div></div>
       <div className='grid-item colorsSelection'>
         <h2>COULEURS</h2>
         <div>

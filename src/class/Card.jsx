@@ -86,7 +86,7 @@ export class Card {
               fontSize: `${this.state.title2_size}px`,
               fontFamily: this.state.title2_font,
               fontWeight: this.state.title2_strong ? 'bold' : 'normal',
-              textShadow: this.state.title2_border ? '0px 0px 1px black' : 'none',
+              textShadow: this.state.title2_border ? '0px 0px 2px black' : 'none',
               }}>
           {this.state.title2}
         </div>
@@ -96,7 +96,7 @@ export class Card {
               fontSize: `${this.state.title3_size}px`,
               fontFamily: this.state.title3_font,
               fontWeight: this.state.title3_strong ? 'bold' : 'normal',
-              textShadow: this.state.title3_border ? '0px 0px 1px black' : 'none', 
+              textShadow: this.state.title3_border ? '0px 0px 2px black' : 'none', 
               }}>
           {this.state.title3}
         </div>
@@ -107,7 +107,7 @@ export class Card {
                 fontSize: `${this.state.email_size}px`,
                 fontFamily: this.state.email_font,
                 fontWeight: this.state.email_strong ? 'bold' : 'normal',
-                textShadow: this.state.email_border ? '0px 0px 1px black' : 'none', 
+                textShadow: this.state.email_border ? '0px 0px 2px black' : 'none', 
                 }}>
             <img src={Email} height={`${this.state.email_size-2}px`}/> {this.state.email}
           </div>
@@ -117,9 +117,9 @@ export class Card {
                 fontSize: `${this.state.phone_size}px`,
                 fontFamily: this.state.phone_font,
                 fontWeight: this.state.phone_strong ? 'bold' : 'normal',
-                textShadow: this.state.phone_border ? '0px 0px 1px black' : 'none', 
+                textShadow: this.state.phone_border ? '0px 0px 2px black' : 'none', 
                 }}>
-            <img src={Email} height={`${this.state.phone_size-2}px`}/> {this.state.phone}
+            <img src={Tel} height={`${this.state.phone_size-2}px`}/> {this.state.phone}
           </div>
         </div>
       </div>

@@ -58,6 +58,18 @@ export const CardBoard = () => {
     setCard({ ...card });
   };
 
+  const updateGlobal = (field) => (event) => {
+    card.updateCard(`global_${field}`, event.target.value);
+    card.updateCard(`title1_${field}`, card.state[`global_${field}`]);
+    card.updateCard(`title2_${field}`, card.state[`global_${field}`]);
+    card.updateCard(`title3_${field}`, card.state[`global_${field}`]);
+    card.updateCard(`email_${field}`, card.state[`global_${field}`]);
+    card.updateCard(`phone_${field}`, card.state[`global_${field}`]);
+    setCard({ ...card });
+  };
+
+
+
 
   const handleModelSelect = (index) => {
     setSelectedModel(index);
@@ -223,6 +235,13 @@ export const CardBoard = () => {
           <div className='info-col-6'>
             <input
               type="checkbox"
+              checked={card.state.title3_strong}
+              onChange={() => updateCheckbox('title3_strong')}
+            />
+          </div>
+          <div className='info-col-6'>
+            <input
+              type="checkbox"
               checked={card.state.title3_border}
               onChange={() => updateCheckbox('title3_border')}
             />
@@ -256,6 +275,13 @@ export const CardBoard = () => {
           <div className='info-col-5'>
             <button onClick={() => changeSize('email_size', -1)}>-</button>
             <button onClick={() => changeSize('email_size', 1)}>+</button>
+          </div>
+          <div className='info-col-6'>
+            <input
+              type="checkbox"
+              checked={card.state.email_strong}
+              onChange={() => updateCheckbox('email_strong')}
+            />
           </div>
           <div className='info-col-6'>
             <input
@@ -297,6 +323,13 @@ export const CardBoard = () => {
           <div className='info-col-6'>
             <input
               type="checkbox"
+              checked={card.state.phone_strong}
+              onChange={() => updateCheckbox('phone_strong')}
+            />
+          </div>
+          <div className='info-col-6'>
+            <input
+              type="checkbox"
               checked={card.state.phone_border}
               onChange={() => updateCheckbox('phone_border')}
             />
@@ -312,7 +345,7 @@ export const CardBoard = () => {
         </div>
         <div>
           <p>Texts : &nbsp;
-          <input type="color" value={card.state.global_color} onChange={updateGlobalColor} />
+          <input type="color" value={card.state.global_color} onChange={updateGlobal('color')} />
           </p>
         </div>
       </div>
@@ -320,7 +353,7 @@ export const CardBoard = () => {
         <h2>GLOBAL TEXTS</h2>
         <div>
           <p>Font :</p>
-          <select value={card.state.global_font} onChange={updateGlobalFont}>
+          <select value={card.state.global_font} onChange={updateGlobal('font')}>
             {fonts.map((font, index) => (
               <option key={index} value={font} style={{fontFamily: font}}>
                 {font}

@@ -135,6 +135,13 @@ export const CardBoard = () => {
           <div className='info-col-6'>
             <input
               type="checkbox"
+              checked={card.state.title1_strong}
+              onChange={() => updateCheckbox('title1_strong')}
+            />
+          </div>
+          <div className='info-col-7'>
+            <input
+              type="checkbox"
               checked={card.state.title1_border}
               onChange={() => updateCheckbox('title1_border')}
             />
@@ -169,6 +176,20 @@ export const CardBoard = () => {
             <button onClick={() => changeSize('title2_size', -1)}>-</button>
             <button onClick={() => changeSize('title2_size', 1)}>+</button>
           </div>
+          <div className='info-col-6'>
+            <input
+              type="checkbox"
+              checked={card.state.title2_strong}
+              onChange={() => updateCheckbox('title2_strong')}
+            />
+          </div>
+          <div className='info-col-6'>
+            <input
+              type="checkbox"
+              checked={card.state.title2_border}
+              onChange={() => updateCheckbox('title2_border')}
+            />
+          </div>
         </div>
         <div className='info-row'>
           <div className='info-col-1'>
@@ -198,6 +219,13 @@ export const CardBoard = () => {
           <div className='info-col-5'>
             <button onClick={() => changeSize('title3_size', -1)}>-</button>
             <button onClick={() => changeSize('title3_size', 1)}>+</button>
+          </div>
+          <div className='info-col-6'>
+            <input
+              type="checkbox"
+              checked={card.state.title3_border}
+              onChange={() => updateCheckbox('title3_border')}
+            />
           </div>
         </div>
         <br />
@@ -229,6 +257,13 @@ export const CardBoard = () => {
             <button onClick={() => changeSize('email_size', -1)}>-</button>
             <button onClick={() => changeSize('email_size', 1)}>+</button>
           </div>
+          <div className='info-col-6'>
+            <input
+              type="checkbox"
+              checked={card.state.email_border}
+              onChange={() => updateCheckbox('email_border')}
+            />
+          </div>
         </div>
         <div className='info-row'>
           <div className='info-col-1'>
@@ -258,6 +293,13 @@ export const CardBoard = () => {
           <div className='info-col-5'>
             <button onClick={() => changeSize('phone_size', -1)}>-</button>
             <button onClick={() => changeSize('phone_size', 1)}>+</button>
+          </div>
+          <div className='info-col-6'>
+            <input
+              type="checkbox"
+              checked={card.state.phone_border}
+              onChange={() => updateCheckbox('phone_border')}
+            />
           </div>
         </div>
       </div>

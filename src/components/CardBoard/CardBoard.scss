@@ -135,6 +135,11 @@ h1, h2 {
   width: 2.5em;
 }
 
+.info-col-6 input,
+.info-col-7 input {
+  width: 1.5em;
+}
+
 .info-row {
   display: flex;
   flex-direction: row;
@@ -148,7 +153,7 @@ h1, h2 {
   justify-content: center;
   align-items: center;
   min-height: 3em;
-  gap: 3em
+  gap: 3em;
 }
 
 .other button {

@@ -129,16 +129,17 @@ h1, h2 {
 .info-col-1 {
   width: 5em;
   text-align: end;
-  margin-right: 0.5em;
 }
 
-// .info-col-2 {
-// }
+.info-col-3 input {
+  width: 2.5em;
+}
 
 .info-row {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  gap: 0.5em;
 }
 
 .other {

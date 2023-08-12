@@ -136,6 +136,22 @@ export const CardBoard = () => {
               maxLength={28}
             />
           </div>
+          <div className='info-col-3'>
+            <input type="color" value={card.state.title2_color} onChange={updateChange('title2_color')} />
+          </div>
+          <div className='info-col-4'>
+            <select value={card.state.title2_font} onChange={updateChange('title2_font')}>
+              {fonts.map((font, index) => (
+                <option key={index} value={font} style={{fontFamily: font}}>
+                  {font}
+                </option>
+              ))}
+            </select>
+          </div>
+          <div className='info-col-5'>
+            <button onClick={() => changeSize('title2_size', -1)}>-</button>
+            <button onClick={() => changeSize('title2_size', 1)}>+</button>
+          </div>
         </div>
         <div className='info-row'>
           <div className='info-col-1'>
@@ -149,6 +165,22 @@ export const CardBoard = () => {
               onChange={updateChange('title3')}
               maxLength={28}
             />
+          </div>
+          <div className='info-col-3'>
+            <input type="color" value={card.state.title3_color} onChange={updateChange('title3_color')} />
+          </div>
+          <div className='info-col-4'>
+            <select value={card.state.title3_font} onChange={updateChange('title3_font')}>
+              {fonts.map((font, index) => (
+                <option key={index} value={font} style={{fontFamily: font}}>
+                  {font}
+                </option>
+              ))}
+            </select>
+          </div>
+          <div className='info-col-5'>
+            <button onClick={() => changeSize('title3_size', -1)}>-</button>
+            <button onClick={() => changeSize('title3_size', 1)}>+</button>
           </div>
         </div>
         <br />
@@ -164,6 +196,22 @@ export const CardBoard = () => {
               onChange={updateChange('email')}
             />
           </div>
+          <div className='info-col-3'>
+            <input type="color" value={card.state.email_color} onChange={updateChange('email_color')} />
+          </div>
+          <div className='info-col-4'>
+            <select value={card.state.email_font} onChange={updateChange('email_font')}>
+              {fonts.map((font, index) => (
+                <option key={index} value={font} style={{fontFamily: font}}>
+                  {font}
+                </option>
+              ))}
+            </select>
+          </div>
+          <div className='info-col-5'>
+            <button onClick={() => changeSize('email_size', -1)}>-</button>
+            <button onClick={() => changeSize('email_size', 1)}>+</button>
+          </div>
         </div>
         <div className='info-row'>
           <div className='info-col-1'>
@@ -178,6 +226,22 @@ export const CardBoard = () => {
               maxLength={18}
             />
           </div>
+          <div className='info-col-3'>
+            <input type="color" value={card.state.phone_color} onChange={updateChange('phone_color')} />
+          </div>
+          <div className='info-col-4'>
+            <select value={card.state.phone_font} onChange={updateChange('phone_font')}>
+              {fonts.map((font, index) => (
+                <option key={index} value={font} style={{fontFamily: font}}>
+                  {font}
+                </option>
+              ))}
+            </select>
+          </div>
+          <div className='info-col-5'>
+            <button onClick={() => changeSize('phone_size', -1)}>-</button>
+            <button onClick={() => changeSize('phone_size', 1)}>+</button>
+          </div>
         </div>
       </div>
       <div className='grid-item colorsSelection'>
@@ -189,7 +253,7 @@ export const CardBoard = () => {
         </div>
         <div>
           <p>Texts : &nbsp;
-          <input type="color" value={card.state.global_color} onChange={updateGlobalColor()} />
+          <input type="color" value={card.state.global_color} onChange={updateGlobalColor} />
           </p>
         </div>
       </div>
@@ -197,7 +261,7 @@ export const CardBoard = () => {
         <h2>GLOBAL TEXTS</h2>
         <div>
           <p>Font :</p>
-          <select value={card.state.global_font} onChange={updateGlobalFont()}>
+          <select value={card.state.global_font} onChange={updateGlobalFont}>
             {fonts.map((font, index) => (
               <option key={index} value={font} style={{fontFamily: font}}>
                 {font}

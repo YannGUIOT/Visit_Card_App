@@ -39,8 +39,21 @@ export const CardBoard = () => {
     setCard({ ...card });
   };
 
-  const updateTextBorder = () => {
-    card.updateCard('textBorder', !card.state.textBorder);
+  const updateGlobalTextBorder = () => {
+    // card.updateCard('title1_border', !card.state.title1_border);
+    // card.updateCard('title2_border', !card.state.title2_border);
+    // card.updateCard('title3_border', !card.state.title3_border);
+    // card.updateCard('email_border', !card.state.email_border);
+    // card.updateCard('phone_border', !card.state.phone_border);
+    // setCard({ ...card });
+  };
+
+  const updateGlobalColor = () => {
+    card.updateCard('title1_color', card.state.title1_color);
+    card.updateCard('title2_color', card.state.title1_color);
+    card.updateCard('title3_color', card.state.title1_color);
+    card.updateCard('email_color', card.state.title1_color);
+    card.updateCard('phone_color', card.state.title1_color);
     setCard({ ...card });
   };
   
@@ -51,12 +64,13 @@ export const CardBoard = () => {
     setCard({ ...card });
   };
 
-  const changeSize = (n) => {
-    if(((n == -1) && (card.state.fontSizeTexts > 14)) || ((n == 1) && (card.state.fontSizeTexts < 24))) {
-      card.updateCard('fontSizeTexts', card.state.fontSizeTexts + n);
-      card.updateCard('fontSizeTitle1', card.state.fontSizeTitle1 + n);
-      setCard({ ...card });
-    }
+  const changeGlobalSize = (n) => {
+      // card.updateCard('title1_size', card.state.title1_size + n);
+      // card.updateCard('title2_size', card.state.title2_size + n);
+      // card.updateCard('title3_size', card.state.title3_size + n);
+      // card.updateCard('email_size', card.state.email_size + n);
+      // card.updateCard('phone_size', card.state.phone_size + n);
+      // setCard({ ...card });
   };
   
 
@@ -160,7 +174,7 @@ export const CardBoard = () => {
         </div>
         <div>
           <p>Texts : &nbsp;
-          <input type="color" value={card.state.textColor} onChange={updateChange('textColor')} />
+          <input type="color" value={card.state.title1_color} onChange={updateGlobalColor()} />
           </p>
         </div>
       </div>
@@ -176,13 +190,13 @@ export const CardBoard = () => {
             ))}
           </select>
           <p>Size : &nbsp;
-            <button onClick={() => changeSize(-1)}>-</button>
-            <button onClick={() => changeSize(1)}>+</button>
+            <button onClick={() => changeGlobalSize(-1)}>-</button>
+            <button onClick={() => changeGlobalSize(1)}>+</button>
           </p>
         </div>
         <div>
           <label>
-            <p>Contoured : <input type="checkbox" checked={card.state.textBorder} onChange={updateTextBorder}/></p>
+            <p>Contoured : <input type="checkbox" checked={card.state.textBorder} onChange={updateGlobalTextBorder}/></p>
           </label>
         </div>
       </div>

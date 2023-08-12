@@ -65,16 +65,18 @@ export const CardBoard = () => {
       <div className='grid-item cardDisplay'>{card.renderCard()}</div>
       <div className='grid-item modelSelection'>
         <h2>MODÈLES</h2>
-        {Models.map((Model, index) => (
-            <div key={index}>
-              <img 
-                src={Model} 
-                alt={`Model ${index + 1}`} 
-                className={`model ${selectedModel === index ? 'selected' : ''}`}
-                onClick={() => handleModelSelect(index)}
-                height={'100px'} />
-            </div>
-          ))}
+        <div className='models-list'>
+          {Models.map((Model, index) => (
+              <div key={index}>
+                <img 
+                  src={Model} 
+                  alt={`Model ${index + 1}`} 
+                  className={`model ${selectedModel === index ? 'selected' : ''}`}
+                  onClick={() => handleModelSelect(index)}
+                  height={'100px'} />
+              </div>
+            ))}
+        </div>
       </div>
       <div className='grid-item textsForm'>
         <h2>INFORMATIONS</h2>

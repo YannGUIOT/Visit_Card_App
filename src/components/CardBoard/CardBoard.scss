@@ -70,6 +70,10 @@
   }
 }
 
+.cardBoard {
+  min-height: 50em;
+}
+
 .cardDisplay {
   display: flex;
   flex-direction: column;
@@ -92,7 +96,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  min-height: 50em;
+}
+
+.models-list {
+  margin-top: -1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+
 }
 
 .textsForm {
@@ -132,6 +146,7 @@ h1, h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  min-height: 3em;
 }
 
 .other button {

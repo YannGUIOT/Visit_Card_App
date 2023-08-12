@@ -2,7 +2,7 @@ export const Footer = () => {
   return (
     <footer className="footer">
       <div className="container">
-        <p>© 2023 Mon entreprise. Tous droits réservés.</p>
+        <p>© Yann GUIOT - FULLSTACK WEB DEVELOPER</p>
       </div>
     </footer>
   );

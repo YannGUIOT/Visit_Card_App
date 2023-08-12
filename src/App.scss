@@ -20,34 +20,6 @@ body {
   margin: 0;
 }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100vw;
-  height: 60px;
-  background-color: var(--navbar-color); 
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-
-nav li {
-  float: left;
-  margin-left: 1em;
-  margin-right: 1em;
-}
-
-a {
-  color: var(--link-text-color);
-  text-decoration: none;
-}
-
 .footer {
   padding: 20px 0;
   text-align: center;
@@ -60,16 +32,4 @@ a {
 .footer p {
   margin: 0;
   font-size: 14px;
-}
-
-.info {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.second-nav-part {
-  display: flex;
-  flex-direction: row;
-  filter: var(--filter-invert);
-  gap: 10px;
-  align-items: center;
 }

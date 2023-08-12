@@ -124,3 +124,10 @@ h1, h2 {
   flex-direction: row;
   justify-content: center;
 }
+
+.other {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

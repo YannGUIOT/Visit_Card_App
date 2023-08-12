@@ -144,10 +144,11 @@ h1, h2 {
 
 .other {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   min-height: 3em;
+  gap: 3em
 }
 
 .other button {

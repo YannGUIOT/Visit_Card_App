@@ -76,8 +76,13 @@ export const CardBoard = () => {
     card.updateCard(field, !card.state[field]);
     setCard({ ...card });
   };
-  
 
+  const resetCard = () => {
+    const newCard = new Card();
+    setCard(newCard);
+    setSelectedModel(newCard.state.model);
+  };
+  
   return (
     <div className="grid-container cardBoard">
       <div className='grid-item cardDisplay'>{card.renderCard()}</div>
@@ -283,6 +288,7 @@ export const CardBoard = () => {
         </div>
       </div>
       <div className='grid-item other'>
+        <button onClick={resetCard}>RESET</button>
         <button>DOWNLOAD CARD</button>
       </div>
     </div>

@@ -346,7 +346,7 @@ export const CardBoard = () => {
       </div>
       <div className='grid-item other'>
         <button onClick={resetCard}>RESET</button>
-        <button>DOWNLOAD CARD</button>
+        <button>DOWNLOAD</button>
       </div>
     </div>
   )

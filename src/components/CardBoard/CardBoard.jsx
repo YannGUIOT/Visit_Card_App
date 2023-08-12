@@ -66,10 +66,15 @@ export const CardBoard = () => {
   };
 
   const changeSize = (field, n) => {
-    if( ((n==-1)&&(card[field] > 8)) || ((n==1)&&(card[field] < 28)) ) {
-      card.updateCard(field, card[field] + n);
+    if( ((n==-1)&&(card.state[field] > 8)) || ((n==1)&&(card.state[field] < 28)) ) {
+      card.updateCard(field, card.state[field] + n);
       setCard({ ...card });
     }
+  };
+  
+  const updateCheckbox = (field) => {
+    card.updateCard(field, !card.state[field]);
+    setCard({ ...card });
   };
   
 
@@ -121,6 +126,13 @@ export const CardBoard = () => {
           <div className='info-col-5'>
             <button onClick={() => changeSize('title1_size', -1)}>-</button>
             <button onClick={() => changeSize('title1_size', 1)}>+</button>
+          </div>
+          <div className='info-col-6'>
+            <input
+              type="checkbox"
+              checked={card.state.title1_border}
+              onChange={() => updateCheckbox('title1_border')}
+            />
           </div>
         </div>
         <div className='info-row'>

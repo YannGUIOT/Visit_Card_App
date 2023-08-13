@@ -351,26 +351,14 @@ export const CardBoard = () => {
       </div>
       <div className='grid-item globalSettings'>
         <div>
-          <h2 className='dark'>CARD COLOR</h2>
-          <div>
-            <input type="color" value={card.state.backgrdColor} onChange={updateChange('backgrdColor')} />
-          </div>
+          <h2 className='dark'>CARD<br />COLOR</h2>
+          <input type="color" value={card.state.backgrdColor} onChange={updateChange('backgrdColor')} />
         </div>
         <div>
-          <h2 className='dark'>GLOBAL TEXTS</h2>
-          <div>
-            <select value={card.state.global_font} onChange={updateGlobal('font')}>
-              {fonts.map((font, index) => (
-                <option key={index} value={font} style={{fontFamily: font}}>
-                  {font}
-                </option>
-              ))}
-            </select>
-            <br/><br/>
-            <input type="color" value={card.state.global_color} onChange={updateGlobal('color')} />
-          </div>
+          <h2 className='dark'>GLOBAL<br />TEXTS<br />COLOR</h2>
+          <input type="color" value={card.state.global_color} onChange={updateGlobal('color')} />
         </div>
-        <div className='reset'>
+        <div>
           <button onClick={resetCard}>RESET</button>
         </div>
       </div>

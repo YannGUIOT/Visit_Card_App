@@ -29,7 +29,7 @@
     grid-row: 3 / 6; /* Occupe les rangées 3 à 5 */
   }
   
-  .other {
+  .download {
     min-width: 35em;
     grid-column: 5 / 9; /* Occupe la colonne 4 à 9 */
     grid-row: 6 / 7; /* Occupe les rangées 6 à 6 */
@@ -44,7 +44,7 @@
 
 
 @media (max-width: 1209px) {
-  .cardBoard, .cardDisplay, .modelSelection, .textsForm, .globalSettings, .other {
+  .cardBoard, .cardDisplay, .modelSelection, .textsForm, .globalSettings, .download {
     width: 35em;
     display: flex;
     flex-direction: column;
@@ -53,7 +53,7 @@
   }
 }
 
-.textsForm, .other {
+.textsForm, .download {
   background-color: rgb(223, 235, 245);
 }
 
@@ -109,7 +109,7 @@
   gap: 1em;
 }
 
-.other {
+.download {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -155,7 +155,7 @@
   gap: 0.5em;
 }
 
-.other button, .globalSettings button {
+.download button, .globalSettings button {
   font-family: 'Tektur';
   font-size: large;
 }

@@ -374,7 +374,7 @@ export const CardBoard = () => {
           <button onClick={resetCard}>RESET</button>
         </div>
       </div>
-      <div className='grid-item other'>
+      <div className='grid-item download'>
         <button onClick={downloadCard}>DOWNLOAD</button>
       </div>
     </div>

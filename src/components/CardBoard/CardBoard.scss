@@ -63,7 +63,7 @@
   }
 }
 
-.cardDisplay, .modelSelection, .textsForm, .colorsSelection, .fontsSelection, .other {
+.modelSelection, .textsForm, .colorsSelection, .fontsSelection, .other {
   background-color: rgb(223, 235, 245);
 }
 
@@ -78,7 +78,6 @@
   align-items: center;
   justify-content: center;
   min-height: 15em;
-  background-color: rgb(16, 14, 29);
   border: none;
 }
 
@@ -115,7 +114,6 @@
   align-items: center;
   justify-content: center;
   gap: 1em;
-
 }
 
 .other {
@@ -125,7 +123,7 @@
   align-items: center;
   min-height: 3em;
   gap: 3em;
-  border-radius: 20px 20px 0px 0px;
+  border-radius: 15px 15px 0px 0px;
 }
 
 .textsForm {
@@ -133,7 +131,7 @@
   flex-direction: column;
   font-family: 'Kanit';
   min-height: 16em;
-  border-radius: 0px 0px 20px 20px;
+  border-radius: 0px 0px 15px 15px;
 }
 
 .textsForm input {

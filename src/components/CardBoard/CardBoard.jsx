@@ -117,7 +117,7 @@ export const CardBoard = () => {
     <div className="grid-container cardBoard">
       <div className='grid-item cardDisplay'>{card.renderCard()}</div>
       <div className='grid-item modelSelection'>
-        <h2 className='dark'>MODELS</h2>
+        <h2 className='titles dark'>MODELS</h2>
         <div className='models-list'>
           {Models.map((Model, index) => (
               <div key={index}>
@@ -356,11 +356,11 @@ export const CardBoard = () => {
       </div>
       <div className='grid-item globalSettings'>
         <div>
-          <h2 className='dark'>BACK<br />GROUND<br />CARD<br />COLOR</h2>
+          <h2 className='titles dark'>BACK<br />GROUND<br />CARD<br />COLOR</h2>
           <input type="color" value={card.state.backgrdColor} onChange={updateChange('backgrdColor')} />
         </div>
         <div>
-          <h2 className='dark'>GLOBAL<br />TEXTS<br />COLOR</h2>
+          <h2 className='titles dark'>GLOBAL<br />TEXTS<br />COLOR</h2>
           <input type="color" value={card.state.global_color} onChange={updateGlobal('color')} />
         </div>
         <div>

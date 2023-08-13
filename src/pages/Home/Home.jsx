@@ -4,7 +4,7 @@ export const Home = () => {
 
   return (
     <>
-      <h2>CREATE YOUR VISIT CARD</h2>
+      <h1 className='light'>CREATE YOUR VISIT CARD</h1>
       <CardBoard />
       <h5>© Yann GUIOT - FULLSTACK WEB DEVELOPER</h5>
     </>

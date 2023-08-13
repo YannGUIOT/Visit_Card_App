@@ -162,6 +162,17 @@
 .download button, .globalSettings button {
   font-family: 'Tektur';
   font-size: large;
+  border-radius: 0.5em;
+}
+
+.download button {
+  color: var(--light-color);
+  background-color: var(--dark-color);
+}
+
+.globalSettings button {
+  color: var(--dark-color);
+  background-color: var(--light-color);
 }
 
 button {

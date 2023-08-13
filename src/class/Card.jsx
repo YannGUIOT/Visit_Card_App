@@ -61,7 +61,7 @@ export class Card {
   
     return modelImages[this.state.model];
   }
-
+  
   renderCard = () => {
     return (
       <div 
@@ -131,5 +131,4 @@ export class Card {
   updateCard = (field, value) => {
     this.state[field] = value;
   }
-
 }

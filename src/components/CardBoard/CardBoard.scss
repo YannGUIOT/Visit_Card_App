@@ -72,7 +72,7 @@
 
 .model {
   border: 1px solid black;
-  box-shadow: 3px 3px 3px rgb(100, 100, 100);
+  box-shadow: 3px 3px 3px var(--dark-color);
   background-color: white;
 }
 
@@ -153,6 +153,11 @@
   width: 1.5em;
 }
 
+.globalSettings input {
+  width: 10em;
+  padding: 0;
+}
+
 .info-row {
   display: flex;
   flex-direction: row;
@@ -183,6 +188,7 @@ button {
   font-weight: bold;
 }
 
+
 .reset {
   margin-right: 2.5em;
 }
@@ -198,6 +204,6 @@ button {
   text-shadow: -1px 1px 6px rgb(255, 255, 255);
 }
 
-button, input {
+button, input, img {
   cursor: pointer;
 }

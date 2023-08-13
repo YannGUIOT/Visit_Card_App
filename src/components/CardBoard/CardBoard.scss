@@ -78,6 +78,8 @@
   align-items: center;
   justify-content: center;
   min-height: 15em;
+  background-color: rgb(16, 14, 29);
+  border: none;
 }
 
 .model {
@@ -116,11 +118,22 @@
 
 }
 
+.other {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-height: 3em;
+  gap: 3em;
+  border-radius: 20px 20px 0px 0px;
+}
+
 .textsForm {
   display: flex;
   flex-direction: column;
   font-family: 'Kanit';
   min-height: 16em;
+  border-radius: 0px 0px 20px 20px;
 }
 
 .textsForm input {
@@ -148,15 +161,6 @@
   flex-direction: row;
   justify-content: center;
   gap: 0.5em;
-}
-
-.other {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  min-height: 3em;
-  gap: 3em;
 }
 
 .other button {

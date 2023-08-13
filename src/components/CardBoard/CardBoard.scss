@@ -38,19 +38,13 @@
   .colorsSelection {
     min-width: 15em;
     grid-column: 9 / 11; /* Occupe la colonne 10 à 11 */
-    grid-row: 1 / 4; /* Occupe les rangées 1 à 3 */
-  }
-  
-  .fontsSelection {
-    min-width: 15em;
-    grid-column: 9 / 11; /* Occupe la colonne 10 à 11 */
-    grid-row: 4 / 7; /* Occupe les rangées 4 à 6 */
+    grid-row: 1 / 7; /* Occupe les rangées 1 à 3 */
   }
 }
 
 
 @media (max-width: 1209px) {
-  .cardBoard, .cardDisplay, .modelSelection, .textsForm, .colorsSelection, .fontsSelection, .other {
+  .cardBoard, .cardDisplay, .modelSelection, .textsForm, .colorsSelection, .other {
     width: 35em;
     display: flex;
     flex-direction: column;
@@ -59,7 +53,7 @@
   }
 }
 
-.modelSelection, .textsForm, .colorsSelection, .fontsSelection, .other {
+.modelSelection, .textsForm, .colorsSelection, .other {
   background-color: rgb(223, 235, 245);
 }
 
@@ -95,12 +89,11 @@
 }
 
 .colorsSelection {
-  border-radius: 0px 40px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border-radius: 0px 40px 40px 0px;
 } 
-
-.fontsSelection {
-  border-radius: 0px 0px 40px 0px;
-}
 
 .models-list {
   margin-top: -1em;
@@ -156,7 +149,7 @@
   gap: 0.5em;
 }
 
-.other button {
+.other button, .colorsSelection button {
   font-family: 'Tektur';
   font-size: large;
 }

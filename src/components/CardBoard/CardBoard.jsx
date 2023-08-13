@@ -316,33 +316,37 @@ export const CardBoard = () => {
         </div>
       </div>
       <div className='grid-item colorsSelection'>
-        <h2>GLOBAL COLORS</h2>
         <div>
-          <p>Card : &nbsp;
-          <input type="color" value={card.state.backgrdColor} onChange={updateChange('backgrdColor')} />
-          </p>
+          <h2>GLOBAL COLORS</h2>
+          <div>
+            <p>Card : &nbsp;
+            <input type="color" value={card.state.backgrdColor} onChange={updateChange('backgrdColor')} />
+            </p>
+          </div>
+          <div>
+            <p>Texts : &nbsp;
+            <input type="color" value={card.state.global_color} onChange={updateGlobal('color')} />
+            </p>
+          </div>
         </div>
         <div>
-          <p>Texts : &nbsp;
-          <input type="color" value={card.state.global_color} onChange={updateGlobal('color')} />
-          </p>
+          <h2>GLOBAL TEXTS</h2>
+          <div>
+            <p>Font :</p>
+            <select value={card.state.global_font} onChange={updateGlobal('font')}>
+              {fonts.map((font, index) => (
+                <option key={index} value={font} style={{fontFamily: font}}>
+                  {font}
+                </option>
+              ))}
+            </select>
+          </div>
         </div>
-      </div>
-      <div className='grid-item fontsSelection'>
-        <h2>GLOBAL TEXTS</h2>
         <div>
-          <p>Font :</p>
-          <select value={card.state.global_font} onChange={updateGlobal('font')}>
-            {fonts.map((font, index) => (
-              <option key={index} value={font} style={{fontFamily: font}}>
-                {font}
-              </option>
-            ))}
-          </select>
+          <button onClick={resetCard}>RESET</button>
         </div>
       </div>
       <div className='grid-item other'>
-        <button onClick={resetCard}>RESET</button>
         <button>DOWNLOAD</button>
       </div>
     </div>

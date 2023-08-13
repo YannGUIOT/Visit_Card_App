@@ -16,7 +16,7 @@
   }
   
   .modelSelection {
-    min-width: 15em;
+    width: 15em;
     grid-column: 3 / 5; /* Occupe la colonne 2 à 3 */
     grid-row: 1 / 7; /* Occupe les rangées 1 à 6 */
   }
@@ -40,7 +40,7 @@
   }
 
   .globalSettings {
-    min-width: 15em;
+    width: 15em;
     grid-column: 9 / 11; /* Occupe la colonne 10 à 11 */
     grid-row: 1 / 7; /* Occupe les rangées 1 à 3 */
   }
@@ -97,7 +97,7 @@
   padding-right: 2em;
   justify-content: space-around;
   border-radius: 0px 40px 40px 0px;
-  background: linear-gradient(to left, var(--light-color) 40%, var(--dark-color) 75%);
+  background: linear-gradient(to left, var(--light-color) 45%, var(--dark-color) 65%);
 } 
 
 .models-list {

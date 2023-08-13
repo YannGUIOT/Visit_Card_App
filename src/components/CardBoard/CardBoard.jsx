@@ -30,7 +30,13 @@ export const CardBoard = () => {
     'Pacifico',
     'Permanent Marker', 
     'Tektur',
-    'Ysabeau SC'
+    'Ysabeau SC',
+    'Princess Sofia',
+    'Audiowide',
+    'Concert One',
+    'Montez',
+    'Cinzel',
+    'Dekko'
   ];
 
   const Models = [Model_1, Model_2, Model_3, Model_4, Model_5, Model_6];
@@ -117,7 +123,7 @@ export const CardBoard = () => {
     <div className="grid-container cardBoard">
       <div className='grid-item cardDisplay'>{card.renderCard()}</div>
       <div className='grid-item modelSelection'>
-        <h2 className='titles dark'>MODELS</h2>
+        <h3 className='titles dark'>MODELS</h3>
         <div className='models-list'>
           {Models.map((Model, index) => (
               <div key={index}>
@@ -356,11 +362,11 @@ export const CardBoard = () => {
       </div>
       <div className='grid-item globalSettings'>
         <div>
-          <h2 className='titles dark'>BACK<br />GROUND<br />CARD<br />COLOR</h2>
+          <h3 className='titles dark'>BACK<br />GROUND<br />CARD<br />COLOR</h3>
           <input type="color" value={card.state.backgrdColor} onChange={updateChange('backgrdColor')} />
         </div>
         <div>
-          <h2 className='titles dark'>GLOBAL<br />TEXTS<br />COLOR</h2>
+          <h3 className='titles dark'>GLOBAL<br />TEXTS<br />COLOR</h3>
           <input type="color" value={card.state.global_color} onChange={updateGlobal('color')} />
         </div>
         <div>

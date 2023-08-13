@@ -73,6 +73,40 @@ export const CardBoard = () => {
     setCard(newCard);
     setSelectedModel(newCard.state.model);
   };
+
+  const downloadCard = () => {
+    const cardDiv = document.getElementById('card');
+    if (!cardDiv) {
+      console.error("La div avec l'identifiant 'card' n'a pas été trouvée.");
+      return;
+    }
+
+    // Créer une image à partir du contenu de la div
+    const image = new Image();
+    const svgString = new XMLSerializer().serializeToString(cardDiv);
+    image.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svgString);
+
+    image.onload = function() {
+      const canvas = document.createElement('canvas');
+      canvas.width = cardDiv.offsetWidth;
+      canvas.height = cardDiv.offsetHeight;
+      const context = canvas.getContext('2d');
+
+      // Dessiner l'image sur le canevas
+      context.drawImage(image, 0, 0, canvas.width, canvas.height);
+
+      // Convertir le canevas en une URL de données au format JPEG
+      const imageURL = canvas.toDataURL('image/jpeg');
+
+      // Créer un lien temporaire pour le téléchargement
+      const link = document.createElement('a');
+      link.href = imageURL;
+      link.download = 'card.jpg';
+      
+      // Simuler un clic sur le lien pour déclencher le téléchargement
+      link.click();
+    };
+  }
   
   return (
     <div className="grid-container cardBoard">
@@ -347,7 +381,7 @@ export const CardBoard = () => {
         </div>
       </div>
       <div className='grid-item other'>
-        <button>DOWNLOAD</button>
+        <button onClick={downloadCard}>DOWNLOAD</button>
       </div>
     </div>
   )

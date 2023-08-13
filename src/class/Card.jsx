@@ -65,7 +65,7 @@ export class Card {
   renderCard = () => {
     return (
       <div 
-        className="card" 
+        id="card" 
         style={{ 
           backgroundColor: this.state.backgrdColor, 
           backgroundImage: `url(${this.getModelImage()})`

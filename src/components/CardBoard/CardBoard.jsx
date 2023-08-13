@@ -70,6 +70,11 @@ export const CardBoard = () => {
 
   const resetCard = () => {
     const newCard = new Card();
+    newCard.updateCard('title1', card.state.title1);
+    newCard.updateCard('title2', card.state.title2);
+    newCard.updateCard('title3', card.state.title3);
+    newCard.updateCard('email', card.state.email);
+    newCard.updateCard('phone', card.state.phone);
     setCard(newCard);
     setSelectedModel(newCard.state.model);
   };
@@ -351,7 +356,7 @@ export const CardBoard = () => {
       </div>
       <div className='grid-item globalSettings'>
         <div>
-          <h2 className='dark'>CARD<br />COLOR</h2>
+          <h2 className='dark'>BACK<br />GROUND<br />CARD<br />COLOR</h2>
           <input type="color" value={card.state.backgrdColor} onChange={updateChange('backgrdColor')} />
         </div>
         <div>

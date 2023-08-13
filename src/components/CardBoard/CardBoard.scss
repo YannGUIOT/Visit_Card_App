@@ -8,18 +8,18 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(6, 1fr);
-    gap: 0.2em;
+    gap: 1em;
   }
   
   .grid-item {
     border: 1px solid rgb(56, 56, 56);
-    min-height: 3em;
+    border-radius: 40px;
   }
   
   .modelSelection {
-    min-width: 25em;
+    min-width: 15em;
     background-color: rgb(190, 210, 226);
-    grid-column: 1 / 4; /* Occupe la colonne 1 à 3 */
+    grid-column: 2 / 4; /* Occupe la colonne 1 à 3 */
     grid-row: 1 / 7; /* Occupe les rangées 1 à 6 */
   }
   
@@ -33,14 +33,14 @@
   .colorsSelection {
     min-width: 15em;
     background-color: rgb(190, 210, 226);
-    grid-column: 10 / 13; /* Occupe la colonne 10 à 12 */
+    grid-column: 10 / 12; /* Occupe la colonne 10 à 12 */
     grid-row: 1 / 4; /* Occupe les rangées 1 à 3 */
   }
   
   .fontsSelection {
     min-width: 15em;
     background-color: rgb(190, 210, 226);
-    grid-column: 10 / 13; /* Occupe la colonne 10 à 12 */
+    grid-column: 10 / 12; /* Occupe la colonne 10 à 12 */
     grid-row: 4 / 7; /* Occupe les rangées 4 à 6 */
   }
   
@@ -160,4 +160,11 @@ h1, h2 {
 .other button {
   font-family: 'Tektur';
   font-size: large;
+}
+
+button {
+  box-shadow: 1px 1px 2px grey;
+  border: 1px solid gray;
+  border-radius: 4px;
+  font-weight: bold;
 }

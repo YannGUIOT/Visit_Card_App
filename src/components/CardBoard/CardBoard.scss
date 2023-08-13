@@ -53,7 +53,7 @@
   }
 }
 
-.textsForm, .download {
+.textsForm {
   background-color: rgb(223, 235, 245);
 }
 
@@ -117,6 +117,7 @@
   min-height: 3em;
   gap: 3em;
   border-radius: 15px 15px 0px 0px;
+  background: linear-gradient(to bottom, rgb(223, 235, 245), rgb(16, 14, 29));
 }
 
 .textsForm {

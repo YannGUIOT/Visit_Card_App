@@ -196,3 +196,7 @@ button {
   font-family: 'Indie Flower';
   text-shadow: -1px 1px 6px rgb(255, 255, 255);
 }
+
+button, input {
+  cursor: pointer;
+}

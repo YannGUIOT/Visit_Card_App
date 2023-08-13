@@ -94,11 +94,15 @@
   display: flex;
   flex-direction: column;
   align-items: end;
-  padding-right: 2em;
   justify-content: space-around;
+  padding-right: 2em;
   border-radius: 0px 40px 40px 0px;
   background: linear-gradient(to left, var(--light-color) 45%, var(--dark-color) 65%);
-} 
+}
+
+.globSet-child {
+  width: 5.5em;
+}
 
 .models-list {
   margin-top: -1em;
@@ -160,7 +164,7 @@
 }
 
 .globalSettings input {
-  width: 6em;
+  width: 5em;
   padding: 0;
 }
 

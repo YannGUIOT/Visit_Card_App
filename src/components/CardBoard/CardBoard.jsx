@@ -138,7 +138,6 @@ export const CardBoard = () => {
         </div>
       </div>
       <div className='grid-item textsForm'>
-        {/* <h2 className='light'>INFORMATIONS &nbsp; &nbsp; ~~~ &nbsp; &nbsp; SETTINGS</h2> */}
         <div className='info-row'>
           <div className='info-col-1'>
             Title 1 :
@@ -361,15 +360,15 @@ export const CardBoard = () => {
         </div>
       </div>
       <div className='grid-item globalSettings'>
-        <div>
+        <div className='globSet-child'>
           <h3 className='titles dark'>BACK<br />GROUND<br />CARD<br />COLOR</h3>
           <input type="color" value={card.state.backgrdColor} onChange={updateChange('backgrdColor')} />
         </div>
-        <div>
+        <div className='globSet-child'>
           <h3 className='titles dark'>GLOBAL<br />TEXTS<br />COLOR</h3>
           <input type="color" value={card.state.global_color} onChange={updateGlobal('color')} />
         </div>
-        <div>
+        <div className='globSet-child'>
           <button onClick={resetCard}>RESET</button>
         </div>
       </div>

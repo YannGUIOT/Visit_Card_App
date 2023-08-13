@@ -41,7 +41,7 @@ export const CardBoard = () => {
   };
 
   const updateGlobal = (field) => (event) => {
-    card.updateCard(`global_${field}`, event.target.value); // ? est-ce utile ?
+    card.updateCard(`global_${field}`, event.target.value);
     card.updateCard(`title1_${field}`, event.target.value);
     card.updateCard(`title2_${field}`, event.target.value);
     card.updateCard(`title3_${field}`, event.target.value);

@@ -43,7 +43,6 @@ export class Card {
       phone_strong: true,
       phone_border: false,
       backgrdColor: '#ffffff',
-      global_font: 'Arial',
       global_color: '#000000',
       model: 0
     };

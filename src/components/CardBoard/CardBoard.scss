@@ -1,3 +1,8 @@
+:root {
+  --dark-color: rgb(16, 14, 29);
+  --light-color: rgb(223, 235, 245);
+}
+
 @media (min-width: 1210px) {
   .cardBoard {
     width: 100vw;
@@ -8,7 +13,6 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(6, 1fr);
-    // gap: 0.6em;
   }
   
   .modelSelection {
@@ -53,13 +57,9 @@
   }
 }
 
-.textsForm {
-  background-color: rgb(223, 235, 245);
-}
-
 .cardBoard {
   min-height: 50em;
-  color: black;
+  color: var(--dark-color);
 }
 
 .cardDisplay {
@@ -87,7 +87,7 @@
   padding-left: 2em;
   min-height: 50em;
   border-radius: 40px 0px 0px 40px;
-  background: linear-gradient(to right, rgb(223, 235, 245) 40%, rgb(16, 14, 29) 80%);
+  background: linear-gradient(to right, var(--light-color) 40%, var(--dark-color) 80%);
 }
 
 .globalSettings {
@@ -97,7 +97,7 @@
   padding-right: 2em;
   justify-content: space-around;
   border-radius: 0px 40px 40px 0px;
-  background: linear-gradient(to left, rgb(223, 235, 245) 30%, rgb(16, 14, 29) 80%);
+  background: linear-gradient(to left, var(--light-color) 30%, var(--dark-color) 80%);
 } 
 
 .models-list {
@@ -117,7 +117,7 @@
   min-height: 3em;
   gap: 3em;
   border-radius: 15px 15px 0px 0px;
-  background: linear-gradient(to bottom, rgb(223, 235, 245), rgb(16, 14, 29));
+  background: linear-gradient(to bottom, var(--light-color), var(--dark-color));
 }
 
 .textsForm {
@@ -129,7 +129,7 @@
   min-width: 40em;
   min-height: 16em;
   border-radius: 0px 0px 15px 15px;
-  background: linear-gradient(to top, rgb(223, 235, 245) 30%, rgb(16, 14, 29));
+  background: linear-gradient(to top, var(--light-color) 30%, var(--dark-color));
 }
 
 .textsForm input {

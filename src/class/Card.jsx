@@ -49,15 +49,7 @@ export class Card {
   }
 
   getModelImage() {
-    const modelImages = [
-      Model_1,
-      Model_2,
-      Model_3,
-      Model_4,
-      Model_5,
-      Model_6
-    ];
-  
+    const modelImages = [Model_1, Model_2, Model_3, Model_4, Model_5, Model_6];
     return modelImages[this.state.model];
   }
   

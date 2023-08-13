@@ -13,7 +13,7 @@ export class Card {
   constructor() {
     this.state = {
       title1: 'MyBusiness & Co',
-      title1_color: '#000000',
+      title1_color: '#39338E',
       title1_font: 'Ysabeau SC',
       title1_size: 24,
       title1_strong: true,
@@ -37,10 +37,10 @@ export class Card {
       email_strong: false,
       email_border: false,
       phone: '01.23.45.67.89',
-      phone_color: '#707070',
+      phone_color: '#5B386B',
       phone_font: 'Kanit',
       phone_size: 18,
-      email_strong: false,
+      phone_strong: true,
       phone_border: false,
       backgrdColor: '#ffffff',
       global_font: 'Arial',

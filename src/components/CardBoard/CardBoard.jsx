@@ -50,9 +50,6 @@ export const CardBoard = () => {
     setCard({ ...card });
   };
 
-
-
-
   const handleModelSelect = (index) => {
     setSelectedModel(index);
     card.updateCard('model', index);

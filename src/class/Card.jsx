@@ -61,7 +61,7 @@ export class Card {
   
     return modelImages[this.state.model];
   }
-  
+
   renderCard = () => {
     return (
       <div 

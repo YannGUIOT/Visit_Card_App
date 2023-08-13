@@ -127,7 +127,7 @@ export const CardBoard = () => {
         </div>
       </div>
       <div className='grid-item textsForm'>
-        <h2 className='light'>INFORMATIONS &nbsp; &nbsp; - &nbsp; &nbsp; SETTINGS</h2>
+        <h2 className='light'>INFORMATIONS &nbsp; &nbsp; ~~~ &nbsp; &nbsp; SETTINGS</h2>
         <div className='info-row'>
           <div className='info-col-1'>
             Title 1 :

@@ -19,7 +19,7 @@
   .modelSelection {
     min-width: 15em;
     background-color: rgb(190, 210, 226);
-    grid-column: 2 / 4; /* Occupe la colonne 1 à 3 */
+    grid-column: 2 / 4; /* Occupe la colonne 2 à 3 */
     grid-row: 1 / 7; /* Occupe les rangées 1 à 6 */
   }
   
@@ -33,14 +33,14 @@
   .colorsSelection {
     min-width: 15em;
     background-color: rgb(190, 210, 226);
-    grid-column: 10 / 12; /* Occupe la colonne 10 à 12 */
+    grid-column: 10 / 12; /* Occupe la colonne 10 à 11 */
     grid-row: 1 / 4; /* Occupe les rangées 1 à 3 */
   }
   
   .fontsSelection {
     min-width: 15em;
     background-color: rgb(190, 210, 226);
-    grid-column: 10 / 12; /* Occupe la colonne 10 à 12 */
+    grid-column: 10 / 12; /* Occupe la colonne 10 à 11 */
     grid-row: 4 / 7; /* Occupe les rangées 4 à 6 */
   }
   

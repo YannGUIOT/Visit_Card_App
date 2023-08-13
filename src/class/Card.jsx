@@ -19,7 +19,7 @@ export class Card {
       title1_strong: true,
       title1_border: true,
       title2: 'company director',
-      title2_color: '#000000',
+      title2_color: '#454545',
       title2_font: 'Tektur',
       title2_size: 18,
       title2_strong: true,
@@ -29,10 +29,10 @@ export class Card {
       title3_font: 'Tektur',
       title3_size: 18,
       title3_strong: true,
-      title3_border: false,
+      title3_border: true,
       email: 'john.doe@gmail.com',
-      email_color: '#707070',
-      email_font: 'Kanit',
+      email_color: '#6E6496',
+      email_font: 'Trebuchet MS',
       email_size: 18,
       email_strong: false,
       email_border: false,
@@ -76,7 +76,7 @@ export class Card {
               fontSize: `${this.state.title1_size}px`,
               fontFamily: this.state.title1_font,
               fontWeight: this.state.title1_strong ? 'bold' : 'normal',
-              textShadow: this.state.title1_border ? '0px 0px 2px black' : 'none',
+              textShadow: this.state.title1_border ? '-2px 2px 2px grey' : 'none',
               }}>
           {this.state.title1}
         </div>
@@ -86,7 +86,7 @@ export class Card {
               fontSize: `${this.state.title2_size}px`,
               fontFamily: this.state.title2_font,
               fontWeight: this.state.title2_strong ? 'bold' : 'normal',
-              textShadow: this.state.title2_border ? '0px 0px 2px black' : 'none',
+              textShadow: this.state.title2_border ? '-1px 1px 2px grey' : 'none',
               }}>
           {this.state.title2}
         </div>
@@ -96,7 +96,7 @@ export class Card {
               fontSize: `${this.state.title3_size}px`,
               fontFamily: this.state.title3_font,
               fontWeight: this.state.title3_strong ? 'bold' : 'normal',
-              textShadow: this.state.title3_border ? '0px 0px 2px black' : 'none', 
+              textShadow: this.state.title3_border ? '-1px 1px 2px grey' : 'none', 
               }}>
           {this.state.title3}
         </div>
@@ -107,7 +107,7 @@ export class Card {
                 fontSize: `${this.state.email_size}px`,
                 fontFamily: this.state.email_font,
                 fontWeight: this.state.email_strong ? 'bold' : 'normal',
-                textShadow: this.state.email_border ? '0px 0px 2px black' : 'none', 
+                textShadow: this.state.email_border ? '-1px 1px 2px grey' : 'none', 
                 }}>
               <EmailIcon size={this.state.email_size + 2} color={this.state.email_color} />
                {this.state.email}
@@ -118,7 +118,7 @@ export class Card {
                 fontSize: `${this.state.phone_size}px`,
                 fontFamily: this.state.phone_font,
                 fontWeight: this.state.phone_strong ? 'bold' : 'normal',
-                textShadow: this.state.phone_border ? '0px 0px 2px black' : 'none', 
+                textShadow: this.state.phone_border ? '-1px 1px 2px grey' : 'none', 
                 }}>
             <PhoneIcon size={this.state.phone_size + 1} color={this.state.phone_color} />
             {this.state.phone}

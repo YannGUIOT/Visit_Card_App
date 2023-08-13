@@ -87,7 +87,7 @@
   padding-left: 2em;
   min-height: 50em;
   border-radius: 40px 0px 0px 40px;
-  background: linear-gradient(to right, rgb(223, 235, 245) 40%, rgb(16, 14, 29) 90%);
+  background: linear-gradient(to right, rgb(223, 235, 245) 40%, rgb(16, 14, 29) 80%);
 }
 
 .globalSettings {
@@ -97,7 +97,7 @@
   padding-right: 2em;
   justify-content: space-around;
   border-radius: 0px 40px 40px 0px;
-  background: linear-gradient(to left, rgb(223, 235, 245) 30%, rgb(16, 14, 29) 90%);
+  background: linear-gradient(to left, rgb(223, 235, 245) 30%, rgb(16, 14, 29) 80%);
 } 
 
 .models-list {
@@ -129,7 +129,7 @@
   min-width: 40em;
   min-height: 16em;
   border-radius: 0px 0px 15px 15px;
-  background: linear-gradient(to top, rgb(223, 235, 245) 1%, rgb(16, 14, 29) 99%);
+  background: linear-gradient(to top, rgb(223, 235, 245) 30%, rgb(16, 14, 29));
 }
 
 .textsForm input {
@@ -139,7 +139,7 @@
 }
 
 .info-col-1 {
-  width: 5em;
+  width: 4em;
   text-align: end;
 }
 

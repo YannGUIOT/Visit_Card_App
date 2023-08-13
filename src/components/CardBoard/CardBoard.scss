@@ -8,7 +8,7 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(6, 1fr);
-    gap: 0.6em;
+    // gap: 0.6em;
   }
   
   .modelSelection {
@@ -53,7 +53,7 @@
   }
 }
 
-.modelSelection, .textsForm, .globalSettings, .other {
+.textsForm, .other {
   background-color: rgb(223, 235, 245);
 }
 
@@ -83,16 +83,21 @@
 .modelSelection {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
+  padding-left: 2em;
   min-height: 50em;
   border-radius: 40px 0px 0px 40px;
+  background: linear-gradient(to right, rgb(223, 235, 245) 20%, rgb(16, 14, 29) 80%);
 }
 
 .globalSettings {
   display: flex;
   flex-direction: column;
+  align-items: end;
+  padding-right: 2em;
   justify-content: space-around;
   border-radius: 0px 40px 40px 0px;
+  background: linear-gradient(to right, rgb(16, 14, 29) 20%, rgb(223, 235, 245) 80%);
 } 
 
 .models-list {

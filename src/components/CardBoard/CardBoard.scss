@@ -201,6 +201,6 @@ button {
   text-shadow: -1px 1px 6px rgb(255, 255, 255);
 }
 
-button, input, img {
+button, img, .globalSettings input, .info-col-3 input, .info-col-6 input, .info-col-7 input {
   cursor: pointer;
 }

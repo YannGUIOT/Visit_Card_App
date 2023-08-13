@@ -123,7 +123,7 @@ export const CardBoard = () => {
     <div className="grid-container cardBoard">
       <div className='grid-item cardDisplay'>{card.renderCard()}</div>
       <div className='grid-item modelSelection'>
-        <h3 className='titles dark'>MODELS</h3>
+        <h3 className='titles dark model-title'>MODELS</h3>
         <div className='models-list'>
           {Models.map((Model, index) => (
               <div key={index}>

@@ -1,6 +1,6 @@
-import './ColorsSelection.scss'
+import './globalSettings.scss'
 
-export const ColorsSelection = () => {
+export const globalSettings = () => {
 
   return (
     <>

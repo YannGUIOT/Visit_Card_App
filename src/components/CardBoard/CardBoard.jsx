@@ -101,7 +101,6 @@ export const CardBoard = () => {
   
   return (
     <div className="grid-container cardBoard">
-      <div className='grid-item cardDisplay'>{card.renderCard()}</div>
       <div className='grid-item modelSelection'>
         <h3 className='titles dark model-title'>MODELS</h3>
         <div className='models-list'>
@@ -115,6 +114,19 @@ export const CardBoard = () => {
                   height={'100px'} />
               </div>
             ))}
+        </div>
+      </div>
+      <div className='grid-item globalSettings'>
+        <div className='globSet-child'>
+          <h3 className='titles dark'>BACK<br />GROUND<br />CARD<br />COLOR</h3>
+          <input type="color" value={card.state.backgrdColor} onChange={updateChange('backgrdColor')} />
+        </div>
+        <div className='globSet-child'>
+          <h3 className='titles dark'>GLOBAL<br />TEXTS<br />COLOR</h3>
+          <input type="color" value={card.state.global_color} onChange={updateGlobal('color')} />
+        </div>
+        <div className='globSet-child'>
+          <button onClick={resetCard}>RESET</button>
         </div>
       </div>
       <div className='grid-item textsForm'>
@@ -339,19 +351,7 @@ export const CardBoard = () => {
           </div>
         </div>
       </div>
-      <div className='grid-item globalSettings'>
-        <div className='globSet-child'>
-          <h3 className='titles dark'>BACK<br />GROUND<br />CARD<br />COLOR</h3>
-          <input type="color" value={card.state.backgrdColor} onChange={updateChange('backgrdColor')} />
-        </div>
-        <div className='globSet-child'>
-          <h3 className='titles dark'>GLOBAL<br />TEXTS<br />COLOR</h3>
-          <input type="color" value={card.state.global_color} onChange={updateGlobal('color')} />
-        </div>
-        <div className='globSet-child'>
-          <button onClick={resetCard}>RESET</button>
-        </div>
-      </div>
+      <div className='grid-item cardDisplay'>{card.renderCard()}</div>
       <div className='grid-item download'>
         <button onClick={downloadCard}>DOWNLOAD</button>
       </div>

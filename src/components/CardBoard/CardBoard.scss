@@ -3,6 +3,8 @@
   --light-color: rgb(223, 235, 245);
 }
 
+//****************************** SCREEN > 1210 PX ******************************//
+
 @media (min-width: 1210px) {
   .cardBoard {
     width: 100vw;
@@ -15,6 +17,7 @@
     grid-template-rows: repeat(6, 1fr);
   }
   
+  //******************** MODEL ********************//
   .modelSelection {
     width: 15em;
     grid-column: 3 / 5; /* Occupe la colonne 2 à 3 */
@@ -73,6 +76,7 @@
   }
 }
 
+//****************************** SCREEN < 1210 PX ******************************//
 
 @media (max-width: 1209px) {
   .cardBoard, .cardDisplay, .modelSelection, .settings, .globalSettings, .download {
@@ -103,6 +107,8 @@
     padding-top: 0.5em;
     padding-bottom: 1.5em;
   }
+
+  //******************** MODEL ********************//
 
   .modelSelection {
     display: flex;
@@ -141,23 +147,29 @@
   min-height: 15em;
 }
 
+//******************** MODEL ********************//
+
 .model {
   border: 1px solid black;
   box-shadow: 3px 3px 3px var(--dark-color);
   background-color: white;
 }
 
+.model-title {
+  padding-bottom: 0.5em;
+}
+
 .selected {
   border: 3px solid red;
 }
+
 
 .globSet-child {
   word-wrap: break-word;
 }
 
-.model-title {
-  padding-bottom: 0.5em;
-}
+
+//******************** DOWNLOAD ********************//
 
 .download {
   display: flex;
@@ -169,6 +181,13 @@
   border-radius: 15px 15px 0px 0px;
   background: linear-gradient(to bottom, var(--light-color), var(--dark-color));
 }
+
+.download button {
+  color: var(--light-color);
+  background-color: var(--dark-color);
+}
+
+//******************** SETTINGS ********************//
 
 .settings {
   display: flex;
@@ -205,10 +224,18 @@
   width: 1.5em;
 }
 
+//******************** GLOBAL SETTINGS ********************//
+
 .globalSettings input {
   width: 5em;
   padding: 0;
 }
+
+.globalSettings button {
+  color: var(--dark-color);
+  background-color: var(--light-color);
+}
+
 
 .info-row {
   display: flex;
@@ -217,20 +244,20 @@
   gap: 0.5em;
 }
 
+
+
+
+
+//******************** MULTI & MORE ********************//
+
+button, img, .globalSettings input, .info-col-3 input, .info-col-6 input, .info-col-7 input {
+  cursor: pointer;
+}
+
 .download button, .globalSettings button {
   font-family: 'Tektur';
   font-size: large;
   border-radius: 0.5em;
-}
-
-.download button {
-  color: var(--light-color);
-  background-color: var(--dark-color);
-}
-
-.globalSettings button {
-  color: var(--dark-color);
-  background-color: var(--light-color);
 }
 
 button {
@@ -249,6 +276,3 @@ button {
   text-shadow: -1px 1px 6px rgb(255, 255, 255);
 }
 
-button, img, .globalSettings input, .info-col-3 input, .info-col-6 input, .info-col-7 input {
-  cursor: pointer;
-}

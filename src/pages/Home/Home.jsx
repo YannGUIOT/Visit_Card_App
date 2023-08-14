@@ -6,7 +6,7 @@ export const Home = () => {
     <>
       <h2 className='title-page light'>CREATE YOUR VISIT CARD</h2>
       <CardBoard />
-      <h5>© Yann GUIOT - FULLSTACK WEB DEVELOPER</h5>
+      <h5 className="footer">© Yann GUIOT - FULLSTACK WEB DEVELOPER</h5>
     </>
   )
 }

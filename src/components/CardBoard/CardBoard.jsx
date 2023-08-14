@@ -140,7 +140,7 @@ export const CardBoard = () => {
               name="title1"
               value={card.state.title1}
               onChange={updateChange('title1')}
-              maxLength={20}
+              maxLength={24}
             />
           </div>
           <div className='info-col-3'>

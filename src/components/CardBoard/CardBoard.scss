@@ -206,7 +206,7 @@
   background-color: var(--dark-color);
 }
 
-//******************** SETTINGS ********************//
+//******************** TEXT SETTINGS ********************//
 
 .textSettings {
   display: flex;
@@ -220,6 +220,7 @@
   min-height: 14em;
   border-radius: 0px 0px 15px 15px;
   background: linear-gradient(to top, var(--light-color) 30%, var(--dark-color));
+  gap: 0.2em;
 }
 
 .textSettings input {

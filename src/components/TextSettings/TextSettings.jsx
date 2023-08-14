@@ -33,7 +33,7 @@ export class TextSettings extends React.Component {
 
   handleSizeChange = (field, delta) => {
     const newSize = this.props.textSettings[field] + delta;
-    if (newSize >= 10 && newSize <= 36) {
+    if (newSize >= 11 && newSize <= 36) {
       this.props.updateChanges(field, newSize);
     }
   };

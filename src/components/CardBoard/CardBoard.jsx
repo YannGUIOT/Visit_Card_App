@@ -126,6 +126,7 @@ export const CardBoard = () => {
           updateChanges={updateChanges}
           updateCheckbox={updateCheckbox}
         />
+        <br />
         <TextSettings
           field="email"
           title='Email'

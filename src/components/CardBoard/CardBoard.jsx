@@ -40,8 +40,8 @@ export const CardBoard = () => {
     setCard({ ...card });
   };
 
-  const updateBackGrd = (newColor) => {
-    card.updateCard('backgrdColor', newColor);
+  const updateChanges = (field, value) => {
+    card.updateCard(field, value);
     setCard({ ...card });
   };
 
@@ -103,24 +103,11 @@ export const CardBoard = () => {
         selectedModel={selectedModel}
         handleModelSelect={handleModelSelect}
       />
-      {/* <div className='globalSettings'>
-        <div className='globSet-child'>
-          <h3 className='titles dark'>BACK GROUND CARD COLOR</h3>
-          <input type="color" value={card.state.backgrdColor} onChange={updateChange('backgrdColor')} />
-        </div>
-        <div className='globSet-child'>
-          <h3 className='titles dark'>GLOBAL TEXTS COLOR</h3>
-          <input type="color" value={card.state.global_color} onChange={updateGlobal('color')} />
-        </div>
-        <div className='globSet-child resetButton'>
-          <button onClick={resetCard}>RESET</button>
-        </div>
-      </div> */}
       <GlobalSettings
         backgrdColor={card.state.backgrdColor}
         globalColor={card.state.global_color}
-        onBackgroundColorChange={updateBackGrd}
-        onGlobalColorChange={updateGlobal}
+        backgroundColorChange={updateChanges}
+        globalColorChange={updateGlobal}
         resetCard={resetCard}
       />
       <div className='settings'>

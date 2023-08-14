@@ -1,16 +1,15 @@
-// GlobalSettings.jsx
 import React from 'react';
 
 export class GlobalSettings extends React.Component {
 
   handleBackgroundColorChange = (event) => {
     const newColor = event.target.value;
-    this.props.onBackgroundColorChange(newColor);
+    this.props.backgroundColorChange('backgrdColor', newColor);
   };
 
   handleGlobalColorChange = (event) => {
     const newColor = event.target.value;
-    this.props.onGlobalColorChange(newColor);
+    this.props.globalColorChange(newColor);
   };
 
   render() {

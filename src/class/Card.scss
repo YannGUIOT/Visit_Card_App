@@ -35,11 +35,15 @@
   gap: 0.2em;
 }
 
-.contact-email, 
-.contact-phone {
+.email, 
+.phone {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 0.5em;
+}
+
+#email-icon {
+  margin-top: 5px;
 }

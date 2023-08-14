@@ -61,63 +61,37 @@ export class Card {
           backgroundColor: this.state.backgrdColor, 
           backgroundImage: `url(${this.getModelImage()})`
           }}>
-        <div className="title1" 
-             style={{ 
-              color: this.state.title1_color,
-              fontSize: `${this.state.title1_size}px`,
-              fontFamily: this.state.title1_font,
-              fontWeight: this.state.title1_strong ? 'bold' : 'normal',
-              textShadow: this.state.title1_border ? '-1px 1px 2px grey' : 'none',
-              }}>
-          {this.state.title1}
-        </div>
-        <div className="title2" 
-             style={{ 
-              color: this.state.title2_color,
-              fontSize: `${this.state.title2_size}px`,
-              fontFamily: this.state.title2_font,
-              fontWeight: this.state.title2_strong ? 'bold' : 'normal',
-              textShadow: this.state.title2_border ? '-1px 1px 2px grey' : 'none',
-              }}>
-          {this.state.title2}
-        </div>
-        <div className="title3" 
-             style={{ 
-              color: this.state.title3_color,
-              fontSize: `${this.state.title3_size}px`,
-              fontFamily: this.state.title3_font,
-              fontWeight: this.state.title3_strong ? 'bold' : 'normal',
-              textShadow: this.state.title3_border ? '-1px 1px 2px grey' : 'none', 
-              }}>
-          {this.state.title3}
-        </div>
+        {this.renderDiv('title1')}
+        {this.renderDiv('title2')}
+        {this.renderDiv('title3')}
         <div className="contact">
-          <div className='contact-email'
-               style={{ 
-                color: this.state.email_color,
-                fontSize: `${this.state.email_size}px`,
-                fontFamily: this.state.email_font,
-                fontWeight: this.state.email_strong ? 'bold' : 'normal',
-                textShadow: this.state.email_border ? '-1px 1px 2px grey' : 'none', 
-                }}>
-              <EmailIcon size={this.state.email_size + 2} color={this.state.email_color} />
-               {this.state.email}
-          </div>
-          <div className='contact-phone'
-               style={{ 
-                color: this.state.phone_color,
-                fontSize: `${this.state.phone_size}px`,
-                fontFamily: this.state.phone_font,
-                fontWeight: this.state.phone_strong ? 'bold' : 'normal',
-                textShadow: this.state.phone_border ? '-1px 1px 2px grey' : 'none', 
-                }}>
-            <PhoneIcon size={this.state.phone_size + 1} color={this.state.phone_color} />
-            {this.state.phone}
-          </div>
+          {this.renderDiv('email')}
+          {this.renderDiv('phone')}
         </div>
       </div>
     );
   };
+
+  renderDiv = (classname) => {
+    return (
+      <div className= {`${classname}`}
+           style={{ 
+            color: this.state[`${classname}_color`],
+            fontSize: `${this.state[`${classname}_size`]}px`,
+            fontFamily: this.state[`${classname}_font`],
+            fontWeight: this.state[`${classname}_strong`] ? 'bold' : 'normal',
+            textShadow: this.state[`${classname}_border`] ? '-1px 1px 2px grey' : 'none', 
+            }}>
+        { classname == 'email' && 
+          <EmailIcon size={this.state[`${classname}_size`]} color={this.state[`${classname}_color`]} />
+        }
+        { classname == 'phone' && 
+          <PhoneIcon size={this.state[`${classname}_size`]} color={this.state[`${classname}_color`]} />
+        }
+        {this.state[`${classname}`]}
+      </div>
+    )
+  }
 
   updateCard = (field, value) => {
     this.state[field] = value;

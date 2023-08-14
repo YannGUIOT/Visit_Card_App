@@ -1,10 +1,5 @@
-import Model_1 from '../../assets/models/model-1.png';
-import Model_2 from '../../assets/models/model-2.png';
-import Model_3 from '../../assets/models/model-3.png';
-import Model_4 from '../../assets/models/model-4.png';
-import Model_5 from '../../assets/models/model-5.png';
-import Model_6 from '../../assets/models/model-6.png';
-
+import { ModelSelection } from '../ModelSelection/ModelSelection';
+import { GlobalSettings } from '../GlobalSettings/GlobalSettings';
 import { Card } from '../../class/Card';
 import html2canvas from 'html2canvas';
 import { useState } from 'react';
@@ -40,20 +35,23 @@ export const CardBoard = () => {
     'Dekko'
   ];
 
-  const Models = [Model_1, Model_2, Model_3, Model_4, Model_5, Model_6];
-
   const updateChange = (field) => (event) => {
     card.updateCard(field, event.target.value);
     setCard({ ...card });
   };
 
-  const updateGlobal = (field) => (event) => {
-    card.updateCard(`global_${field}`, event.target.value);
-    card.updateCard(`title1_${field}`, event.target.value);
-    card.updateCard(`title2_${field}`, event.target.value);
-    card.updateCard(`title3_${field}`, event.target.value);
-    card.updateCard(`email_${field}`, event.target.value);
-    card.updateCard(`phone_${field}`, event.target.value);
+  const updateBackGrd = (newColor) => {
+    card.updateCard('backgrdColor', newColor);
+    setCard({ ...card });
+  };
+
+  const updateGlobal = (newColor) => {
+    card.updateCard('global_color', newColor);
+    card.updateCard('title1_color', newColor);
+    card.updateCard('title2_color', newColor);
+    card.updateCard('title3_color', newColor);
+    card.updateCard('email_color', newColor);
+    card.updateCard('phone_color', newColor);
     setCard({ ...card });
   };
 
@@ -101,22 +99,11 @@ export const CardBoard = () => {
   
   return (
     <div className="grid-container cardBoard">
-      <div className='modelSelection'>
-        <h3 className='titles dark model-title'>MODELS</h3>
-        <div className='models-list'>
-          {Models.map((Model, index) => (
-              <div key={index}>
-                <img 
-                  src={Model} 
-                  alt={`Model ${index + 1}`} 
-                  className={`model ${selectedModel === index ? 'selected' : ''}`}
-                  onClick={() => handleModelSelect(index)}
-                  height={'100px'} />
-              </div>
-            ))}
-        </div>
-      </div>
-      <div className='globalSettings'>
+      <ModelSelection
+        selectedModel={selectedModel}
+        handleModelSelect={handleModelSelect}
+      />
+      {/* <div className='globalSettings'>
         <div className='globSet-child'>
           <h3 className='titles dark'>BACK GROUND CARD COLOR</h3>
           <input type="color" value={card.state.backgrdColor} onChange={updateChange('backgrdColor')} />
@@ -128,7 +115,14 @@ export const CardBoard = () => {
         <div className='globSet-child resetButton'>
           <button onClick={resetCard}>RESET</button>
         </div>
-      </div>
+      </div> */}
+      <GlobalSettings
+        backgrdColor={card.state.backgrdColor}
+        globalColor={card.state.global_color}
+        onBackgroundColorChange={updateBackGrd}
+        onGlobalColorChange={updateGlobal}
+        resetCard={resetCard}
+      />
       <div className='settings'>
         <div className='info-row'>
           <div className='info-col-1'>

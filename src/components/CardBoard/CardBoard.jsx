@@ -1,8 +1,8 @@
 import { ModelSelection } from '../ModelSelection/ModelSelection';
 import { GlobalSettings } from '../GlobalSettings/GlobalSettings';
 import { TextSettings } from '../TextSettings/TextSettings';
+import { DownloadCard } from '../DownloadCard/DownloadCard';
 import { Card } from '../../class/Card';
-import html2canvas from 'html2canvas';
 import { useState } from 'react';
 
 import './CardBoard.scss'
@@ -11,35 +11,6 @@ export const CardBoard = () => {
 
   const [card, setCard] = useState(new Card());
   const [selectedModel, setSelectedModel] = useState(0);
-
-  const fonts = [
-    "Arial",
-    "Courier New",
-    "Times New Roman",
-    "Trebuchet MS",
-    "Roboto",
-    "Kanit",
-    "Dancing Script",
-    'Caprasimo',
-    'Caveat',
-    'Indie Flower',
-    'Lilita One', 
-    'Pacifico',
-    'Permanent Marker', 
-    'Tektur',
-    'Ysabeau SC',
-    'Princess Sofia',
-    'Audiowide',
-    'Concert One',
-    'Montez',
-    'Cinzel',
-    'Dekko'
-  ];
-
-  const updateChange = (field) => (event) => {
-    card.updateCard(field, event.target.value);
-    setCard({ ...card });
-  };
 
   const updateChanges = (field, value) => {
     card.updateCard(field, value);
@@ -77,19 +48,6 @@ export const CardBoard = () => {
     setCard(newCard);
     setSelectedModel(newCard.state.model);
   };
-
-  const downloadCard = () => {
-    const cardElement = document.getElementById('card');
-
-    if (cardElement) {
-      html2canvas(cardElement).then((canvas) => {
-        const link = document.createElement('a');
-        link.href = canvas.toDataURL('image/jpeg');
-        link.download = 'card.jpg';
-        link.click();
-      });
-    }
-  }
   
   return (
     <div className="grid-container cardBoard">
@@ -143,9 +101,7 @@ export const CardBoard = () => {
         />
       </div>
       <div className='cardDisplay'>{card.renderCard()}</div>
-      <div className='download'>
-        <button onClick={downloadCard}>DOWNLOAD</button>
-      </div>
+      <DownloadCard />
     </div>
   )
 }

@@ -129,7 +129,7 @@ export const CardBoard = () => {
           <button onClick={resetCard}>RESET</button>
         </div>
       </div>
-      <div className='grid-item textsForm'>
+      <div className='grid-item settings'>
         <div className='info-row'>
           <div className='info-col-1'>
             Title 1 :

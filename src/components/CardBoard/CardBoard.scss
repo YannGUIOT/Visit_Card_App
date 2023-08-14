@@ -44,7 +44,7 @@
 
   //***** SETTINGS > 1210 PX *****//
   
-  .settings {
+  .textSettings {
     width: 40em;
     grid-column: 5 / 9; /* Occupe la colonne 4 à 9 */
     grid-row: 1 / 3; /* Occupe les rangées 1 à 2 */
@@ -93,7 +93,7 @@
   .cardBoard, 
   .cardDisplay, 
   .modelSelection, 
-  .settings, 
+  .textSettings, 
   .globalSettings, 
   .download {
     width: 40em;
@@ -208,7 +208,7 @@
 
 //******************** SETTINGS ********************//
 
-.settings {
+.textSettings {
   display: flex;
   flex-direction: column;
   justify-content: end;
@@ -222,7 +222,7 @@
   background: linear-gradient(to top, var(--light-color) 30%, var(--dark-color));
 }
 
-.settings input {
+.textSettings input {
   padding-left: 0.5em;
   font-family: 'Kanit';
   width: 13em;

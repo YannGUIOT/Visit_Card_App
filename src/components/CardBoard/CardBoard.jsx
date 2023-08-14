@@ -101,7 +101,7 @@ export const CardBoard = () => {
   
   return (
     <div className="grid-container cardBoard">
-      <div className='grid-item modelSelection'>
+      <div className='modelSelection'>
         <h3 className='titles dark model-title'>MODELS</h3>
         <div className='models-list'>
           {Models.map((Model, index) => (
@@ -116,7 +116,7 @@ export const CardBoard = () => {
             ))}
         </div>
       </div>
-      <div className='grid-item globalSettings'>
+      <div className='globalSettings'>
         <div className='globSet-child'>
           <h3 className='titles dark'>BACK GROUND CARD COLOR</h3>
           <input type="color" value={card.state.backgrdColor} onChange={updateChange('backgrdColor')} />
@@ -129,7 +129,7 @@ export const CardBoard = () => {
           <button onClick={resetCard}>RESET</button>
         </div>
       </div>
-      <div className='grid-item settings'>
+      <div className='settings'>
         <div className='info-row'>
           <div className='info-col-1'>
             Title 1 :
@@ -351,43 +351,10 @@ export const CardBoard = () => {
           </div>
         </div>
       </div>
-      <div className='grid-item cardDisplay'>{card.renderCard()}</div>
-      <div className='grid-item download'>
+      <div className='cardDisplay'>{card.renderCard()}</div>
+      <div className='download'>
         <button onClick={downloadCard}>DOWNLOAD</button>
       </div>
     </div>
   )
 }
-
-
-  // const cardDiv = document.getElementById('card');
-  // if (!cardDiv) {
-  //   console.error("La div avec l'identifiant 'card' n'a pas été trouvée.");
-  //   return;
-  // }
-
-  // // Créer une image à partir du contenu de la div
-  // const image = new Image();
-  // const svgString = new XMLSerializer().serializeToString(cardDiv);
-  // image.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svgString);
-
-  // image.onload = function() {
-  //   const canvas = document.createElement('canvas');
-  //   canvas.width = cardDiv.offsetWidth;
-  //   canvas.height = cardDiv.offsetHeight;
-  //   const context = canvas.getContext('2d');
-
-  //   // Dessiner l'image sur le canevas
-  //   context.drawImage(image, 0, 0, canvas.width, canvas.height);
-
-  //   // Convertir le canevas en une URL de données au format JPEG
-  //   const imageURL = canvas.toDataURL('image/jpeg');
-
-  //   // Créer un lien temporaire pour le téléchargement
-  //   const link = document.createElement('a');
-  //   link.href = imageURL;
-  //   link.download = 'card.jpg';
-    
-  //   // Simuler un clic sur le lien pour déclencher le téléchargement
-  //   link.click();
-  // };

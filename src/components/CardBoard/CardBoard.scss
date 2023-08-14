@@ -6,6 +6,7 @@
 //****************************** SCREEN > 1210 PX ******************************//
 
 @media (min-width: 1210px) {
+
   .cardBoard {
     width: 100vw;
     height: 85.5vh;
@@ -17,7 +18,8 @@
     grid-template-rows: repeat(6, 1fr);
   }
   
-  //******************** MODEL ********************//
+  //***** MODEL > 1210 PX *****//
+
   .modelSelection {
     width: 15em;
     grid-column: 3 / 5; /* Occupe la colonne 2 à 3 */
@@ -39,6 +41,8 @@
     justify-content: center;
     gap: 1em;
   }
+
+  //***** SETTINGS > 1210 PX *****//
   
   .settings {
     width: 40em;
@@ -46,17 +50,23 @@
     grid-row: 1 / 3; /* Occupe les rangées 1 à 2 */
   }
 
+  //***** CARD DISPLAY > 1210 PX *****//
+
   .cardDisplay {
     width: 40em;
     grid-column: 5 / 9; /* Occupe la colonne 4 à 9 */
     grid-row: 3 / 6; /* Occupe les rangées 3 à 5 */
   }
-  
+
+  //***** DOWNLOAD > 1210 PX *****//
+
   .download {
     width: 40em;
     grid-column: 5 / 9; /* Occupe la colonne 4 à 9 */
     grid-row: 6 / 7; /* Occupe les rangées 6 à 6 */
   }
+
+  //***** GLOBAL SETTINGS > 1210 PX *****//
 
   .globalSettings {
     width: 15em;
@@ -79,13 +89,21 @@
 //****************************** SCREEN < 1210 PX ******************************//
 
 @media (max-width: 1209px) {
-  .cardBoard, .cardDisplay, .modelSelection, .settings, .globalSettings, .download {
+
+  .cardBoard, 
+  .cardDisplay, 
+  .modelSelection, 
+  .settings, 
+  .globalSettings, 
+  .download {
     width: 40em;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 0.4em;
   }
+
+  //***** GLOBAL SETTINGS < 1210 PX *****//
 
   .globalSettings {
     display: flex;
@@ -108,7 +126,7 @@
     padding-bottom: 1.5em;
   }
 
-  //******************** MODEL ********************//
+  //***** MODEL < 1210 PX *****//
 
   .modelSelection {
     display: flex;
@@ -134,10 +152,14 @@
   }
 }
 
+//******************** CARD BOARD ********************//
+
 .cardBoard {
   min-height: 50em;
   color: var(--dark-color);
 }
+
+//******************** CARD DISPLAY ********************//
 
 .cardDisplay {
   display: flex;
@@ -163,12 +185,6 @@
   border: 3px solid red;
 }
 
-
-.globSet-child {
-  word-wrap: break-word;
-}
-
-
 //******************** DOWNLOAD ********************//
 
 .download {
@@ -183,6 +199,9 @@
 }
 
 .download button {
+  font-family: 'Tektur';
+  font-size: large;
+  border-radius: 0.5em;
   color: var(--light-color);
   background-color: var(--dark-color);
 }
@@ -209,6 +228,13 @@
   width: 13em;
 }
 
+.info-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0.5em;
+}
+
 .info-col-1 {
   width: 4em;
   text-align: end;
@@ -217,11 +243,13 @@
 .info-col-3 input {
   width: 2em;
   padding: 0;
+  cursor: pointer;
 }
 
 .info-col-6 input,
 .info-col-7 input {
   width: 1.5em;
+  cursor: pointer;
 }
 
 //******************** GLOBAL SETTINGS ********************//
@@ -229,42 +257,33 @@
 .globalSettings input {
   width: 5em;
   padding: 0;
+  cursor: pointer;
 }
 
 .globalSettings button {
+  font-family: 'Tektur';
+  font-size: large;
+  border-radius: 0.5em;
   color: var(--dark-color);
   background-color: var(--light-color);
 }
 
-
-.info-row {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 0.5em;
+.globSet-child {
+  word-wrap: break-word;
 }
 
-
-
-
-
-//******************** MULTI & MORE ********************//
-
-button, img, .globalSettings input, .info-col-3 input, .info-col-6 input, .info-col-7 input {
-  cursor: pointer;
-}
-
-.download button, .globalSettings button {
-  font-family: 'Tektur';
-  font-size: large;
-  border-radius: 0.5em;
-}
+//******************** OTHERS ********************//
 
 button {
   box-shadow: 1px 1px 2px grey;
   border: 1px solid gray;
   border-radius: 4px;
   font-weight: bold;
+  cursor: pointer;
+}
+
+img {
+  cursor: pointer;
 }
 
 .light {
@@ -275,4 +294,3 @@ button {
 .dark {
   text-shadow: -1px 1px 6px rgb(255, 255, 255);
 }
-

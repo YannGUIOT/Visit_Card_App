@@ -6,6 +6,7 @@ import Model_5 from '../../assets/models/model-5.png';
 import Model_6 from '../../assets/models/model-6.png';
 
 import { Card } from '../../class/Card';
+import html2canvas from 'html2canvas';
 import { useState } from 'react';
 
 import './CardBoard.scss'
@@ -86,37 +87,16 @@ export const CardBoard = () => {
   };
 
   const downloadCard = () => {
-    // const cardDiv = document.getElementById('card');
-    // if (!cardDiv) {
-    //   console.error("La div avec l'identifiant 'card' n'a pas été trouvée.");
-    //   return;
-    // }
+    const cardElement = document.getElementById('card');
 
-    // // Créer une image à partir du contenu de la div
-    // const image = new Image();
-    // const svgString = new XMLSerializer().serializeToString(cardDiv);
-    // image.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svgString);
-
-    // image.onload = function() {
-    //   const canvas = document.createElement('canvas');
-    //   canvas.width = cardDiv.offsetWidth;
-    //   canvas.height = cardDiv.offsetHeight;
-    //   const context = canvas.getContext('2d');
-
-    //   // Dessiner l'image sur le canevas
-    //   context.drawImage(image, 0, 0, canvas.width, canvas.height);
-
-    //   // Convertir le canevas en une URL de données au format JPEG
-    //   const imageURL = canvas.toDataURL('image/jpeg');
-
-    //   // Créer un lien temporaire pour le téléchargement
-    //   const link = document.createElement('a');
-    //   link.href = imageURL;
-    //   link.download = 'card.jpg';
-      
-    //   // Simuler un clic sur le lien pour déclencher le téléchargement
-    //   link.click();
-    // };
+    if (cardElement) {
+      html2canvas(cardElement).then((canvas) => {
+        const link = document.createElement('a');
+        link.href = canvas.toDataURL('image/jpeg');
+        link.download = 'card.jpg';
+        link.click();
+      });
+    }
   }
   
   return (
@@ -378,3 +358,36 @@ export const CardBoard = () => {
     </div>
   )
 }
+
+
+  // const cardDiv = document.getElementById('card');
+  // if (!cardDiv) {
+  //   console.error("La div avec l'identifiant 'card' n'a pas été trouvée.");
+  //   return;
+  // }
+
+  // // Créer une image à partir du contenu de la div
+  // const image = new Image();
+  // const svgString = new XMLSerializer().serializeToString(cardDiv);
+  // image.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svgString);
+
+  // image.onload = function() {
+  //   const canvas = document.createElement('canvas');
+  //   canvas.width = cardDiv.offsetWidth;
+  //   canvas.height = cardDiv.offsetHeight;
+  //   const context = canvas.getContext('2d');
+
+  //   // Dessiner l'image sur le canevas
+  //   context.drawImage(image, 0, 0, canvas.width, canvas.height);
+
+  //   // Convertir le canevas en une URL de données au format JPEG
+  //   const imageURL = canvas.toDataURL('image/jpeg');
+
+  //   // Créer un lien temporaire pour le téléchargement
+  //   const link = document.createElement('a');
+  //   link.href = imageURL;
+  //   link.download = 'card.jpg';
+    
+  //   // Simuler un clic sur le lien pour déclencher le téléchargement
+  //   link.click();
+  // };

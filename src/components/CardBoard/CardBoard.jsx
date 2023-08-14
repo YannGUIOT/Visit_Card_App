@@ -100,7 +100,9 @@ export const CardBoard = () => {
           updateCheckbox={updateCheckbox}
         />
       </div>
-      <div className='cardDisplay'>{card.renderCard()}</div>
+      <div className='cardDisplay'>
+        {card.renderCard()}
+      </div>
       <DownloadCard />
     </div>
   )

@@ -67,7 +67,7 @@ export class Card {
               fontSize: `${this.state.title1_size}px`,
               fontFamily: this.state.title1_font,
               fontWeight: this.state.title1_strong ? 'bold' : 'normal',
-              textShadow: this.state.title1_border ? '-2px 2px 2px grey' : 'none',
+              textShadow: this.state.title1_border ? '-1px 1px 2px grey' : 'none',
               }}>
           {this.state.title1}
         </div>

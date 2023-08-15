@@ -8,7 +8,14 @@
 @media (min-width: 1210px) {
 
   body {
-    background: linear-gradient(to right, var(--light-color), var(--dark-color), var(--dark-color), var(--dark-color), var(--dark-color), var(--light-color));
+    background: 
+      linear-gradient(to right, 
+      var(--light-color), 
+      var(--dark-color), 
+      var(--dark-color), 
+      var(--dark-color), 
+      var(--dark-color), 
+      var(--light-color));
   }
 
   .cardBoard {
@@ -17,26 +24,27 @@
   }
   
   .grid-container {
-    max-width: 1900px;
+    width: 70em;
+    height: 50em;
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
+    grid-template-columns: 15em 40em 15em;
     grid-template-rows: repeat(6, 1fr);
   }
   
   //***** MODEL > 1210 PX *****//
 
   .modelSelection {
-    width: 15em;
-    grid-column: 3 / 5; /* Occupe la colonne 3 à 4 */
-    margin-left: auto; /* Pousse vers la colonne 5 */
+    grid-column: 1; 
     grid-row: 1 / 7; /* Occupe les rangées 1 à 6 */
     display: flex;
     flex-direction: column;
     align-items: start;
     padding-left: 2em;
-    min-height: 50em;
     border-radius: 40px 0px 0px 40px;
-    background: linear-gradient(to right, var(--light-color) 40%, var(--dark-color) 85%);
+    background: 
+      linear-gradient(to right, 
+      var(--light-color) 40%, 
+      var(--dark-color) 82%);
   }
 
   .models-list {
@@ -51,39 +59,38 @@
   //***** SETTINGS > 1210 PX *****//
   
   .textSettings {
-    width: 40em;
-    grid-column: 5 / 9; /* Occupe la colonne 5 à 8 */
-    grid-row: 1 / 3; /* Occupe les rangées 1 à 2 */
+    grid-column: 2;
+    grid-row: 1 / 3;
   }
 
   //***** CARD DISPLAY > 1210 PX *****//
 
   .cardDisplay {
-    width: 40em;
-    grid-column: 5 / 9; /* Occupe la colonne 5 à 8 */
-    grid-row: 3 / 6; /* Occupe les rangées 3 à 5 */
+    grid-column: 2;
+    grid-row: 3 / 6;
   }
 
   //***** DOWNLOAD > 1210 PX *****//
 
   .download {
-    width: 40em;
-    grid-column: 5 / 9; /* Occupe la colonne 5 à 8 */
-    grid-row: 6 / 7; /* Occupe les rangées 6 à 6 */
+    grid-column: 2;
+    grid-row: 6 / 7;
   }
 
   //***** GLOBAL SETTINGS > 1210 PX *****//
 
   .globalSettings {
-    width: 15em;
-    grid-column: 9 / 11; /* Occupe la colonne 9 à 10 */
-    grid-row: 1 / 7; /* Occupe les rangées 1 à 6 */
+    grid-column: 3;
+    grid-row: 1 / 7;
     display: flex;
     flex-direction: column;
     align-items: end;
     justify-content: space-around;
     border-radius: 0px 40px 40px 0px;
-    background: linear-gradient(to left, var(--light-color) 40%, var(--dark-color) 84%);
+    background: 
+      linear-gradient(to left, 
+      var(--light-color) 40%, 
+      var(--dark-color) 82%);
   }
 
   .globSet-child {
@@ -121,7 +128,10 @@
     align-items: center;
     justify-content: center;
     border-radius: 15px 15px 0px 0px;
-    background: linear-gradient(to bottom, var(--light-color) 30%, var(--dark-color));
+    background: 
+      linear-gradient(to bottom, 
+      var(--light-color) 30%, 
+      var(--dark-color));
   }
 
   .globSet-child {
@@ -144,7 +154,10 @@
     align-items: center;
     height: 21.5em;
     border-radius: 15px;
-    background: radial-gradient(circle, var(--dark-color), var(--light-color) 38%);
+    background: 
+      radial-gradient(circle, 
+      var(--dark-color), 
+      var(--light-color) 38%);
   }
 
   .models-list {
@@ -163,7 +176,6 @@
 //******************** CARD BOARD ********************//
 
 .cardBoard {
-  min-height: 50em;
   color: var(--dark-color);
 }
 
@@ -200,7 +212,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  min-height: 3em;
+  min-height: 5em;
   gap: 3em;
   border-radius: 15px 15px 0px 0px;
   background: linear-gradient(to bottom, var(--light-color), var(--dark-color));
@@ -225,7 +237,7 @@
   text-shadow: 0px 0px 4px rgb(255, 255, 255);
   font-weight: bold;
   min-width: 40em;
-  min-height: 14em;
+  min-height: 15em;
   border-radius: 0px 0px 15px 15px;
   background: linear-gradient(to top, var(--light-color) 30%, var(--dark-color));
   gap: 0.2em;

@@ -7,6 +7,10 @@
 
 @media (min-width: 1210px) {
 
+  body {
+    background: linear-gradient(to right, var(--light-color), var(--dark-color), var(--dark-color), var(--dark-color), var(--dark-color), var(--light-color));
+  }
+
   .cardBoard {
     width: 100vw;
     height: 85.5vh;
@@ -102,6 +106,10 @@
     flex-direction: column;
     align-items: center;
     gap: 0.4em;
+  }
+
+  body {
+    background-color: var(--dark-color);
   }
 
   //***** GLOBAL SETTINGS < 1210 PX *****//

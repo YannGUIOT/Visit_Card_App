@@ -1,5 +1,4 @@
 :root {
-  --background-color: rgb(16, 14, 29);
   --dark-color: rgb(16, 14, 29);
   --light-color: rgb(223, 235, 245);
 }
@@ -13,8 +12,7 @@
 
 body {
   margin: 0;
-  // background-color: var(--background-color);
-  background: linear-gradient(to right, var(--light-color), var(--dark-color), var(--light-color));
+  background: linear-gradient(to right, var(--light-color), var(--dark-color), var(--dark-color), var(--dark-color), var(--dark-color), var(--light-color));
 }
 
 .footer {

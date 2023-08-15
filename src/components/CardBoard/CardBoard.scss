@@ -134,7 +134,7 @@
     align-items: center;
     height: 21.5em;
     border-radius: 15px;
-    background: radial-gradient(circle, var(--dark-color), var(--light-color) 48%);
+    background: radial-gradient(circle, var(--dark-color), var(--light-color) 38%);
   }
 
   .models-list {
@@ -145,10 +145,6 @@
     align-items: center;
     justify-content: space-evenly;
     gap: 1em;
-  }
-
-  .model-title {
-    margin-left: 2em;
   }
 }
 

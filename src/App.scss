@@ -12,6 +12,14 @@
 
 body {
   margin: 0;
+  background: 
+    linear-gradient(to right, 
+    var(--light-color), 
+    var(--dark-color), 
+    var(--dark-color), 
+    var(--dark-color), 
+    var(--dark-color), 
+    var(--light-color));
 }
 
 .footer {

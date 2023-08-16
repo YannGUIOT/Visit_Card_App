@@ -3,17 +3,6 @@
   --light-color: rgb(223, 235, 245);
 }
 
-body {
-  background: 
-    linear-gradient(to right, 
-    var(--light-color), 
-    var(--dark-color), 
-    var(--dark-color), 
-    var(--dark-color), 
-    var(--dark-color), 
-    var(--light-color));
-}
-
 //****************************** SCREEN > 1210 PX ******************************//
 
 @media (min-width: 1210px) {

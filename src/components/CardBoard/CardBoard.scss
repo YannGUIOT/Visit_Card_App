@@ -3,20 +3,22 @@
   --light-color: rgb(223, 235, 245);
 }
 
+body {
+  background: 
+    linear-gradient(to right, 
+    var(--light-color), 
+    var(--dark-color), 
+    var(--dark-color), 
+    var(--dark-color), 
+    var(--dark-color), 
+    var(--light-color));
+}
+
 //****************************** SCREEN > 1210 PX ******************************//
 
 @media (min-width: 1210px) {
 
-  body {
-    background: 
-      linear-gradient(to right, 
-      var(--light-color), 
-      var(--dark-color), 
-      var(--dark-color), 
-      var(--dark-color), 
-      var(--dark-color), 
-      var(--light-color));
-  }
+  //***** GRID SETTINGS > 1210 PX *****//
 
   .grid-container {
     width: 70em;
@@ -26,11 +28,34 @@
     grid-template-rows: repeat(6, 1fr);
   }
   
+  .modelSelection {
+    grid-column: 1; 
+    grid-row: 1 / 7;
+  }
+
+  .textSettings {
+    grid-column: 2;
+    grid-row: 1 / 3;
+  }
+
+  .cardDisplay {
+    grid-column: 2;
+    grid-row: 3 / 6;
+  }
+
+  .download {
+    grid-column: 2;
+    grid-row: 6 / 7;
+  }
+
+  .globalSettings {
+    grid-column: 3;
+    grid-row: 1 / 7;
+  }
+
   //***** MODEL > 1210 PX *****//
 
   .modelSelection {
-    grid-column: 1; 
-    grid-row: 1 / 7; /* Occupe les rangées 1 à 6 */
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -51,32 +76,10 @@
     gap: 1em;
   }
 
-  //***** SETTINGS > 1210 PX *****//
-  
-  .textSettings {
-    grid-column: 2;
-    grid-row: 1 / 3;
-  }
-
-  //***** CARD DISPLAY > 1210 PX *****//
-
-  .cardDisplay {
-    grid-column: 2;
-    grid-row: 3 / 6;
-  }
-
-  //***** DOWNLOAD > 1210 PX *****//
-
-  .download {
-    grid-column: 2;
-    grid-row: 6 / 7;
-  }
 
   //***** GLOBAL SETTINGS > 1210 PX *****//
 
   .globalSettings {
-    grid-column: 3;
-    grid-row: 1 / 7;
     display: flex;
     flex-direction: column;
     align-items: end;
@@ -98,9 +101,7 @@
 
 @media (max-width: 1209px) {
 
-  body {
-    background-color: var(--dark-color);
-  }
+  //***** GRID SETTINGS < 1210 PX *****//
 
   .grid-container {
     width: 40em;
@@ -110,10 +111,29 @@
     gap: 0.25em;
   }
 
-  //***** GLOBAL SETTINGS < 1210 PX *****//
+  .modelSelection {
+    grid-row: 1;
+  }
 
   .globalSettings {
     grid-row: 2;
+  }
+
+  .textSettings {
+    grid-row: 3;
+  }
+
+  .cardDisplay {
+    grid-row: 4;
+  }
+
+  .download {
+    grid-row: 5;
+  }
+
+  //***** GLOBAL SETTINGS < 1210 PX *****//
+
+  .globalSettings {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -140,7 +160,6 @@
   //***** MODEL < 1210 PX *****//
 
   .modelSelection {
-    grid-row: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -161,23 +180,12 @@
     gap: 1em;
   }
 
-  .download {
-    grid-row: 5;
-  }
-
-  .cardDisplay {
-    grid-row: 4;
-  }
-
-  .textSettings {
-    grid-row: 3;
-  }
 }
 
 //****************************** ALL SIZE SCREEN ******************************//
 
 
-//******************** CARD DISPLAY ********************//
+//***** CARD DISPLAY *****//
 
 .cardDisplay {
   display: flex;
@@ -186,7 +194,7 @@
   justify-content: center;
 }
 
-//******************** MODEL ********************//
+//***** MODEL *****//
 
 .model {
   border: 1px solid black;
@@ -202,7 +210,7 @@
   border: 3px solid red;
 }
 
-//******************** DOWNLOAD ********************//
+//***** DOWNLOAD *****//
 
 .download {
   display: flex;
@@ -222,7 +230,7 @@
   background-color: var(--dark-color);
 }
 
-//******************** TEXT SETTINGS ********************//
+//***** TEXT SETTINGS *****//
 
 .textSettings {
   display: flex;
@@ -267,7 +275,7 @@
   cursor: pointer;
 }
 
-//******************** GLOBAL SETTINGS ********************//
+//***** GLOBAL SETTINGS *****//
 
 .globalSettings input {
   width: 5em;
@@ -287,7 +295,7 @@
   word-wrap: break-word;
 }
 
-//******************** OTHERS ********************//
+//***** OTHERS *****//
 
 button {
   box-shadow: 1px 1px 2px grey;

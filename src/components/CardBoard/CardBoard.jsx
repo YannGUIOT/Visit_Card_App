@@ -42,11 +42,10 @@ export const CardBoard = () => {
 
   const resetCard = () => {
     const newCard = new Card();
-    newCard.updateCard('title1', card.state.title1);
-    newCard.updateCard('title2', card.state.title2);
-    newCard.updateCard('title3', card.state.title3);
-    newCard.updateCard('email', card.state.email);
-    newCard.updateCard('phone', card.state.phone);
+    const fiedsToUpdate = ['title1', 'title2', 'title3', 'email', 'phone'];
+    fiedsToUpdate.forEach(field => {
+      newCard.updateCard(field, card.state[field]);
+    });
     setCard(newCard);
     setSelectedModel(newCard.state.model);
   };

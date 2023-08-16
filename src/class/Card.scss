@@ -8,16 +8,6 @@
   grid-template-rows: repeat(15, 1fr);
 }
 
-.title1, 
-.title2, 
-.title3, 
-.contact {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 .title1 {
   grid-row: 4 / 5;
 }
@@ -35,6 +25,16 @@
   gap: 0.2em;
 }
 
+.title1, 
+.title2, 
+.title3, 
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .email, 
 .phone {
   display: flex;
@@ -42,8 +42,4 @@
   align-items: center;
   justify-content: center;
   gap: 0.5em;
-}
-
-#email-icon {
-  margin-top: 5px;
 }

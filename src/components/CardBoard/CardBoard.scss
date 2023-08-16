@@ -18,11 +18,6 @@
       var(--light-color));
   }
 
-  .cardBoard {
-    width: 100vw;
-    height: 85.5vh;
-  }
-  
   .grid-container {
     width: 70em;
     height: 50em;
@@ -103,26 +98,37 @@
 
 @media (max-width: 1209px) {
 
-  .cardBoard, 
-  .cardDisplay, 
-  .modelSelection, 
-  .textSettings, 
-  .globalSettings, 
-  .download {
-    width: 40em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.4em;
-  }
+  // .cardBoard, 
+  // .cardDisplay, 
+  // .modelSelection, 
+  // .textSettings, 
+  // .globalSettings, 
+  // .download {
+  //   width: 40em;
+  //   display: flex;
+  //   flex-direction: column;
+  //   align-items: center;
+  //   gap: 0.4em;
+  // }
 
   body {
     background-color: var(--dark-color);
   }
 
+  .grid-container {
+    width: 40em;
+    height: 71em;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 21em 13em 16em 15em 5em;
+    gap: 0.25em;
+  }
+
   //***** GLOBAL SETTINGS < 1210 PX *****//
 
   .globalSettings {
+    grid-column: 1;
+    grid-row: 2;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -149,10 +155,11 @@
   //***** MODEL < 1210 PX *****//
 
   .modelSelection {
+    grid-column: 1;
+    grid-row: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 21.5em;
     border-radius: 15px;
     background: 
       radial-gradient(circle, 
@@ -168,6 +175,21 @@
     align-items: center;
     justify-content: space-evenly;
     gap: 1em;
+  }
+
+  .download {
+    grid-column: 1;
+    grid-row: 5;
+  }
+
+  .cardDisplay {
+    grid-column: 1;
+    grid-row: 4;
+  }
+
+  .textSettings {
+    grid-column: 1;
+    grid-row: 3;
   }
 }
 
@@ -186,7 +208,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 15em;
 }
 
 //******************** MODEL ********************//
@@ -212,7 +233,6 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  min-height: 5em;
   gap: 3em;
   border-radius: 15px 15px 0px 0px;
   background: linear-gradient(to bottom, var(--light-color), var(--dark-color));
@@ -236,8 +256,6 @@
   font-family: 'Kanit';
   text-shadow: 0px 0px 4px rgb(255, 255, 255);
   font-weight: bold;
-  min-width: 40em;
-  min-height: 15em;
   border-radius: 0px 0px 15px 15px;
   background: linear-gradient(to top, var(--light-color) 30%, var(--dark-color));
   gap: 0.2em;

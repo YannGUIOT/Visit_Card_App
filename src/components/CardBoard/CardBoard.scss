@@ -113,7 +113,6 @@
   //***** GLOBAL SETTINGS < 1210 PX *****//
 
   .globalSettings {
-    // grid-column: 1;
     grid-row: 2;
     display: flex;
     flex-direction: column;
@@ -141,7 +140,6 @@
   //***** MODEL < 1210 PX *****//
 
   .modelSelection {
-    // grid-column: 1;
     grid-row: 1;
     display: flex;
     flex-direction: column;
@@ -164,17 +162,14 @@
   }
 
   .download {
-    // grid-column: 1;
     grid-row: 5;
   }
 
   .cardDisplay {
-    // grid-column: 1;
     grid-row: 4;
   }
 
   .textSettings {
-    // grid-column: 1;
     grid-row: 3;
   }
 }

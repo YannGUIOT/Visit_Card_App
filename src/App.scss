@@ -34,3 +34,24 @@ body {
 .titles {
   font-family: 'Audiowide';
 }
+
+button {
+  box-shadow: 1px 1px 2px grey;
+  border: 1px solid gray;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+img {
+  cursor: pointer;
+}
+
+.light {
+  color: #dadada;
+  text-shadow: -1px 1px 6px rgb(56, 56, 56);
+}
+
+.dark {
+  text-shadow: -1px 1px 6px rgb(255, 255, 255);
+}

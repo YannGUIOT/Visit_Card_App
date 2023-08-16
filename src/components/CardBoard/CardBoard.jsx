@@ -18,13 +18,15 @@ export const CardBoard = () => {
   };
 
   const updateGlobal = (newColor) => {
-    card.updateCard('global_color', newColor);
-    card.updateCard('title1_color', newColor);
-    card.updateCard('title2_color', newColor);
-    card.updateCard('title3_color', newColor);
-    card.updateCard('email_color', newColor);
-    card.updateCard('phone_color', newColor);
-    setCard({ ...card });
+    const cardCopy = { ...card };
+    const fieldsToUpdate = [
+      'global_color','title1_color','title2_color',
+      'title3_color','email_color','phone_color',
+    ];
+    fieldsToUpdate.forEach(field => {
+      cardCopy.updateCard(field, newColor);
+    });
+    setCard(cardCopy);
   };
 
   const handleModelSelect = (index) => {

@@ -14,12 +14,12 @@ body {
   margin: 0;
   background: 
     linear-gradient(to right, 
-    var(--light-color), 
+    rgb(72, 69, 88), 
     var(--dark-color), 
     var(--dark-color), 
     var(--dark-color), 
     var(--dark-color), 
-    var(--light-color));
+    rgb(72, 69, 88));
 }
 
 .footer {
